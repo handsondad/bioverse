@@ -1,13 +1,13 @@
 import { html, raw, setHtml, type SafeHtml } from './html';
 import { H, W, n, type SimDef, type SimParam, type State } from './simlib/kit';
-import { cellCompare, osmosisCell, membraneGate, mitosisPhases } from './simlib/cells';
-import { starchChew, cellPower, enzymeTemp } from './simlib/metabolism';
-import { photoFactory, leafSeason, treePull } from './simlib/plants';
-import { hibernateMeter, camoSpot, birdCompass } from './simlib/animals';
-import { reflexArc, feverBattle, nerveWave } from './simlib/body';
-import { punnettDimple, dnaPair, geneMutate } from './simlib/genetics';
-import { yeastDough, germVsVirus, gutGarden } from './simlib/microbes';
-import { wolfSheep, forestRecycle, giraffeSelect } from './simlib/ecology';
+import { cellCompare, osmosisCell, membraneGate, mitosisPhases, hookeScope, ciliaSwim, tadpoleMorph } from './simlib/cells';
+import { starchChew, cellPower, enzymeTemp, fireflyAtp, bromelainMouth, fatExhale } from './simlib/metabolism';
+import { photoFactory, leafSeason, treePull, beanSprout, mimosaPillow, sunflowerTrack, desertCactus } from './simlib/plants';
+import { hibernateMeter, camoSpot, birdCompass, gillFilament, pupaRebuild, penguinFeet } from './simlib/animals';
+import { reflexArc, feverBattle, nerveWave, earCanalSpin, glucoseBalance, vaccineDrill } from './simlib/body';
+import { punnettDimple, dnaPair, geneMutate, mendelPeas, calicoCoat, hybridRice } from './simlib/genetics';
+import { yeastDough, germVsVirus, gutGarden, pasteurFlask, penicillinZone, artemisininExtract } from './simlib/microbes';
+import { wolfSheep, forestRecycle, giraffeSelect, beeWaggle, energyPyramid, coralBleach } from './simlib/ecology';
 
 /**
  * 文章里能拖滑块的生物互动图。每一种只由「滑块的值」和「时间 t」决定画面，
@@ -17,14 +17,14 @@ import { wolfSheep, forestRecycle, giraffeSelect } from './simlib/ecology';
 export type { SimParam };
 
 const SIMS = {
-  cellCompare, osmosisCell, membraneGate, mitosisPhases,
-  starchChew, cellPower, enzymeTemp,
-  photoFactory, leafSeason, treePull,
-  hibernateMeter, camoSpot, birdCompass,
-  reflexArc, feverBattle, nerveWave,
-  punnettDimple, dnaPair, geneMutate,
-  yeastDough, germVsVirus, gutGarden,
-  wolfSheep, forestRecycle, giraffeSelect,
+  cellCompare, osmosisCell, membraneGate, mitosisPhases, hookeScope, ciliaSwim, tadpoleMorph,
+  starchChew, cellPower, enzymeTemp, fireflyAtp, bromelainMouth, fatExhale,
+  photoFactory, leafSeason, treePull, beanSprout, mimosaPillow, sunflowerTrack, desertCactus,
+  hibernateMeter, camoSpot, birdCompass, gillFilament, pupaRebuild, penguinFeet,
+  reflexArc, feverBattle, nerveWave, earCanalSpin, glucoseBalance, vaccineDrill,
+  punnettDimple, dnaPair, geneMutate, mendelPeas, calicoCoat, hybridRice,
+  yeastDough, germVsVirus, gutGarden, pasteurFlask, penicillinZone, artemisininExtract,
+  wolfSheep, forestRecycle, giraffeSelect, beeWaggle, energyPyramid, coralBleach,
 } satisfies Record<string, SimDef>;
 
 export type SimName = keyof typeof SIMS;

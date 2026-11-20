@@ -284,3 +284,172 @@ export const mitosisPhases: SimDef = {
     ][s.stage];
   },
 };
+
+/** 5. 胡克软木塞 vs 列文虎克活细胞：切换标本与放大倍数，看清死细胞壁与活细胞 */
+export const hookeScope: SimDef = {
+  params: [
+    { key: 'sample', label: '显微镜下的标本', min: 0, max: 1, step: 1, value: 0, labels: ['1665 胡克：软木薄片', '1674 列文虎克：池塘水滴'] },
+    { key: 'zoom', label: '放大清晰度', min: 0, max: 2, step: 1, value: 1, labels: ['低倍（约 30×）', '中倍（约 120×）', '高倍（约 270×）'] },
+  ],
+  animated: true,
+  still: 1,
+  draw(s, t) {
+    const cork = s.sample === 0;
+    const z = s.zoom + 1;
+    const out: string[] = [];
+    // 圆形目镜视野
+    out.push(`<rect x="20" y="20" width="520" height="280" rx="16" fill="#f7f1e5"/>`);
+    out.push(`<circle cx="190" cy="162" r="108" fill="${cork ? '#2b2520' : '#e6f4f8'}" stroke="#8b6b43" stroke-width="8"/>`);
+    if (cork) {
+      const step = [28, 22, 16][z - 1];
+      for (let gx = 104; gx <= 262; gx += step) {
+        for (let gy = 76; gy <= 236; gy += Math.round(step * 0.78)) {
+          if (Math.hypot(gx + step / 2 - 190, gy + step / 3 - 162) > 92) continue;
+          out.push(`<rect x="${gx}" y="${gy}" width="${step - 3}" height="${Math.round(step * 0.78) - 3}" rx="3" fill="#3a3129" stroke="#e9cfa0" stroke-width="1.8"/>`);
+        }
+      }
+    } else {
+      const count = z + 2;
+      for (let i = 0; i < count; i += 1) {
+        const ang = t * 0.9 + i * 1.45;
+        const cx = 190 + Math.cos(ang) * (24 + i * 13);
+        const cy = 162 + Math.sin(ang * 1.2) * (18 + i * 11);
+        const r = 7 + z * 3;
+        out.push(`<ellipse cx="${n(cx)}" cy="${n(cy)}" rx="${r}" ry="${Math.round(r * 0.62)}" fill="#74c69d" stroke="${GREEN}" stroke-width="2"/>`);
+        if (z >= 2) out.push(`<circle cx="${n(cx)}" cy="${n(cy)}" r="${Math.max(2.5, r * 0.28)}" fill="${PURPLE}"/>`);
+      }
+    }
+    // 右侧解读卡片
+    out.push(`<rect x="322" y="54" width="202" height="214" rx="14" fill="#fff" stroke="#ffe0cc" stroke-width="2"/>`);
+    out.push(txt(423, 84, cork ? '软木塞：死细胞空壳' : '池塘水：游动的活细胞', { size: 15, bold: true, color: cork ? HOT : GREEN }));
+    out.push(txt(423, 118, cork ? '细胞膜：已消失' : '细胞膜：完整包裹', { size: 13, color: INK }));
+    out.push(txt(423, 146, cork ? '细胞质与核：全空了' : z >= 2 ? '细胞质与核：清晰可见' : '倍数太低还看不清内部', { size: 13, color: cork ? HOT : BLUE, bold: !cork && z >= 2 }));
+    out.push(txt(423, 178, cork ? '只剩木栓化的硬细胞壁' : '能游动、进食和分裂！', { size: 13, color: GREEN, bold: true }));
+    out.push(txt(423, 224, `放大档位：第 ${z} 档`, { size: 12.5, color: INK }));
+    out.push(txt(423, 248, cork ? '胡克借“小房间”起名 cell' : '列文虎克首次看见活微生物', { size: 12, color: PURPLE, bold: true }));
+    out.push(txt(280, 38, cork ? '1665 年胡克复合显微镜：看到整齐蜂窝状“小格子”' : '1674 年列文虎克高倍单透镜：看到活蹦乱跳的小生命', { size: 14, bold: true, color: INK }));
+    return out.join('');
+  },
+  readout(s) {
+    if (s.sample === 0) return '胡克观察的软木塞是死树皮：细胞质和细胞核早就没了，他看到的“小格子”其实是留下的空细胞壁。';
+    return s.zoom >= 1
+      ? '列文虎克把单颗小玻璃珠磨到近 270 倍：第一次在池塘水里看清了有细胞膜、细胞质、正在游动的活单细胞生物！'
+      : '低倍镜下只能看见小点晃动；调高放大倍数，就能看清活细胞完整的内部结构啦。';
+  },
+};
+
+/** 6. 单细胞草履虫：切换外界刺激（肉汁 vs 盐粒），看纤毛划水、食物泡与伸缩泡分工 */
+export const ciliaSwim: SimDef = {
+  params: [
+    { key: 'cue', label: '右边滴入什么', min: 0, max: 2, step: 1, value: 1, labels: ['清水（自由游）', '牛肉汁（营养）', '浓盐粒（有害刺激）'] },
+  ],
+  animated: true,
+  still: 1,
+  draw(s, t) {
+    const cue = s.cue;
+    const out: string[] = [];
+    out.push(`<rect x="20" y="44" width="520" height="222" rx="22" fill="#eaf6ff" stroke="#a5d8ff" stroke-width="2.5"/>`);
+    // 右侧滴入物
+    if (cue === 1) {
+      out.push(`<circle cx="472" cy="155" r="34" fill="#ffe8cc" stroke="#f59f00" stroke-width="2.5"/>`);
+      out.push(txt(472, 159, '🍖 肉汁', { size: 13, bold: true, color: '#a8501a' }));
+    } else if (cue === 2) {
+      out.push(`<circle cx="472" cy="155" r="34" fill="#ffe3e3" stroke="${HOT}" stroke-width="2.5"/>`);
+      out.push(txt(472, 159, '🧂 盐粒', { size: 13, bold: true, color: HOT }));
+    }
+    // 草履虫位置与朝向
+    const baseX = cue === 1 ? 305 + Math.sin(t * 2) * 12 : cue === 2 ? 175 - Math.sin(t * 2) * 12 : 265 + Math.sin(t * 1.5) * 18;
+    const dir = cue === 2 ? -1 : 1;
+    out.push(`<g transform="translate(${n(baseX)} 152) scale(${dir} 1)">`);
+    // 纤毛小短线
+    for (let a = 0; a < 20; a += 1) {
+      const th = (a / 20) * Math.PI * 2;
+      const x1 = Math.cos(th) * 92;
+      const y1 = Math.sin(th) * 44;
+      const wag = Math.sin(t * 10 + a) * 4;
+      out.push(`<line x1="${n(x1)}" y1="${n(y1)}" x2="${n(x1 * 1.13)}" y2="${n(y1 * 1.18 + wag)}" stroke="${GREEN}" stroke-width="2"/>`);
+    }
+    // 鞋底形细胞膜
+    out.push(`<ellipse cx="0" cy="0" rx="92" ry="44" fill="#eef9ee" stroke="${GREEN}" stroke-width="3.5"/>`);
+    // 口沟凹陷 + 食物泡 + 大核 + 星形伸缩泡
+    out.push(`<path d="M18 -41 Q4 -16 24 -8" fill="none" stroke="${BLUE}" stroke-width="3"/>`);
+    out.push(`<circle cx="-8" cy="12" r="10" fill="#ffd43b" stroke="#c27a23" stroke-width="1.8"/>`);
+    out.push(`<circle cx="28" cy="14" r="8" fill="#ffd43b" stroke="#c27a23" stroke-width="1.8"/>`);
+    out.push(`<ellipse cx="-24" cy="-8" rx="18" ry="12" fill="#d8c5fa" stroke="${PURPLE}" stroke-width="2"/>`);
+    const vacR = 5 + 4 * Math.abs(Math.sin(t * 2.4));
+    out.push(`<circle cx="-62" cy="0" r="${n(vacR)}" fill="#a5d8ff" stroke="${BLUE}" stroke-width="2"/>`);
+    out.push(`<circle cx="62" cy="0" r="${n(9 - vacR * 0.5)}" fill="#a5d8ff" stroke="${BLUE}" stroke-width="2"/>`);
+    out.push(`</g>`);
+
+    if (cue > 0) {
+      out.push(arrow(cue === 1 ? 395 : 285, 92, cue === 1 ? 435 : 225, 92, cue === 1 ? GREEN : HOT, 3.5));
+      out.push(txt(cue === 1 ? 415 : 255, 80, cue === 1 ? '朝营养游去' : '掉头躲开！', { size: 12.5, bold: true, color: cue === 1 ? GREEN : HOT }));
+    }
+    out.push(txt(280, 28, '一个细胞全包办：绿纤毛划水 · 紫大核指挥 · 黄食物泡消化 · 蓝伸缩泡排水', { size: 13, bold: true, color: INK }));
+    out.push(txt(280, 294, '没有脑和神经，单细胞草履虫也能趋向肉汁、躲开浓盐粒（应激性）', { size: 13, color: GREEN, bold: true }));
+    return out.join('');
+  },
+  readout(s) {
+    return [
+      '清水中：全身几千根纤毛像小船桨整齐划水，两边星形的伸缩泡轮流把多余的水挤出去，防止细胞涨破。',
+      '右边滴入牛肉汁：草履虫感受到营养物质，纤毛调整划动方向，聚拢到肉汁边用口沟把细菌卷进食物泡消化。',
+      '右边放上浓盐粒：高浓度盐水会伤细胞，草履虫立刻纤毛倒划后退、换个方向游走，展现趋利避害本领！',
+    ][s.cue];
+  },
+};
+
+/** 7. 蝌蚪变青蛙（细胞凋亡）：拖动发育阶段，看甲状腺激素指挥尾巴细胞有序回收 */
+export const tadpoleMorph: SimDef = {
+  params: [
+    { key: 'stage', label: '变态发育进度', min: 0, max: 3, step: 1, value: 2, labels: ['圆头长尾蝌蚪', '先长出后腿', '再伸出前腿·尾巴缩', '小青蛙上岸'] },
+  ],
+  animated: false,
+  draw(s) {
+    const st = s.stage;
+    const tailLen = [165, 145, 76, 8][st];
+    const thLevel = [12, 42, 92, 55][st];
+    const limb = [0, 38, 75, 100][st];
+    const out: string[] = [];
+    out.push(`<rect x="20" y="48" width="520" height="170" rx="18" fill="#e7f5ff" stroke="#a5d8ff" stroke-width="2"/>`);
+    // 蝌蚪 / 青蛙身体（朝左，尾巴朝右）
+    const bx = 185;
+    const by = 132;
+    const bodyCol = st >= 2 ? '#51a355' : '#5c6b57';
+    // 尾巴
+    if (tailLen > 12) {
+      out.push(`<path d="M${bx + 32} ${by - 16} Q${bx + 32 + tailLen * 0.6} ${by - 20} ${bx + 36 + tailLen} ${by} Q${bx + 32 + tailLen * 0.6} ${by + 20} ${bx + 32} ${by + 16} Z" fill="#8ce09b" stroke="${st === 2 ? HOT : GREEN}" stroke-width="2.5" ${st === 2 ? 'stroke-dasharray="6 4"' : ''}/>`);
+      if (st === 2) {
+        out.push(arrow(bx + 90, by, bx + 42, by, HOT, 3.5));
+        out.push(txt(bx + 125, by - 28, '细胞凋亡拆解 → 养分运回身体', { size: 12.5, bold: true, color: HOT }));
+      }
+    }
+    // 后腿 & 前腿
+    if (st >= 1) {
+      out.push(`<path d="M${bx + 20} ${by + 18} L${bx + 42} ${by + 44} L${bx + 16} ${by + 50}" fill="none" stroke="${GREEN}" stroke-width="${st >= 2 ? 7 : 5}" stroke-linecap="round" stroke-linejoin="round"/>`);
+    }
+    if (st >= 2) {
+      out.push(`<path d="M${bx - 18} ${by + 18} L${bx - 34} ${by + 44}" fill="none" stroke="${GREEN}" stroke-width="6" stroke-linecap="round"/>`);
+    }
+    // 躯干与眼睛
+    out.push(`<ellipse cx="${bx}" cy="${by}" rx="44" ry="26" fill="${bodyCol}" stroke="#1b5e20" stroke-width="3"/>`);
+    out.push(`<circle cx="${bx - 22}" cy="${by - 10}" r="6" fill="#fff"/><circle cx="${bx - 24}" cy="${by - 10}" r="3" fill="#111"/>`);
+
+    // 下方两条读数：甲状腺激素 & 回收养分建四肢
+    out.push(txt(48, 246, `甲状腺激素信号：${thLevel}%`, { size: 13, anchor: 'start', bold: true, color: PURPLE }));
+    out.push(`<rect x="48" y="254" width="200" height="14" rx="7" fill="#f4efe9"/><rect x="48" y="254" width="${n(thLevel * 2)}" height="14" rx="7" fill="${PURPLE}"/>`);
+    out.push(txt(306, 246, `四肢与肺发育度：${limb}%`, { size: 13, anchor: 'start', bold: true, color: GREEN }));
+    out.push(`<rect x="306" y="254" width="200" height="14" rx="7" fill="#f4efe9"/><rect x="306" y="254" width="${n(limb * 2)}" height="14" rx="7" fill="${GREEN}"/>`);
+
+    out.push(txt(280, 30, '尾巴没有整截断在水里：基因按下“细胞凋亡”开关，自己拆解回收！', { size: 14, bold: true, color: INK }));
+    out.push(txt(280, 296, '细胞有序自拆不发炎，连人类胎儿分开五根手指靠的也是细胞凋亡', { size: 12.5, color: INK }));
+    return out.join('');
+  },
+  readout(s) {
+    return [
+      '小蝌蚪阶段：用鳃呼吸、靠长尾巴划水游动，血液里甲状腺激素水平还很低。',
+      '长后腿阶段：甲状腺激素升高，后肢芽对低浓度激素先作出反应，率先长出两条后腿。',
+      '退尾高峰期：激素冲到高峰，尾部细胞启动“细胞凋亡”程序，由溶酶体与吞噬细胞拆解成氨基酸，运去长四肢！',
+      '变态完成：长尾巴被干干净净吸收完毕，鳃退化、肺长好，小青蛙跳上荷叶开启水陆两栖生活。',
+    ][s.stage];
+  },
+};

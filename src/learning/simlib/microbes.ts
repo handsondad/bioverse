@@ -130,3 +130,166 @@ export const gutGarden: SimDef = {
     return '几乎不吃蔬果纤维：有益菌缺少食物变少，肠道屏障变弱，坏菌更容易趁机捣乱。';
   },
 };
+
+/** 4. 巴斯德鹅颈瓶与牛奶灭菌：切换鹅颈瓶 / 72℃ 巴氏鲜奶 / 135℃ 超高温常温奶 */
+export const pasteurFlask: SimDef = {
+  params: [
+    { key: 'kind', label: '杀菌与密封方式', min: 0, max: 3, step: 1, value: 3, labels: ['煮沸后敞口放着', '巴斯德鹅颈瓶（弯管挡菌）', '巴氏鲜奶（72℃·冷藏）', '常温纯牛奶（135℃+无菌盒）'] },
+  ],
+  animated: false,
+  draw(s) {
+    const k = s.kind;
+    const germs = [95, 0, 12, 0][k];
+    const days = ['1~2 天变臭', '放几年仍清亮！', '冷藏约 7~15 天', '常温密封存 6 个月'][k];
+    const out: string[] = [];
+    out.push(txt(280, 28, '食物变质不是“自己凭空长细菌”，杀灭原菌 + 挡住外菌就不用防腐剂！', { size: 13.2, bold: true, color: INK }));
+    // 左：容器演示
+    out.push(`<rect x="24" y="48" width="248" height="198" rx="16" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2"/>`);
+    if (k <= 1) {
+      // 烧瓶
+      out.push(`<circle cx="136" cy="176" r="46" fill="${k === 0 ? '#e9d8a6' : '#fff3bf'}" stroke="${BLUE}" stroke-width="3"/>`);
+      out.push(`<rect x="126" y="96" width="20" height="36" fill="none" stroke="${BLUE}" stroke-width="3"/>`);
+      if (k === 1) {
+        out.push(`<path d="M136 96 Q136 62 178 68 Q208 74 198 128 Q192 152 216 142" fill="none" stroke="${BLUE}" stroke-width="7" stroke-linecap="round"/>`);
+        out.push(`<circle cx="196" cy="136" r="6" fill="${HOT}"/>`);
+        out.push(txt(148, 234, '空气进得去，灰尘细菌全卡在弯管底！', { size: 11.5, bold: true, color: GREEN }));
+      } else {
+        out.push(txt(136, 78, '🦠 空气细菌直落肉汤', { size: 12, bold: true, color: HOT }));
+        out.push(txt(148, 234, '打断鹅颈敞口：细菌掉进去飞快变浑发臭', { size: 11.5, bold: true, color: HOT }));
+      }
+    } else {
+      // 牛奶盒
+      out.push(`<rect x="96" y="84" width="104" height="128" rx="12" fill="${k === 2 ? '#e7f5ff' : '#e6f4e8'}" stroke="${k === 2 ? BLUE : GREEN}" stroke-width="3"/>`);
+      out.push(txt(148, 132, k === 2 ? '🥛 鲜牛奶' : '🥛 纯牛奶', { size: 16, bold: true, color: INK }));
+      out.push(txt(148, 158, k === 2 ? '72 ℃ · 15 秒' : '135 ℃ · 数秒', { size: 13, bold: true, color: k === 2 ? BLUE : GREEN }));
+      out.push(txt(148, 182, '配料：100% 生牛乳', { size: 11, color: INK }));
+      out.push(txt(148, 232, k === 2 ? '杀灭致病菌留风味，剩少量芽孢需冷藏' : '细菌芽孢全灭光 + 六层铝塑无菌盒隔空！', { size: 11.5, bold: true, color: GREEN }));
+    }
+
+    // 右：保鲜成绩单
+    out.push(`<rect x="290" y="48" width="246" height="198" rx="16" fill="#fff" stroke="#ffe0cc" stroke-width="2"/>`);
+    out.push(txt(413, 80, '保鲜与细菌账单', { size: 14.5, bold: true, color: INK }));
+    out.push(txt(310, 118, `存活微生物：${germs}%`, { size: 13, anchor: 'start', bold: true, color: germs > 20 ? HOT : GREEN }));
+    out.push(`<rect x="310" y="128" width="204" height="15" rx="7.5" fill="#f4efe9"/><rect x="310" y="128" width="${n(germs * 2.04)}" height="15" rx="7.5" fill="${germs > 20 ? HOT : '#51cf66'}"/>`);
+    out.push(txt(413, 176, `保质时间：${days}`, { size: 14, bold: true, color: PURPLE }));
+    out.push(txt(413, 206, '防腐剂添加量：0（一滴没加！）', { size: 13, bold: true, color: GREEN }));
+    out.push(txt(413, 232, '⚠️ 一旦插吸管开封，当天就要喝完哦', { size: 11.5, color: HOT, bold: true }));
+
+    out.push(txt(280, 288, '常温奶和巴氏鲜奶蛋白质与钙含量差不多，按需挑选、开封冷藏最安心', { size: 12.5, color: INK }));
+    return out.join('');
+  },
+  readout(s) {
+    return [
+      '煮沸后敞口：虽然煮死了原来的细菌，但空气里的细菌很快落进去繁殖，一两天就变质发臭。',
+      '巴斯德鹅颈瓶：细长弯管让空气通过，却把灰尘和微生物拦在最低处的弯折里，肉汤放上几年依然清澈！',
+      '巴氏杀菌鲜奶：约 72 ℃ 加热 15 秒杀灭致病菌、最大化保留鲜奶风味，但还剩极少量耐热菌，必须 2~6 ℃ 冷藏。',
+      '超高温灭菌常温纯牛奶：约 135 ℃ 瞬时把细菌和芽孢彻底归零，再装进隔光隔氧的无菌砖，不加一滴防腐剂也能常温存半年！',
+    ][s.kind];
+  },
+};
+
+/** 5. 弗莱明培养皿抑菌圈：拖动培养天数，观察青霉周围细菌溶解出现透明抑菌圈 */
+export const penicillinZone: SimDef = {
+  params: [
+    { key: 'day', label: '培养皿观察阶段', min: 0, max: 2, step: 1, value: 1, labels: ['没落入青霉（长满细菌）', '1928 弗莱明培养皿（抑菌圈！）', '乱停药剩耐药菌反扑'] },
+  ],
+  animated: false,
+  draw(s) {
+    const d = s.day;
+    const out: string[] = [];
+    out.push(txt(280, 28, '1928 年圣玛丽医院培养皿：青霉菌分泌青霉素，在周围清出一圈“无人区”', { size: 13.2, bold: true, color: INK }));
+    // 左：圆形培养皿俯视
+    out.push(`<circle cx="152" cy="154" r="94" fill="#fff9db" stroke="#adb5bd" stroke-width="5"/>`);
+    if (d === 1) {
+      // 青霉菌落 + 透明抑菌圈
+      out.push(`<circle cx="132" cy="126" r="56" fill="#fffef5" stroke="${GREEN}" stroke-width="1.5" stroke-dasharray="5 4"/>`);
+      out.push(`<circle cx="132" cy="126" r="24" fill="#69db7c" stroke="${GREEN}" stroke-width="3"/>`);
+      out.push(txt(132, 130, '青霉', { size: 12, bold: true, color: '#1b5e20' }));
+    }
+    // 黄色葡萄球菌菌落点
+    for (let i = 0; i < 26; i += 1) {
+      const a = i * 2.399;
+      const r = 16 + (i % 7) * 11;
+      const bx = 152 + Math.cos(a) * r;
+      const by = 154 + Math.sin(a) * r;
+      if (d === 1 && Math.hypot(bx - 132, by - 126) < 55) continue;
+      const resistant = d === 2 && i % 3 === 0;
+      if (d === 2 && !resistant) continue;
+      out.push(`<circle cx="${n(bx)}" cy="${n(by)}" r="${resistant ? 7 : 5.5}" fill="${resistant ? HOT : '#f59f00'}"/>`);
+    }
+
+    // 右：原理与安全说明
+    out.push(`<rect x="278" y="54" width="258" height="196" rx="16" fill="#fff" stroke="#ffe0cc" stroke-width="2"/>`);
+    out.push(txt(407, 84, ['整盘长满金黄色葡萄球菌', '🔍 透明圈：细菌细胞壁被拆破！', '⚠️ 半途停药：筛出超级耐药菌'][d], { size: 14, bold: true, color: d === 1 ? GREEN : HOT }));
+    out.push(txt(407, 122, d === 1 ? '青霉素专拦细菌砌“细胞壁”' : d === 2 ? '怕药的死了，扛药的活下来猛长' : '没有青霉素阻拦，细菌迅速繁殖', { size: 12.5, color: INK }));
+    out.push(txt(407, 152, d === 1 ? '人体细胞没细胞壁，所以不伤人' : '吃抗生素必须遵医嘱足疗程吃完', { size: 12.5, color: BLUE, bold: true }));
+    out.push(`<rect x="296" y="176" width="222" height="54" rx="12" fill="#fff0ee"/>`);
+    out.push(txt(407, 198, '🚫 千万别吃发霉面包或烂橘子！', { size: 12.5, bold: true, color: HOT }));
+    out.push(txt(407, 218, '食物霉斑含剧毒霉菌毒素，不是药！', { size: 11.5, color: INK }));
+
+    out.push(txt(280, 288, '弗莱明发现现象，弗洛里与钱恩攻克提纯量产，三人共享 1945 年诺贝尔奖', { size: 12.5, color: INK }));
+    return out.join('');
+  },
+  readout(s) {
+    return [
+      '普通细菌培养皿：营养琼脂上密密麻麻长满金黄色葡萄球菌菌落。',
+      '弗莱明的发现：一朵飘进来的青霉菌周围出现了一圈干净透明的“抑菌圈”——它分泌的青霉素阻止细菌合成细胞壁，让细菌自己裂解了！',
+      '乱吃或擅自提前停用抗生素：普通细菌死光后，极少数天生耐药的突变菌失去竞争对手反而疯长，以后再用同种药就不管用了。',
+    ][s.day];
+  },
+};
+
+/** 6. 屠呦呦低温提取青蒿素：调节提取温度与溶剂，看青蒿素过氧桥完整度与疟原虫清除率 */
+export const artemisininExtract: SimDef = {
+  params: [
+    { key: 'method', label: '青蒿提取方法', min: 0, max: 2, step: 1, value: 2, labels: ['100 ℃ 沸水熬汤（传统煎煮）', '乙醇加热回流（约 78 ℃）', '35 ℃ 乙醚冷浸提取（屠呦呦突破）'] },
+  ],
+  animated: false,
+  draw(s) {
+    const m = s.method;
+    const intact = [18, 36, 98][m];
+    const clearRate = [20, 40, 100][m];
+    const out: string[] = [];
+    out.push(txt(280, 28, '《肘后备急方》“青蒿一握，以水二升渍，绞取汁” → 怕热的青蒿素不能煮！', { size: 13, bold: true, color: INK }));
+    // 左：分子结构（过氧桥 -O-O-）与提取锅
+    out.push(`<rect x="24" y="48" width="248" height="198" rx="16" fill="#fff" stroke="#ffe0cc" stroke-width="2"/>`);
+    out.push(txt(148, 76, ['🔥 100 ℃ 滚水煎煮', '♨️ 78 ℃ 加热提取', '❄️ 35 ℃ 低沸点乙醚提取'][m], { size: 14, bold: true, color: m === 2 ? GREEN : HOT }));
+    // 画青蒿素过氧桥示意环
+    out.push(`<circle cx="148" cy="142" r="42" fill="${m === 2 ? '#e6f4e8' : '#fbeae7'}" stroke="${m === 2 ? GREEN : '#adb5bd'}" stroke-width="3"/>`);
+    if (m === 2) {
+      out.push(`<line x1="124" y1="142" x2="172" y2="142" stroke="${HOT}" stroke-width="5"/>`);
+      out.push(`<circle cx="132" cy="142" r="10" fill="${HOT}"/><circle cx="164" cy="142" r="10" fill="${HOT}"/>`);
+      out.push(txt(148, 122, '关键“过氧桥”完好！', { size: 11.5, bold: true, color: GREEN }));
+    } else {
+      out.push(`<line x1="120" y1="134" x2="138" y2="148" stroke="#868e96" stroke-width="4"/>`);
+      out.push(`<line x1="176" y1="134" x2="158" y2="148" stroke="#868e96" stroke-width="4"/>`);
+      out.push(txt(148, 122, '高温把过氧桥震断了！', { size: 11.5, bold: true, color: HOT }));
+    }
+    out.push(txt(148, 206, `完好活性青蒿素：${intact}%`, { size: 13, bold: true, color: m === 2 ? GREEN : HOT }));
+    out.push(txt(148, 228, '青蒿素专打红细胞里的疟原虫', { size: 11.5, color: INK }));
+
+    // 右：红细胞内疟原虫清除效果
+    out.push(`<rect x="290" y="48" width="246" height="198" rx="16" fill="#fff5f5" stroke="#ffc9c9" stroke-width="2"/>`);
+    out.push(txt(413, 76, '🩸 红细胞与疟原虫（单细胞寄生虫）', { size: 13, bold: true, color: '#c92a2a' }));
+    for (let i = 0; i < 4; i += 1) {
+      const rx = 342 + (i % 2) * 140;
+      const ry = 118 + Math.floor(i / 2) * 56;
+      out.push(`<circle cx="${rx}" cy="${ry}" r="22" fill="#ff8787" stroke="#c92a2a" stroke-width="2.5"/>`);
+      if (m < 2 && (i < 3 - m)) {
+        out.push(`<circle cx="${rx}" cy="${ry}" r="7" fill="${PURPLE}"/>`);
+      }
+    }
+    out.push(txt(413, 214, `实验鼠疟原虫抑制率：约 ${clearRate}%`, { size: 14, bold: true, color: m === 2 ? GREEN : HOT }));
+    out.push(txt(413, 234, m === 2 ? '✅ 红细胞干干净净，全部康复！' : '❌ 紫点疟原虫还在涨破红细胞', { size: 12, bold: true, color: m === 2 ? GREEN : HOT }));
+
+    out.push(txt(280, 288, '屠呦呦团队 1972 年提纯出青蒿素结晶，挽救全球数百万生命（2015 年诺贝尔奖）', { size: 12.2, color: INK }));
+    return out.join('');
+  },
+  readout(s) {
+    return [
+      '100 ℃ 沸水煎煮：青蒿素分子里抗疟最关键的“过氧桥”怕热被破坏，药效只剩约一两成，时灵时不灵。',
+      '约 78 ℃ 乙醇提取：温度仍然偏高，部分有效成分受损，对鼠疟的抑制率在 12%~40% 之间剧烈波动。',
+      '35 ℃ 低温乙醚提取：受古籍“冷水浸泡绞汁”启发改用低沸点溶剂并去除酸性杂质，完好保住青蒿素结构，对实验动物疟原虫抑制率达 100%！',
+    ][s.method];
+  },
+};

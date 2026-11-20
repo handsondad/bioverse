@@ -150,3 +150,155 @@ export const nerveWave: SimDef = {
     ][s.pos];
   },
 };
+
+/** 4. 内耳半规管与转圈头晕：切换刚开始转 / 刚停下，看淋巴液惯性与纤毛弯曲信号冲突 */
+export const earCanalSpin: SimDef = {
+  params: [
+    { key: 'phase', label: '转圈动作', min: 0, max: 2, step: 1, value: 2, labels: ['站稳不动', '原地转圈中', '猛地停下来！'] },
+  ],
+  animated: true,
+  still: 1,
+  draw(s, t) {
+    const ph = s.phase;
+    const out: string[] = [];
+    out.push(txt(280, 28, '耳朵深处的平衡陀螺仪：半规管里的淋巴液也有惯性！', { size: 14, bold: true, color: INK }));
+    // 左：半规管圆环与帽状胶质纤毛
+    out.push(`<circle cx="152" cy="154" r="78" fill="none" stroke="#d0ebff" stroke-width="26"/>`);
+    out.push(`<circle cx="152" cy="154" r="78" fill="none" stroke="${BLUE}" stroke-width="2.5"/>`);
+    out.push(txt(152, 154, '内耳半规管', { size: 13, bold: true, color: BLUE }));
+    // 液体小点转动
+    if (ph > 0) {
+      for (let i = 0; i < 6; i += 1) {
+        const a = t * 2.6 + (i * Math.PI) / 3;
+        const px = 152 + Math.cos(a) * 78;
+        const py = 154 + Math.sin(a) * 78;
+        out.push(`<circle cx="${n(px)}" cy="${n(py)}" r="5.5" fill="${BLUE}"/>`);
+      }
+    }
+    // 顶部感觉毛细胞与胶质帽弯曲
+    const bend = ph === 0 ? 0 : ph === 1 ? -18 : 22;
+    out.push(`<path d="M152 88 Q${152 + bend} 74 ${152 + bend * 1.2} 62" fill="none" stroke="${HOT}" stroke-width="6" stroke-linecap="round"/>`);
+    out.push(txt(152, 256, ph === 0 ? '液体静止 · 纤毛直立' : ph === 1 ? '人在转 · 液体推弯纤毛' : '人已停下，液体靠惯性还在冲！', { size: 12.5, bold: true, color: ph === 2 ? HOT : INK }));
+
+    // 右：眼睛 vs 内耳信号核对台
+    out.push(`<rect x="278" y="54" width="258" height="196" rx="16" fill="#fff" stroke="#ffe0cc" stroke-width="2"/>`);
+    out.push(txt(407, 84, '🧠 大脑收到两份报告', { size: 14.5, bold: true, color: PURPLE }));
+    const eyeMsg = ['👀 眼睛：房间静止不动', '👀 眼睛：画面在往后掠过', '👀 眼睛：脚已站定，房间没动'][ph];
+    const earMsg = ['👂 内耳：没有旋转', '👂 内耳：正在旋转（一致！）', '👂 内耳：纤毛还弯着，报告还在转！'][ph];
+    out.push(txt(296, 122, eyeMsg, { size: 12.5, anchor: 'start', bold: true, color: BLUE }));
+    out.push(txt(296, 158, earMsg, { size: 12.5, anchor: 'start', bold: true, color: ph === 2 ? HOT : GREEN }));
+    out.push(`<rect x="296" y="182" width="222" height="48" rx="12" fill="${ph === 2 ? '#fff0ee' : '#eef9ee'}"/>`);
+    out.push(txt(407, 211, ph === 2 ? '😵 两边信号打架 → 天旋地转！' : '😊 两边报告一致 → 站得稳稳当当', { size: 13, bold: true, color: ph === 2 ? HOT : GREEN }));
+
+    out.push(txt(280, 294, '花样滑冰运动员靠眼神死死盯住远方同一点（留头甩头）来减轻眩晕', { size: 12.5, color: INK }));
+    return out.join('');
+  },
+  readout(s) {
+    return [
+      '站稳不动时：内耳半规管里的淋巴液安安静静，感觉毛细胞的纤毛直立，眼睛和内耳都报告“静止”。',
+      '原地转圈时：半规管跟着头一起转，液体推动胶质帽和纤毛弯曲，眼睛也看到景物移动，两边信号对得上。',
+      '猛地停下那一刻：脚停住了、眼睛看到沙发没动，可半规管里的淋巴液因为惯性还在转，继续压弯纤毛谎报“还在转”，大脑就觉得屋子天旋地转！',
+    ][s.phase];
+  },
+};
+
+/** 5. 胰岛素与胰高血糖素调血糖：切换饱餐后 vs 空腹运动，看负反馈稳住血糖 */
+export const glucoseBalance: SimDef = {
+  params: [
+    { key: 'state', label: '身体状态', min: 0, max: 2, step: 1, value: 0, labels: ['刚吃饱一大碗饭', '饭后 2 小时（平稳）', '空腹踢球肚子饿'] },
+  ],
+  animated: true,
+  still: 1,
+  draw(s, t) {
+    const st = s.state;
+    const out: string[] = [];
+    out.push(txt(280, 28, '血糖天平（正常约 4~6 毫摩尔/升）：胰岛素管“收”，胰高血糖素管“放”', { size: 13.5, bold: true, color: INK }));
+    // 中间血管
+    out.push(`<rect x="34" y="126" width="492" height="58" rx="29" fill="#ffe3e3" stroke="#e03131" stroke-width="2.5"/>`);
+    const dots = [9, 5, 3][st];
+    for (let i = 0; i < dots; i += 1) {
+      const dx = 66 + ((i * 54 + t * 28) % 420);
+      const dy = 145 + (i % 2) * 18;
+      out.push(`<circle cx="${n(dx)}" cy="${dy}" r="7.5" fill="#ffd43b" stroke="#c27a23" stroke-width="1.8"/>`);
+    }
+    out.push(txt(280, 114, ['饭后葡萄糖大量涌进血液', '血液葡萄糖浓度恰到好处', '运动消耗快，血糖开始偏低'][st], { size: 13, bold: true, color: st === 0 ? HOT : st === 1 ? GREEN : BLUE }));
+
+    // 左下：胰岛指挥官
+    out.push(`<rect x="40" y="206" width="214" height="68" rx="14" fill="#fff9db" stroke="#f59f00" stroke-width="2"/>`);
+    out.push(txt(147, 232, st === 0 ? '📬 胰岛素派出！' : st === 2 ? '📬 胰高血糖素派出！' : '😌 两种激素温和待命', { size: 13.5, bold: true, color: '#b45309' }));
+    out.push(txt(147, 256, st === 0 ? '通知各细胞开门收糖' : st === 2 ? '通知肝脏开仓放粮' : '血糖平稳无需大动作', { size: 12, color: INK }));
+
+    // 右下：肝脏糖原仓库
+    out.push(`<rect x="306" y="206" width="214" height="68" rx="14" fill="#eef9ee" stroke="${GREEN}" stroke-width="2"/>`);
+    out.push(txt(413, 232, '🏦 肝脏与肌肉“糖原仓库”', { size: 13.5, bold: true, color: GREEN }));
+    out.push(txt(413, 256, st === 0 ? '把多余葡萄糖串成糖原存好' : st === 2 ? '把肝糖原拆回葡萄糖补进血里' : '库存充足，随时可取用', { size: 12, color: INK }));
+
+    if (st === 0) out.push(arrow(390, 184, 390, 206, GREEN, 3.5));
+    if (st === 2) out.push(arrow(435, 206, 435, 184, HOT, 3.5));
+
+    out.push(txt(280, 298, '少喝含糖饮料、规律运动，能帮身体里的胰岛素保持灵敏不累坏', { size: 12.5, color: INK }));
+    return out.join('');
+  },
+  readout(s) {
+    return [
+      '刚吃完一大碗米饭：大量葡萄糖吸进血液，胰岛立刻分泌“胰岛素”随血液传信，让细胞加速用糖、肝脏和肌肉把多余糖存成糖原，血糖很快回落正常。',
+      '饭后两小时左右：血糖稳稳停在正常区间（约 4~6 毫摩尔每升），大脑和全身细胞都有稳定的能量供应。',
+      '空腹运动肚子饿时：血糖偏低，胰岛改派“胰高血糖素”出场，通知肝脏把存好的肝糖原拆回葡萄糖放进血液，防止低血糖头晕！',
+    ][s.state];
+  },
+};
+
+const vaccineAb = (day: number, fast: boolean): number =>
+  fast ? Math.min(98, Math.round(98 * (1 - Math.exp(-day / 1.6)))) : day < 4 ? 4 : Math.min(36, Math.round((day - 3) * 6));
+
+/** 6. 疫苗与免疫记忆曲线：对比未接种首次感染 vs 接种后遇真病毒，看抗体爆发速度 */
+export const vaccineDrill: SimDef = {
+  params: [
+    { key: 'vax', label: '是否打过疫苗', min: 0, max: 1, step: 1, value: 1, labels: ['没打疫苗（初次硬扛）', '打过疫苗（有记忆细胞）'] },
+    { key: 'day', label: '遇到真病毒后第几天', min: 1, max: 10, step: 1, value: 4, unit: ' 天' },
+  ],
+  animated: false,
+  draw(s) {
+    const trained = s.vax === 1;
+    const d = s.day;
+    const cur = vaccineAb(d, trained);
+    const out: string[] = [];
+    out.push(txt(280, 28, trained ? '🛡️ 有记忆细胞：真病毒一露头，抗体火箭式飙升！' : '😰 没练过兵：免疫系统从零摸索好几天，病毒趁机大繁殖', { size: 13.5, bold: true, color: trained ? GREEN : HOT }));
+    // 坐标图
+    out.push(`<rect x="34" y="48" width="310" height="206" rx="14" fill="#fff" stroke="#ffe0cc" stroke-width="2"/>`);
+    out.push(`<line x1="64" y1="226" x2="324" y2="226" stroke="${INK}" stroke-width="2"/>`);
+    out.push(`<line x1="64" y1="68" x2="64" y2="226" stroke="${INK}" stroke-width="2"/>`);
+    // 两条对比曲线（淡色慢曲线 + 亮色当前曲线）
+    const slowPts: string[] = [];
+    const fastPts: string[] = [];
+    for (let x = 1; x <= 10; x += 1) {
+      const px = 64 + ((x - 1) / 9) * 252;
+      slowPts.push(`${n(px)},${n(224 - vaccineAb(x, false) * 1.48)}`);
+      fastPts.push(`${n(px)},${n(224 - vaccineAb(x, true) * 1.48)}`);
+    }
+    out.push(`<polyline points="${slowPts.join(' ')}" fill="none" stroke="${trained ? '#ced4da' : HOT}" stroke-width="${trained ? 2.5 : 4}" stroke-dasharray="5 4"/>`);
+    if (trained) out.push(`<polyline points="${fastPts.join(' ')}" fill="none" stroke="${GREEN}" stroke-width="4"/>`);
+    const dotX = 64 + ((d - 1) / 9) * 252;
+    const dotY = 224 - cur * 1.48;
+    out.push(`<circle cx="${n(dotX)}" cy="${n(dotY)}" r="7.5" fill="${trained ? GREEN : HOT}" stroke="#fff" stroke-width="2"/>`);
+    out.push(txt(194, 245, '第 1 天        遇真病毒后天数        第 10 天', { size: 11.5, color: INK }));
+    out.push(txt(124, 74, '抗体数量', { size: 12, color: INK, bold: true }));
+
+    // 右侧状态卡
+    out.push(`<rect x="360" y="48" width="174" height="206" rx="14" fill="#fff" stroke="#ffe0cc" stroke-width="2"/>`);
+    out.push(txt(447, 78, `第 ${d} 天战况`, { size: 15, bold: true, color: INK }));
+    out.push(txt(447, 114, `抗体水平：${cur} 份`, { size: 14, bold: true, color: trained ? GREEN : HOT }));
+    out.push(txt(447, 152, trained ? '🧠 记忆细胞秒认通缉照' : '🔍 还在挨个试哪种抗体对路', { size: 12, color: PURPLE, bold: true }));
+    out.push(txt(447, 188, trained ? (d >= 3 ? '✅ 病毒已被围剿清除' : '⚡ 大批抗体正在出厂') : (d <= 5 ? '🤒 病毒占上风，发烧难受' : '😮‍💨 抗体总算慢慢追上来了'), { size: 12, bold: true, color: trained ? GREEN : HOT }));
+    out.push(txt(447, 228, '疫苗本身早已代谢排走', { size: 11.5, color: INK }));
+
+    out.push(txt(280, 288, '疫苗不是药水留在血里杀毒，而是帮身体提前练出一支长寿的“记忆特种兵”', { size: 12.5, bold: true, color: INK }));
+    return out.join('');
+  },
+  readout(s) {
+    if (s.vax === 1) {
+      return `打过疫苗（第 ${s.day} 天）：体内早就存着认得该病毒的记忆细胞，真病毒一露面就迅速唤醒二次免疫，抗体飙到 ${vaccineAb(s.day, true)} 份，往往还没生病就把病毒清光了！`;
+    }
+    return `没打过疫苗（第 ${s.day} 天）：免疫系统第一次见这个敌人，前几天几乎造不出专门抗体（当前仅 ${vaccineAb(s.day, false)} 份），病毒趁机大量复制让人大病一场。`;
+  },
+};

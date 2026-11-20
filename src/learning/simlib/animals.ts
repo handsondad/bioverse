@@ -129,3 +129,154 @@ export const birdCompass: SimDef = {
     return `两套主导航同时失灵（如强风暴叠加干扰）：候鸟很容易偏航，说明它们真的在靠多种自然线索认路（偏离约 ${r1(95)} km 示意）。`;
   },
 };
+
+/** 4. 鱼鳃在水中展开 vs 离水粘连：切换鱼所处环境，看鳃丝有效交换面积与血氧 */
+export const gillFilament: SimDef = {
+  params: [
+    { key: 'env', label: '鱼在哪里', min: 0, max: 1, step: 1, value: 0, labels: ['在水里（鳃丝浮起展开）', '捞到岸上（鳃丝粘连成团）'] },
+  ],
+  animated: true,
+  still: 1,
+  draw(s, t) {
+    const inWater = s.env === 0;
+    const area = inWater ? 95 : 14;
+    const o2In = inWater ? 90 : 16;
+    const out: string[] = [];
+    out.push(`<rect x="20" y="44" width="256" height="196" rx="16" fill="${inWater ? '#d0ebff' : '#fff4e6'}" stroke="${inWater ? BLUE : '#f59f00'}" stroke-width="2.5"/>`);
+    out.push(txt(148, 70, inWater ? '💧 水托住每一根细软鳃丝' : '🌬️ 空气氧占 21%，鳃丝却塌粘在一起', { size: 12.5, bold: true, color: inWater ? BLUE : HOT }));
+    out.push(`<path d="M74 96 Q58 148 74 204" fill="none" stroke="#f08c00" stroke-width="8" stroke-linecap="round"/>`);
+    for (let i = 0; i < 11; i += 1) {
+      const y0 = 102 + i * 9.5;
+      const sway = inWater ? Math.sin(t * 3 + i * 0.5) * 3 : 0;
+      const yEnd = inWater ? 92 + i * 11.5 + sway : 146 + (i - 5) * 1.6;
+      out.push(`<path d="M76 ${n(y0)} Q148 ${n((y0 + yEnd) / 2)} 222 ${n(yEnd)}" fill="none" stroke="#e03131" stroke-width="3.2" stroke-linecap="round"/>`);
+    }
+    out.push(txt(148, 224, inWater ? '像水中展开的红羽毛，水流顺畅穿过' : '像出水的湿毛笔，表面全糊住了！', { size: 12, bold: true, color: inWater ? GREEN : HOT }));
+
+    out.push(`<rect x="294" y="44" width="246" height="196" rx="16" fill="#fff" stroke="#ffe0cc" stroke-width="2"/>`);
+    out.push(txt(417, 76, '气体交换成绩单', { size: 15, bold: true, color: INK }));
+    out.push(txt(314, 116, `摊开的有效面积：${area}%`, { size: 13, anchor: 'start', bold: true, color: INK }));
+    out.push(`<rect x="314" y="124" width="204" height="16" rx="8" fill="#f4efe9"/><rect x="314" y="124" width="${n(area * 2.04)}" height="16" rx="8" fill="${inWater ? GREEN : HOT}"/>`);
+    out.push(txt(314, 174, `血液吸进的氧气：${o2In}%`, { size: 13, anchor: 'start', bold: true, color: INK }));
+    out.push(`<rect x="314" y="182" width="204" height="16" rx="8" fill="#f4efe9"/><rect x="314" y="182" width="${n(o2In * 2.04)}" height="16" rx="8" fill="${inWater ? BLUE : HOT}"/>`);
+    out.push(txt(417, 222, inWater ? '逆流交换可吸走水里近八成溶解氧' : '里面夹层的鳃小片根本碰不到空气', { size: 11.5, color: INK }));
+
+    out.push(txt(280, 26, '鱼在岸上憋死不是因为空气没氧，而是呼吸“摊子”塌成了一团', { size: 14, bold: true, color: INK }));
+    out.push(txt(280, 286, '买活鱼或观察小鱼时别让鳃干掉，我们的肺靠支气管软骨和肺泡撑住才不怕塌', { size: 12.5, color: INK }));
+    return out.join('');
+  },
+  readout(s) {
+    return s.env === 0
+      ? '在水里：水的浮力把成千上万根细软鳃丝和鳃小片托开，摊出巨大表面积，溶解氧源源不断进入毛细血管。'
+      : '离开水到岸上：空气氧气虽然比水里多得多，但失去浮力的鳃丝立刻粘成一绺，有效接触面积只剩零头，鱼很快就缺氧窒息！';
+  },
+};
+
+/** 5. 毛毛虫化蛹成蝶：拖动蛹期进度，透视旧组织拆解与“成虫盘”长出翅足复眼 */
+export const pupaRebuild: SimDef = {
+  params: [
+    { key: 'day', label: '完全变态阶段', min: 0, max: 3, step: 1, value: 1, labels: ['幼虫（藏着成虫盘）', '蛹初期（酶拆旧组织）', '蛹后期（成虫盘组装）', '羽化成蝴蝶'] },
+  ],
+  animated: false,
+  draw(s) {
+    const d = s.day;
+    const out: string[] = [];
+    out.push(txt(280, 28, '蛹壳透视：不是光长对翅膀，而是用“营养汤 + 成虫盘”重装全身！', { size: 13.5, bold: true, color: INK }));
+    out.push(`<rect x="30" y="48" width="500" height="206" rx="18" fill="#f6fbf4" stroke="#b7e4c7" stroke-width="2"/>`);
+    if (d === 0) {
+      for (let i = 0; i < 6; i += 1) {
+        out.push(`<circle cx="${160 + i * 38}" cy="148" r="24" fill="#74c69d" stroke="${GREEN}" stroke-width="2.5"/>`);
+      }
+      for (const dx of [198, 236, 274]) {
+        out.push(`<circle cx="${dx}" cy="142" r="6" fill="${HOT}" stroke="#fff" stroke-width="1.5"/>`);
+      }
+      out.push(txt(280, 214, '毛毛虫身体里早就备好了微小的“成虫盘”（橙点：未来翅膀和复眼的种子）', { size: 12.5, bold: true, color: HOT }));
+    } else if (d === 1) {
+      out.push(`<line x1="280" y1="54" x2="280" y2="82" stroke="#5d4e37" stroke-width="4"/>`);
+      out.push(`<ellipse cx="280" cy="144" rx="54" ry="66" fill="#d8f3dc" stroke="${GREEN}" stroke-width="4"/>`);
+      out.push(`<ellipse cx="280" cy="152" rx="40" ry="46" fill="#fff3bf"/>`);
+      for (const [cx, cy] of [[262, 124], [298, 124], [260, 156], [300, 156]]) {
+        out.push(`<circle cx="${cx}" cy="${cy}" r="9" fill="${HOT}" stroke="#fff" stroke-width="2"/>`);
+      }
+      out.push(txt(280, 230, '蛹壳内：酶把啃叶子的旧肌肉和肠道拆成蛋白质营养汤，成虫盘和主气管完好保留！', { size: 12.5, bold: true, color: INK }));
+    } else if (d === 2) {
+      out.push(`<line x1="280" y1="54" x2="280" y2="82" stroke="#5d4e37" stroke-width="4"/>`);
+      out.push(`<ellipse cx="280" cy="144" rx="54" ry="66" fill="#e9fac8" stroke="${GREEN}" stroke-width="4"/>`);
+      out.push(`<ellipse cx="264" cy="146" rx="18" ry="34" fill="#ff9f43" stroke="${HOT}" stroke-width="2"/>`);
+      out.push(`<ellipse cx="296" cy="146" rx="18" ry="34" fill="#ff9f43" stroke="${HOT}" stroke-width="2"/>`);
+      out.push(`<circle cx="280" cy="106" r="12" fill="#5c4033"/>`);
+      out.push(txt(280, 230, '成虫盘吸取营养汤高速分裂上千倍，折叠好的彩翅、复眼和吸管嘴已经成型！', { size: 12.5, bold: true, color: GREEN }));
+    } else {
+      out.push(`<ellipse cx="236" cy="132" rx="48" ry="32" fill="#ff922b" stroke="#5c4033" stroke-width="3"/>`);
+      out.push(`<ellipse cx="324" cy="132" rx="48" ry="32" fill="#ff922b" stroke="#5c4033" stroke-width="3"/>`);
+      out.push(`<ellipse cx="246" cy="166" rx="34" ry="22" fill="#ffd43b" stroke="#5c4033" stroke-width="2.5"/>`);
+      out.push(`<ellipse cx="314" cy="166" rx="34" ry="22" fill="#ffd43b" stroke="#5c4033" stroke-width="2.5"/>`);
+      out.push(`<rect x="274" y="106" width="12" height="74" rx="6" fill="#3d2c1e"/>`);
+      out.push(txt(280, 230, '破蛹羽化！体液泵进翅脉撑开翅膀，吃树叶的幼虫变成吸花蜜的蝴蝶', { size: 12.5, bold: true, color: HOT }));
+    }
+    out.push(txt(280, 290, '幼虫啃叶、成虫吸蜜，两代不抢同一种食物，这是完全变态昆虫超成功的秘诀', { size: 12.5, color: INK }));
+    return out.join('');
+  },
+  readout(s) {
+    return [
+      '毛毛虫幼虫期：虽然看着只会狂吃树叶，体内却早已藏好一对对“成虫盘”种子细胞团，等待化蛹信号。',
+      '刚化蛹时：消化酶把幼虫大部分旧组织拆成富含蛋白质的营养汤，但成虫盘、呼吸气管和部分记忆神经被精准保护下来！',
+      '蛹期后半段：成虫盘吃着营养汤飞速分裂分化，原本几十个细胞的翅盘长成几万个细胞的彩色翅膀。',
+      '羽化出蛹：蝴蝶钻出蛹壳，把体液打进翅膀脉络撑平晾干，彻底完成生命的华丽重装！',
+    ][s.day];
+  },
+};
+
+/** 6. 企鹅脚掌逆流热交换：切换普通血管 vs 逆流热交换网，看沿途温度与漏热量 */
+export const penguinFeet: SimDef = {
+  params: [
+    { key: 'net', label: '腿部血管排布', min: 0, max: 1, step: 1, value: 1, labels: ['分开走（假设无热交换）', '紧贴逆流热交换（真实企鹅）'] },
+  ],
+  animated: true,
+  still: 1,
+  draw(s, t) {
+    const smart = s.net === 1;
+    const footTemp = smart ? 3 : 28;
+    const heatLoss = smart ? 12 : 88;
+    const out: string[] = [];
+    out.push(`<rect x="20" y="230" width="520" height="44" rx="12" fill="#d0ebff" stroke="#74c0fc" stroke-width="2"/>`);
+    out.push(txt(152, 257, '🧊 南极冰面 −30 ℃', { size: 13.5, bold: true, color: BLUE }));
+    out.push(`<rect x="52" y="42" width="204" height="50" rx="16" fill="#ffe8cc" stroke="#d97706" stroke-width="2.5"/>`);
+    out.push(txt(154, 72, '🐧 羽毛躯干核心：39 ℃', { size: 14, bold: true, color: '#7c2d12' }));
+    const ax = smart ? 138 : 98;
+    const vx = smart ? 170 : 210;
+    out.push(`<line x1="${ax}" y1="92" x2="${ax}" y2="216" stroke="${HOT}" stroke-width="12" stroke-linecap="round"/>`);
+    out.push(`<line x1="${vx}" y1="216" x2="${vx}" y2="92" stroke="${BLUE}" stroke-width="12" stroke-linecap="round"/>`);
+    if (smart) {
+      const shift = (t * 16) % 16;
+      for (let y = 112; y <= 192; y += 26) {
+        out.push(`<line x1="${ax + 6}" y1="${n(y + shift * 0.2)}" x2="${vx - 6}" y2="${n(y + shift * 0.2)}" stroke="#ff922b" stroke-width="3"/>`);
+      }
+      out.push(txt(74, 116, '39℃', { size: 12, bold: true, color: HOT }));
+      out.push(txt(74, 160, '18℃', { size: 12, bold: true, color: '#e67700' }));
+      out.push(txt(74, 204, '4℃', { size: 12, bold: true, color: BLUE }));
+      out.push(txt(232, 116, '36℃ 回身体', { size: 12, bold: true, color: '#e67700' }));
+      out.push(txt(232, 204, '2℃ 起步', { size: 12, bold: true, color: BLUE }));
+    } else {
+      out.push(txt(56, 160, '39℃ 直冲脚底', { size: 11.5, bold: true, color: HOT }));
+      out.push(txt(248, 160, '冰血直回心脏', { size: 11.5, bold: true, color: BLUE }));
+    }
+    out.push(`<ellipse cx="154" cy="224" rx="52" ry="12" fill="${smart ? '#ffd8a8' : '#ffa8a8'}" stroke="#c9623b" stroke-width="2.5"/>`);
+
+    out.push(`<rect x="302" y="50" width="234" height="172" rx="16" fill="#fff" stroke="#ffe0cc" stroke-width="2"/>`);
+    out.push(txt(419, 82, `脚掌实测温度：约 ${footTemp} ℃`, { size: 14.5, bold: true, color: smart ? GREEN : HOT }));
+    out.push(txt(320, 122, `白白散到冰面的热量：${heatLoss}%`, { size: 12.5, anchor: 'start', bold: true, color: INK }));
+    out.push(`<rect x="320" y="132" width="196" height="16" rx="8" fill="#f4efe9"/><rect x="320" y="132" width="${n(heatLoss * 1.96)}" height="16" rx="8" fill="${smart ? GREEN : HOT}"/>`);
+    out.push(txt(419, 178, smart ? '✅ 略高于 0 ℃：既不结冰，也不化冰粘脚' : '❌ 狂漏全身热量，还会化冰再冻住脚掌！', { size: 12, bold: true, color: smart ? GREEN : HOT }));
+    out.push(txt(419, 204, '脚里多是肌腱韧带，靠腿上肌肉拉线控制', { size: 11.5, color: INK }));
+
+    out.push(txt(280, 24, '逆流热交换：下楼的热血顺手把热量交接给上楼的冷血', { size: 14, bold: true, color: INK }));
+    out.push(txt(280, 298, '鸭子、海鸥站在冰河里不冻脚，用的也是同一套逆流热交换血管网', { size: 12.5, color: INK }));
+    return out.join('');
+  },
+  readout(s) {
+    return s.net === 1
+      ? '真实企鹅腿里的动脉和静脉紧紧贴在一起：往下流的热血一路把热量传给往上回流的冷血，脚掌稳在 1~4 ℃，不冻伤又省热！'
+      : '假如动静脉分开走不交接热量：39 ℃ 的热血直接冲进脚掌踩在冰上，不仅飞快耗光全身热量，还会融化冰面再把脚冻住。';
+  },
+};

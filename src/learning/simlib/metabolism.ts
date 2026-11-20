@@ -164,3 +164,154 @@ export const enzymeTemp: SimDef = {
     return `${r1(s.temp)} ℃ 附近：酶的凹槽形态最稳定、碰撞又够勤，催化切开底物的速度非常高。`;
   },
 };
+
+/** 4. 萤火虫冷光 vs 白炽灯泡：调能量零钱 ATP 投入，看光能与热能分配 */
+export const fireflyAtp: SimDef = {
+  params: [
+    { key: 'dev', label: '谁在发光', min: 0, max: 1, step: 1, value: 0, labels: ['萤火虫发光器（冷光）', '老式白炽灯泡（热光）'] },
+    { key: 'atp', label: '供能强弱', min: 0, max: 100, step: 25, value: 75, unit: '%' },
+  ],
+  animated: true,
+  still: 1,
+  draw(s, t) {
+    const bug = s.dev === 0;
+    const p = s.atp;
+    const lightPct = p === 0 ? 0 : bug ? 85 : 10;
+    const heatPct = p === 0 ? 0 : 100 - lightPct;
+    const glow = (p / 100) * (0.65 + 0.35 * Math.sin(t * 4));
+    const out: string[] = [];
+    out.push(`<rect x="20" y="44" width="236" height="218" rx="16" fill="#1e2a24"/>`);
+    if (p > 0) {
+      out.push(`<circle cx="138" cy="154" r="${n(34 + p * 0.42)}" fill="${bug ? '#c5f667' : '#ffd43b'}" opacity="${n(glow * 0.55)}"/>`);
+    }
+    if (bug) {
+      out.push(`<ellipse cx="138" cy="134" rx="22" ry="34" fill="#495057"/>`);
+      out.push(`<ellipse cx="138" cy="170" rx="18" ry="14" fill="${p > 0 ? '#d8f5a2' : '#868e96'}"/>`);
+      out.push(txt(138, 82, '荧光素 + 荧光素酶 + O₂', { size: 12, color: '#d8f5a2', bold: true, plain: true }));
+      out.push(txt(138, 236, p > 0 ? '手摸温度：约 25 ℃（不烫手！）' : '缺了 ATP，灯笼熄灭', { size: 12.5, color: '#ffffff', bold: true, plain: true }));
+    } else {
+      out.push(`<circle cx="138" cy="146" r="32" fill="${p > 0 ? '#ffe066' : '#868e96'}" stroke="#dee2e6" stroke-width="2.5"/>`);
+      out.push(`<rect x="124" y="178" width="28" height="18" rx="4" fill="#adb5bd"/>`);
+      out.push(txt(138, 82, '电流把钨丝烧到上千摄氏度', { size: 12, color: '#ffd8a8', bold: true, plain: true }));
+      out.push(txt(138, 236, p > 0 ? '表面烫手：超 100 ℃！' : '断电熄灭', { size: 12.5, color: '#ffa8a8', bold: true, plain: true }));
+    }
+    // 右侧能量去向对比
+    out.push(`<rect x="276" y="44" width="264" height="218" rx="16" fill="#fff" stroke="#ffe0cc" stroke-width="2"/>`);
+    out.push(txt(408, 76, bug ? 'ATP 化学能直接变光' : '电能先烧热灯丝才发光', { size: 14, bold: true, color: INK }));
+    out.push(txt(296, 118, `变成可见光：${lightPct}%`, { size: 13, anchor: 'start', bold: true, color: GREEN }));
+    out.push(`<rect x="296" y="128" width="220" height="18" rx="9" fill="#f4efe9"/><rect x="296" y="128" width="${n(lightPct * 2.2)}" height="18" rx="9" fill="#94d82d"/>`);
+    out.push(txt(296, 182, `散成热量：${heatPct}%`, { size: 13, anchor: 'start', bold: true, color: HOT }));
+    out.push(`<rect x="296" y="192" width="220" height="18" rx="9" fill="#f4efe9"/><rect x="296" y="192" width="${n(heatPct * 2.2)}" height="18" rx="9" fill="${HOT}"/>`);
+    out.push(txt(408, 240, bug ? '量子产率约 41%，几乎不产废热' : '约九成能量都白白变成热散掉了', { size: 12, color: INK }));
+    out.push(txt(280, 28, '细胞的能量零钱 ATP：随取随用，驱动萤火虫点亮夏夜冷光', { size: 14, bold: true, color: INK }));
+    out.push(txt(280, 294, '野外看萤火虫请关掉手电筒、不捕捉，让它们安心用闪光找伙伴', { size: 12.5, color: GREEN, bold: true }));
+    return out.join('');
+  },
+  readout(s) {
+    if (s.atp === 0) return '供能为 0%：没有能量零钱 ATP 激活荧光素，就算有荧光素酶和氧气也发不出光。';
+    return s.dev === 0
+      ? `萤火虫供能 ${s.atp}%：荧光素酶利用 ATP 把化学能直接转成黄绿光（发光量子产率约 41%），几乎不发热，摸着凉丝丝！`
+      : `白炽灯泡供能 ${s.atp}%：必须先把灯丝烧得滚烫才能发光，约九成能量变成烫手的热量浪费掉了。`;
+  },
+};
+
+/** 5. 菠萝扎嘴与蛋白酶：切换生吃 / 泡淡盐水 / 加热煮熟，看草酸钙针晶与蛋白酶变化 */
+export const bromelainMouth: SimDef = {
+  params: [
+    { key: 'prep', label: '菠萝怎么处理', min: 0, max: 2, step: 1, value: 0, labels: ['直接生吃', '泡淡盐水 10 分钟', '加热到 75 ℃ 煮熟'] },
+  ],
+  animated: false,
+  draw(s) {
+    const p = s.prep;
+    const enzymeActive = [100, 72, 0][p];
+    const sting = [92, 52, 8][p];
+    const out: string[] = [];
+    out.push(txt(280, 30, '鲜菠萝“双武器”：草酸钙小针晶扎微口 + 菠萝蛋白酶啃黏膜蛋白', { size: 13.5, bold: true, color: INK }));
+    // 左侧：显微镜下的菠萝果肉武器
+    out.push(`<rect x="26" y="52" width="246" height="186" rx="16" fill="#fff9db" stroke="#f59f00" stroke-width="2.5"/>`);
+    out.push(txt(149, 78, '🍍 菠萝汁里的两样东西', { size: 14, bold: true, color: '#b45309' }));
+    // 草酸钙针晶
+    for (let i = 0; i < 4; i += 1) {
+      const y = 104 + i * 16;
+      out.push(`<line x1="54" y1="${y}" x2="118" y2="${y - 6}" stroke="#868e96" stroke-width="2.5" stroke-linecap="round"/>`);
+    }
+    out.push(txt(86, 184, '草酸钙针晶', { size: 12, color: INK, bold: true }));
+    out.push(txt(86, 204, p === 2 ? '煮软冲散' : '微米级小细针', { size: 11.5, color: INK }));
+    // 菠萝蛋白酶吃豆人/变形团
+    if (p < 2) {
+      out.push(`<path d="M202 134 L228 118 A30 30 0 1 0 228 150 Z" fill="${HOT}"/>`);
+      out.push(txt(202, 184, '菠萝蛋白酶', { size: 12, color: HOT, bold: true }));
+      out.push(txt(202, 204, p === 0 ? '全速剪蛋白质！' : '还在！没被盐杀死', { size: 11.5, color: HOT, bold: true }));
+    } else {
+      out.push(`<path d="M174 142 Q192 114 210 138 T232 136" fill="none" stroke="#adb5bd" stroke-width="6" stroke-linecap="round"/>`);
+      out.push(txt(202, 184, '菠萝蛋白酶', { size: 12, color: GREEN, bold: true }));
+      out.push(txt(202, 204, '高温变性彻底失活', { size: 11.5, color: GREEN, bold: true }));
+    }
+    // 右侧：舌头感受与酶活性
+    out.push(`<rect x="292" y="52" width="242" height="186" rx="16" fill="#fff" stroke="#ffe0cc" stroke-width="2"/>`);
+    out.push(txt(413, 82, ['👅 舌尖又麻又刺痛！', '👅 甜味更显，吃多仍微麻', '😋 酸甜温和，一点不扎嘴！'][p], { size: 14, bold: true, color: p === 2 ? GREEN : HOT }));
+    out.push(txt(312, 122, `蛋白酶剩余活性：${enzymeActive}%`, { size: 13, anchor: 'start', bold: true, color: INK }));
+    out.push(`<rect x="312" y="130" width="200" height="15" rx="7.5" fill="#f4efe9"/><rect x="312" y="130" width="${n(enzymeActive * 2)}" height="15" rx="7.5" fill="${p === 2 ? GREEN : '#ff9f43'}"/>`);
+    out.push(txt(312, 178, `舌头刺痛感：${sting}%`, { size: 13, anchor: 'start', bold: true, color: INK }));
+    out.push(`<rect x="312" y="186" width="200" height="15" rx="7.5" fill="#f4efe9"/><rect x="312" y="186" width="${n(sting * 2)}" height="15" rx="7.5" fill="${sting > 40 ? HOT : GREEN}"/>`);
+
+    out.push(txt(280, 268, p === 1 ? '淡盐水主要冲掉表面汁液、促唾液保护黏膜，并不能把蛋白酶彻底灭活' : p === 2 ? '加热超过 70 ℃ 把蛋白酶结构烫塌，做菠萝咕咾肉还能顺便把肉变嫩！' : '口腔黏膜细胞每隔几天就会换新，麻一会儿自己就能长好', { size: 12.5, bold: true, color: p === 2 ? GREEN : INK }));
+    out.push(txt(280, 296, '对菠萝严重过敏（嘴唇红肿呼吸不畅）不是普通扎嘴，要立刻停吃就医', { size: 12, color: INK }));
+    return out.join('');
+  },
+  readout(s) {
+    return [
+      '直接生吃：草酸钙微针在舌头表面扎出微小缺口，菠萝蛋白酶趁机分解口腔表面蛋白质，所以火辣辣地刺痛。',
+      '泡淡盐水：冲走部分表面针晶、咸味衬托甜味并刺激口水保护黏膜，但绝大部分菠萝蛋白酶依然活着，吃多了还会麻。',
+      '75 ℃ 加热煮熟（或菠萝罐头）：高温让菠萝蛋白酶三维结构彻底变性失活，再吃就一点也不扎舌头啦！',
+    ][s.prep];
+  },
+};
+
+/** 6. 减掉的脂肪去哪儿了：拖动减掉的脂肪质量，看 84% 呼出 CO₂ 与 16% 变成水 */
+export const fatExhale: SimDef = {
+  params: [
+    { key: 'kg', label: '氧化分解掉的脂肪', min: 1, max: 10, step: 1, value: 10, unit: ' 千克' },
+  ],
+  animated: true,
+  still: 1,
+  draw(s, t) {
+    const fat = s.kg;
+    const o2 = fat * 2.9;
+    const co2FromFat = fat * 0.84;
+    const h2oFromFat = fat * 0.16;
+    const out: string[] = [];
+    out.push(txt(280, 30, `分解 ${fat} 千克脂肪的原子去向账本（物质守恒，不会凭空变没！）`, { size: 14, bold: true, color: INK }));
+    // 左：脂肪块 + 吸入氧气
+    const rFat = 24 + fat * 2.2;
+    out.push(`<circle cx="106" cy="132" r="${n(rFat)}" fill="#ffd43b" stroke="#d97706" stroke-width="3"/>`);
+    out.push(txt(106, 128, '脂肪', { size: 14, bold: true, color: '#7c2d12' }));
+    out.push(txt(106, 148, `${fat} kg`, { size: 14, bold: true, color: '#7c2d12' }));
+    out.push(txt(106, 218, `+ 吸入氧气约 ${r1(o2)} kg`, { size: 12.5, bold: true, color: BLUE }));
+
+    out.push(arrow(168, 126, 256, 98, GREEN, 4));
+    out.push(arrow(168, 152, 256, 196, BLUE, 3.5));
+
+    // 右上：84% 从肺呼出 CO2
+    out.push(`<rect x="266" y="54" width="268" height="92" rx="16" fill="#e6f4e8" stroke="${GREEN}" stroke-width="3"/>`);
+    out.push(txt(400, 84, `🫁 肺呼出二氧化碳：${r1(co2FromFat)} kg（84%）`, { size: 14.5, bold: true, color: GREEN }));
+    out.push(txt(400, 110, '脂肪里的碳原子全靠一呼一吸排进空气！', { size: 12.5, color: INK }));
+    const u = (t * 0.6) % 1;
+    for (let i = 0; i < 3; i += 1) {
+      const bx = 330 + i * 65 + u * 18;
+      out.push(`<circle cx="${n(bx)}" cy="130" r="7" fill="#b2f2bb" stroke="${GREEN}" stroke-width="1.5"/>`);
+    }
+
+    // 右下：16% 变成水
+    out.push(`<rect x="266" y="162" width="268" height="82" rx="16" fill="#e7f5ff" stroke="${BLUE}" stroke-width="2.5"/>`);
+    out.push(txt(400, 192, `💧 变成水排出：${r1(h2oFromFat)} kg（16%）`, { size: 14.5, bold: true, color: BLUE }));
+    out.push(txt(400, 218, '随尿液、汗液、呼吸水汽离开身体', { size: 12.5, color: INK }));
+
+    out.push(txt(280, 272, '⚠️ 光坐着故意猛喘气可减不了肥（只会头晕），得靠运动让肌肉真正消耗燃料！', { size: 12.5, bold: true, color: HOT }));
+    out.push(txt(280, 298, '流汗掉的体重绝大部分是降温用的水，喝杯水就回来了', { size: 12.5, color: INK }));
+    return out.join('');
+  },
+  readout(s) {
+    return `每真正减掉 ${s.kg} 千克脂肪，需要吸进约 ${r1(s.kg * 2.9)} 千克氧气：其中 ${r1(s.kg * 0.84)} 千克（84%）变成二氧化碳从肺呼出，${r1(s.kg * 0.16)} 千克（16%）变成水排出——肺才是减脂最大的排泄通道！`;
+  },
+};
