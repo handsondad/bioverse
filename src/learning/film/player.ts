@@ -99,6 +99,8 @@ export function mountFilm(host: HTMLElement, film: Film, options: Options = {}):
   let destroyed = false;
   let audio: HTMLAudioElement | undefined;
   let audioSrc = '';
+  /** 提前把下一句配音拉进缓存，换句时不用干等网络 */
+  let upcoming: HTMLAudioElement | undefined;
   /** 正在放的那句配音；放着的时候动画的时钟跟着声音走 */
   let clip: SpokenLine | null = null;
 
@@ -172,6 +174,12 @@ export function mountFilm(host: HTMLElement, film: Film, options: Options = {}):
       player.src = src;
     }
     clip = found.line;
+    const next = lines[lines.indexOf(found.line) + 1];
+    if (next) {
+      upcoming ??= Object.assign(new Audio(), { preload: 'auto' });
+      const nextSrc = voice.src(next.turn, next.who);
+      if (upcoming.getAttribute('src') !== nextSrc) upcoming.src = nextSrc;
+    }
     player.currentTime = Math.max(at - found.line.start, 0);
     claimVoice(playerId);
     player.play()?.catch((error: unknown) => {
@@ -326,6 +334,7 @@ export function mountFilm(host: HTMLElement, film: Film, options: Options = {}):
       caf(frame);
       stopVoice();
       audio?.removeAttribute('src');
+      upcoming?.removeAttribute('src');
       resize?.disconnect();
       autoplay?.disconnect();
       thisTab.delete(onThisTab);

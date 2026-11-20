@@ -7,5 +7,7 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
+    // Three.js stays one lazy vendor chunk (~602 kB) loaded only by the home planet; the 3D labs are standalone iframes.
+    chunkSizeWarningLimit: 650,
   },
 });

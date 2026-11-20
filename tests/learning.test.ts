@@ -160,9 +160,16 @@ describe('learning workspace', () => {
     navigate('#topic/metabolism');
     expect(document.querySelector('.page-top h1')?.textContent).toContain('能量与呼吸');
     navigate('#q/enzyme-step');
+    await vi.dynamicImportSettled();
     expect(document.querySelector('.page-top h1')?.textContent).toBe(story.title);
     expect(document.querySelector('.page-lab')?.getAttribute('href')).toBe('#lab/enzyme-step');
     expect(readProgress().started).toEqual(['enzyme-step']);
+
+    navigate('#q/bread-sweet-chew');
+    navigate('#topic/metabolism');
+    await vi.dynamicImportSettled();
+    expect(document.querySelector('.qa-page')).toBeNull();
+    expect(document.querySelector('.page-top h1')?.textContent).toContain('能量与呼吸');
   });
 
   it('gathers all 5 biology labs under #labs and runs each on #lab/<slug>', async () => {
