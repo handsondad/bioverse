@@ -1,0 +1,114 @@
+[
+  {
+    "slug": "plasmolysis-step",
+    "subject": "bio",
+    "title": "植物细胞的吸水和失水",
+    "type": "原理与现象",
+    "question": "菜叶泡在清水里会变硬挺，撒了盐会出水——植物细胞怎样吸水和失水？",
+    "textbook": [
+      "必修1 分子与细胞 · 第4章 细胞的物质输入和输出 · 第1节 被动运输 · 探究·实践：探究植物细胞的吸水和失水"
+    ],
+    "steps": [
+      "渗透",
+      "原生质层",
+      "失水",
+      "水去哪",
+      "复原",
+      "甘油",
+      "测浓度",
+      "考核"
+    ],
+    "file": "courses/plasmolysis-step.html",
+    "cover": "covers/plasmolysis-step.webp"
+  },
+  {
+    "slug": "transport-step",
+    "subject": "bio",
+    "title": "物质跨膜运输",
+    "type": "原理与现象",
+    "question": "同一片细胞膜，为什么氧能自己穿过去、葡萄糖要好几个蛋白帮忙、K⁺ 还能逆着浓度往里走？",
+    "textbook": [
+      "必修1 分子与细胞 · 第4章 细胞的物质输入和输出"
+    ],
+    "steps": [
+      "自由扩散",
+      "选择透过",
+      "协助扩散",
+      "载体与通道",
+      "主动运输",
+      "胞吞胞吐",
+      "汇总",
+      "考核"
+    ],
+    "file": "courses/transport-step.html",
+    "cover": "covers/transport-step.webp"
+  },
+  {
+    "slug": "impulse-step",
+    "subject": "bio",
+    "title": "神经冲动的产生和传导",
+    "type": "原理与现象",
+    "question": "发令枪响后 0.1 s 内起跑就算抢跑（教材 p.27）——兴奋在身体里怎样「跑」过去？",
+    "textbook": [
+      "选择性必修1 稳态与调节 · 第2章 神经调节 · 第3节 神经冲动的产生和传导"
+    ],
+    "steps": [
+      "神经冲动",
+      "静息电位",
+      "动作电位",
+      "局部电流",
+      "突触",
+      "单向与延搁",
+      "可卡因",
+      "膜外 Na⁺",
+      "考核"
+    ],
+    "file": "courses/impulse-step.html",
+    "cover": "covers/impulse-step.webp"
+  },
+  {
+    "slug": "mitosis-step",
+    "subject": "bio",
+    "title": "观察根尖分生区组织细胞的有丝分裂",
+    "type": "原理与现象",
+    "question": "一根洋葱根尖上，哪些细胞正在分裂？它们分裂一次各要多久？",
+    "textbook": [
+      "必修1 分子与细胞 · 第6章 细胞的生命历程 · 第1节 细胞的增殖 · 探究·实践：观察根尖分生区组织细胞的有丝分裂"
+    ],
+    "steps": [
+      "制片",
+      "找分生区",
+      "前期",
+      "中期",
+      "后期",
+      "末期",
+      "计数",
+      "算时长",
+      "考核"
+    ],
+    "file": "courses/mitosis-step.html",
+    "cover": "covers/mitosis-step.webp"
+  },
+  {
+    "slug": "enzyme-step",
+    "subject": "bio",
+    "title": "影响酶活性的条件",
+    "type": "原理与现象",
+    "question": "同一支酶，为什么放进沸水里就再也救不回来，放进冰水里却还能醒过来？",
+    "textbook": [
+      "必修1 分子与细胞 · 第5章 细胞的能量供应和利用 · 第1节 降低化学反应活化能的酶 · 探究·实践：影响酶活性的条件"
+    ],
+    "steps": [
+      "认识实验台",
+      "温度",
+      "pH",
+      "高温不可逆",
+      "低温可恢复",
+      "看进去",
+      "过酸过碱",
+      "考核 · 当实验员"
+    ],
+    "file": "courses/enzyme-step.html",
+    "cover": "covers/enzyme-step.webp"
+  }
+]

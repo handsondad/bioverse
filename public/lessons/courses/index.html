@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3D 实验台目录 · 生物奇遇记</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Ma+Shan+Zheng&display=swap"><link rel="stylesheet" href="../../theme/tokens.css"><style>
+*{box-sizing:border-box}body{margin:0;padding:24px 20px 44px;background:var(--cv-page);background-attachment:fixed;color:var(--cv-text);font:16px/1.7 var(--cv-font)}
+.wrap{max-width:1180px;margin:0 auto}header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+h1{margin:0;font-size:clamp(1.4rem,2.6vw,1.9rem)}p{margin:4px 0 0;color:var(--cv-muted);font-size:14.5px}
+.back{display:inline-flex;padding:8px 16px;border:2px solid var(--cv-border);border-radius:999px;background:var(--cv-surface);color:var(--cv-text-2);font-size:14px;font-weight:700;text-decoration:none}
+.back:hover{border-color:#ffc58f}main{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:20px 0 28px}
+main a{display:grid;align-content:start;gap:6px;padding:10px 10px 12px;border:2px solid var(--cv-border);border-radius:20px;text-decoration:none;background:var(--cv-surface);color:var(--cv-text);box-shadow:var(--cv-shadow-sm);transition:transform .2s,border-color .15s,box-shadow .2s}
+main a:hover{transform:translateY(-2px);border-color:#ffc58f;box-shadow:var(--cv-shadow)}
+a:focus-visible{outline:2px solid var(--cv-accent);outline-offset:3px}img{display:block;width:100%;aspect-ratio:16/9;border-radius:14px;object-fit:cover;background:var(--cv-inset)}
+h2{font-size:16px;line-height:1.45;margin:2px 4px 0}small{display:block;margin:0 4px;font-size:13px;font-weight:700;color:var(--cv-accent)}
+footer{padding-top:18px;border-top:2px dashed var(--cv-border);text-align:center;font-size:13px;color:var(--cv-subtle)}@media(max-width:700px){body{padding:14px 12px 36px}main{grid-template-columns:1fr}}
+</style></head><body><div class="wrap"><header><a class="back" href="../../#labs">← 🔬 回到 3D 实验台</a><div><h1>🔬 选择一个 3D 生物实验</h1><p>独立打开的是完整实验台；回到「生物奇遇记」还可以听小念和爸爸边演边讲。</p></div></header>
+<main><a href="plasmolysis-step.html" data-slug="plasmolysis-step"><img src="../covers/plasmolysis-step.webp" alt="植物细胞的吸水和失水的课件封面" loading="lazy"><h2>植物细胞的吸水和失水</h2><small>🔬 3D 实验 · 8 段</small></a>
+<a href="transport-step.html" data-slug="transport-step"><img src="../covers/transport-step.webp" alt="物质跨膜运输的课件封面" loading="lazy"><h2>物质跨膜运输</h2><small>🔬 3D 实验 · 8 段</small></a>
+<a href="impulse-step.html" data-slug="impulse-step"><img src="../covers/impulse-step.webp" alt="神经冲动的产生和传导的课件封面" loading="lazy"><h2>神经冲动的产生和传导</h2><small>🔬 3D 实验 · 9 段</small></a>
+<a href="mitosis-step.html" data-slug="mitosis-step"><img src="../covers/mitosis-step.webp" alt="观察根尖分生区组织细胞的有丝分裂的课件封面" loading="lazy"><h2>观察根尖分生区组织细胞的有丝分裂</h2><small>🔬 3D 实验 · 9 段</small></a>
+<a href="enzyme-step.html" data-slug="enzyme-step"><img src="../covers/enzyme-step.webp" alt="影响酶活性的条件的课件封面" loading="lazy"><h2>影响酶活性的条件</h2><small>🔬 3D 实验 · 8 段</small></a></main>
+<footer>奇遇记系列 · 生物奇遇记 —— 小念一问，爸爸一答，把身边的生命看个明白</footer></div>
+<script>document.querySelectorAll('[data-slug]').forEach(function(link){link.addEventListener('click',function(event){if(window.parent!==window){event.preventDefault();window.parent.postMessage({type:'bioverse:open-lesson',slug:link.dataset.slug},'*');}});});</script>
+</body></html>
