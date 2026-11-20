@@ -60,7 +60,7 @@ export const dizzyEarSpin: Story = {
       {
         turn: 1, title: '液体晃动弯纤毛', duration: 9,
         cues: [
-          { kind: 'flow', path: [[320, 400], [880, 400]], color: '#3b6ea5', count: 8, speed: 0.55, from: 0.4 },
+          { kind: 'flow', path: [[320, 400], [880, 400]], color: '#3b6ea5', count: 8, speed: 210, from: 0.4 },
           { kind: 'shape', shape: 'pill', at: [600, 490], size: [90, 160], color: '#ff922b', text: '毛细胞', motion: 'wiggle', from: 1.0 },
           { kind: 'arrow', path: [[660, 490], [880, 540]], color: '#7c52b8', text: '神经报信', from: 2.4 },
           { kind: 'text', at: [600, 740], text: '液体推弯纤毛，报告正在旋转', from: 4.6 },

@@ -60,7 +60,8 @@ export const flemingPenicillin: Story = {
         turn: 1, title: '1928神奇抑菌圈', duration: 9,
         cues: [
           { kind: 'shape', shape: 'circle', at: [600, 450], size: [340, 340], color: '#fff9db', outline: true, from: 0.2 },
-          { kind: 'shape', shape: 'circle', at: [530, 420], size: [190, 190], color: '#ffffff', text: '透明抑菌圈', from: 1.0 },
+          { kind: 'shape', shape: 'circle', at: [530, 420], size: [190, 190], color: '#ffffff', from: 1.0 },
+          { kind: 'label', at: [445, 470], pos: [260, 560], text: '透明抑菌圈', color: '#2e7d32', from: 1.3 },
           { kind: 'shape', shape: 'circle', at: [530, 420], size: [86, 86], color: '#51cf66', text: '青霉', motion: 'pulse', from: 1.6 },
           { kind: 'particles', box: [650, 340, 110, 200], count: 10, color: '#f59f00', motion: 'jitter', size: 10, from: 2.2 },
           { kind: 'label', at: [530, 325], pos: [850, 230], text: '周边葡萄球菌全被溶解', from: 3.4 },

@@ -94,7 +94,7 @@ export const bloodSugarInsulin: Story = {
           { kind: 'myth', wrong: '年轻怎么狂喝甜饮料都没事', right: '长期糖过量会让细胞对胰岛素变迟钝', from: 0.6 },
           { kind: 'sprite', icon: '🥛', path: [[380, 420]], size: 130, from: 1.8 },
           { kind: 'sprite', icon: '🏃', path: [[820, 420]], size: 130, from: 2.4 },
-          { kind: 'label', at: [600, 540], pos: [600, 560], text: '均衡三餐运动护好胰岛', from: 3.6 },
+          { kind: 'text', at: [600, 610], text: '均衡三餐加运动，护好胰岛', size: 's', from: 3.6 },
         ],
       },
     ],

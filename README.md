@@ -31,6 +31,7 @@ npm run preview
 - `public/models/`：CC0 3D 角色模型与来源说明。
 - `public/voice/`：小念和爸爸的语音讲解（`npm run voice` 由 edge-tts 生成）。
 - `tests/`：自动化测试。
+- `AGENTS.md` 与 `skills/bioverse-explainer/`：扩充内容的指南（选题题库、资料与许可、问答 / 互动图 / 动画写法、检查与配音工具）。让 AI Agent 加新题时，先让它读这两处；skill 同步镜像在 `.agents/skills/` 和 `.cursor/skills/`（`npm run skills:sync`）。
 
 ## 参考与致谢
 

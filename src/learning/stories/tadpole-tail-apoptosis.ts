@@ -60,7 +60,7 @@ export const tadpoleTailApoptosis: Story = {
       {
         turn: 1, title: '激素工程进度', duration: 9,
         cues: [
-          { kind: 'meter', at: [340, 420], label: '甲状腺激素', start: 15, end: 95, color: '#e8590c', over: 3.5, from: 0.4 },
+          { kind: 'meter', at: [340, 420], label: '甲状腺激素', start: 0.15, end: 0.95, color: '#e8590c', over: 3.5, from: 0.4 },
           { kind: 'arrow', path: [[470, 420], [630, 360]], color: '#2e7d32', text: '先催长四肢', from: 1.6 },
           { kind: 'arrow', path: [[470, 450], [630, 510]], color: '#e8590c', text: '高峰收尾巴', from: 2.8 },
           { kind: 'sprite', icon: '🐸', path: [[820, 440]], size: 150, from: 3.6 },

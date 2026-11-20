@@ -79,8 +79,8 @@ export const penguinIcyFeet: Story = {
       {
         turn: 2, title: '血管贴身交接热', duration: 9,
         cues: [
-          { kind: 'flow', path: [[480, 260], [480, 600]], color: '#e03131', count: 7, speed: 0.45, from: 0.3 },
-          { kind: 'flow', path: [[660, 600], [660, 260]], color: '#3b6ea5', count: 7, speed: 0.45, from: 0.6 },
+          { kind: 'flow', path: [[480, 260], [480, 600]], color: '#e03131', count: 7, speed: 170, from: 0.3 },
+          { kind: 'flow', path: [[660, 600], [660, 260]], color: '#3b6ea5', count: 7, speed: 170, from: 0.6 },
           { kind: 'arrow', path: [[500, 360], [640, 360]], color: '#ff922b', text: '传热', from: 1.6 },
           { kind: 'arrow', path: [[500, 480], [640, 480]], color: '#ff922b', text: '传热', from: 2.2 },
           { kind: 'label', at: [660, 300], pos: [920, 300], text: '回流冷血提前暖回36℃', from: 3.4 },

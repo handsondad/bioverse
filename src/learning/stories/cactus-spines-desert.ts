@@ -92,7 +92,7 @@ export const cactusSpinesDesert: Story = {
       {
         turn: 4, title: '尖刺集露浅根抢水', duration: 9,
         cues: [
-          { kind: 'flow', path: [[600, 240], [600, 460]], color: '#3b6ea5', count: 6, speed: 0.45, from: 0.4 },
+          { kind: 'flow', path: [[600, 240], [600, 460]], color: '#3b6ea5', count: 6, speed: 160, from: 0.4 },
           { kind: 'shape', shape: 'pill', at: [600, 430], size: [150, 220], color: '#51cf66', text: '棱槽导水', from: 0.2 },
           { kind: 'shape', shape: 'rect', at: [600, 570], size: [660, 36], color: '#c9623b', text: '宽广浅根网', from: 1.8 },
           { kind: 'label', at: [840, 570], pos: [920, 440], text: '小雨刚落瞬间吸进肚', from: 3.0 },

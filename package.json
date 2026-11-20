@@ -21,7 +21,8 @@
     "story:sims": "vite-node scripts/story.ts sims",
     "lessons:import": "node scripts/import-lessons.mjs",
     "lessons:steps": "node scripts/extract-lab-steps.mjs",
-    "voice": "vite-node scripts/voice.ts"
+    "voice": "vite-node scripts/voice.ts",
+    "skills:sync": "node scripts/sync-skills.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",

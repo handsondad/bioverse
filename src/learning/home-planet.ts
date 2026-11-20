@@ -150,12 +150,16 @@ function butterfly(kit: DuoKit): { group: THREE.Group; left: THREE.Group; right:
   const body = new THREE.Mesh(new THREE.CylinderGeometry(0.016, 0.012, 0.14, 8), kit.toon('#4a3828'));
   body.rotation.x = Math.PI / 2;
   group.add(body);
+  const upperMat = kit.toon('#ff9f43');
+  upperMat.side = THREE.DoubleSide;
+  const lowerMat = kit.toon('#ffd43b');
+  lowerMat.side = THREE.DoubleSide;
   const makeWing = (side: number): THREE.Group => {
     const pivot = new THREE.Group();
-    const upper = new THREE.Mesh(new THREE.CircleGeometry(0.095, 16), new THREE.MeshToonMaterial({ color: '#ff9f43', side: THREE.DoubleSide }));
+    const upper = new THREE.Mesh(new THREE.CircleGeometry(0.095, 16), upperMat);
     upper.rotation.x = -Math.PI / 2;
     upper.position.set(side * 0.09, 0, -0.03);
-    const lower = new THREE.Mesh(new THREE.CircleGeometry(0.065, 14), new THREE.MeshToonMaterial({ color: '#ffd43b', side: THREE.DoubleSide }));
+    const lower = new THREE.Mesh(new THREE.CircleGeometry(0.065, 14), lowerMat);
     lower.rotation.x = -Math.PI / 2;
     lower.position.set(side * 0.07, 0, 0.05);
     pivot.add(upper, lower);

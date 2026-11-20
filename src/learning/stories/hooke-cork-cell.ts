@@ -72,7 +72,8 @@ export const hookeCorkCell: Story = {
         cues: [
           { kind: 'shape', shape: 'rect', at: [360, 430], size: [260, 200], color: '#e9c496', outline: true, text: '空细胞壁', from: 0.3 },
           { kind: 'label', at: [360, 330], pos: [320, 220], text: '只剩硬砖墙外壳', from: 1.5 },
-          { kind: 'shape', shape: 'rect', at: [840, 430], size: [260, 200], color: '#b7e4c7', text: '活细胞', from: 1.0 },
+          { kind: 'shape', shape: 'rect', at: [840, 430], size: [260, 200], color: '#b7e4c7', from: 1.0 },
+          { kind: 'label', at: [840, 330], pos: [880, 220], text: '活细胞饱满有核', color: '#2e7d32', from: 1.8 },
           { kind: 'shape', shape: 'circle', at: [840, 430], size: [86, 86], color: '#d8c5fa', text: '细胞核', motion: 'pulse', from: 2.2 },
           { kind: 'myth', wrong: '胡克看到的是完整活细胞', right: '他看到的是死细胞留下的空壁', from: 4.4 },
         ],

@@ -61,7 +61,7 @@ export const mimosaFoldTouch: Story = {
           { kind: 'pulse', at: [280, 440], color: '#e8590c', radius: 70, rate: 1.1, from: 0.3 },
           { kind: 'arrow', path: [[350, 440], [560, 440]], color: '#e8590c', text: '电化学信号', from: 1.2 },
           { kind: 'shape', shape: 'circle', at: [740, 460], size: [200, 130], color: '#74c0fc', tint: { color: '#ffd8a8', at: 2.2, over: 1.2 }, text: '下半变瘪', motion: 'shrink', over: 2.2, from: 1.6 },
-          { kind: 'flow', path: [[740, 520], [940, 580]], color: '#3b6ea5', count: 6, speed: 0.6, from: 2.4 },
+          { kind: 'flow', path: [[740, 520], [940, 580]], color: '#3b6ea5', count: 6, speed: 190, from: 2.4 },
           { kind: 'text', at: [600, 740], text: '钾离子与水涌出，膨压降垂叶', from: 4.6 },
         ],
       },
@@ -69,7 +69,7 @@ export const mimosaFoldTouch: Story = {
         turn: 2, title: '慢慢打水重撑开', duration: 9,
         cues: [
           { kind: 'count', at: [360, 400], label: '吸水恢复时间', start: 0, end: 15, unit: '分钟', over: 3.0, from: 0.4 },
-          { kind: 'flow', path: [[920, 460], [720, 460]], color: '#3b6ea5', count: 6, speed: 0.4, from: 1.2 },
+          { kind: 'flow', path: [[920, 460], [720, 460]], color: '#3b6ea5', count: 6, speed: 140, from: 1.2 },
           { kind: 'shape', shape: 'circle', at: [660, 460], size: [190, 130], color: '#74c0fc', text: '重新鼓起', motion: 'grow', over: 2.8, from: 1.8 },
           { kind: 'text', at: [600, 740], text: '泵回钾离子吸水，叶片慢展开', from: 4.8 },
         ],
@@ -77,7 +77,7 @@ export const mimosaFoldTouch: Story = {
       {
         turn: 3, title: '别总戳它省体力', duration: 9,
         cues: [
-          { kind: 'meter', at: [380, 420], label: '植株储备能量', start: 90, end: 35, color: '#e8590c', over: 2.8, from: 0.4 },
+          { kind: 'meter', at: [380, 420], label: '植株储备能量', start: 0.9, end: 0.35, color: '#e8590c', over: 2.8, from: 0.4 },
           { kind: 'label', at: [520, 420], pos: [830, 340], text: '频繁合叶既耗能又耽误晒光', from: 1.8 },
           { kind: 'label', at: [520, 500], pos: [830, 500], text: '对无害刺激还会暂时习惯', from: 3.2 },
           { kind: 'text', at: [600, 740], text: '轻轻碰一次就好，留时间晒光', from: 4.8 },

@@ -46,7 +46,8 @@ export const mitosisStep: Story = {
       {
         turn: 0, title: '不能直接生劈', duration: 9,
         cues: [
-          { kind: 'shape', shape: 'circle', at: [600, 430], size: [260, 260], color: '#d9f2dc', text: '母细胞', from: 0.2 },
+          { kind: 'shape', shape: 'circle', at: [600, 430], size: [260, 260], color: '#d9f2dc', from: 0.2 },
+          { kind: 'label', at: [710, 330], pos: [870, 240], text: '母细胞', from: 0.5 },
           { kind: 'shape', shape: 'circle', at: [600, 430], size: [120, 120], color: '#d8c5fa', text: '1套DNA', from: 0.8 },
           { kind: 'myth', wrong: '直接劈成两半变成两个细胞', right: '必须先复印两份再平分', from: 3.2 },
         ],

@@ -73,7 +73,7 @@ export const fatBreathedOut: Story = {
         cues: [
           { kind: 'count', at: [360, 380], label: '10千克脂肪呼出', start: 0, end: 84, unit: '%', over: 2.5, from: 0.4 },
           { kind: 'sprite', icon: '🫁', path: [[780, 430]], size: 160, from: 1.0 },
-          { kind: 'flow', path: [[780, 340], [780, 190]], color: '#e8590c', count: 6, speed: 0.5, from: 2.0 },
+          { kind: 'flow', path: [[780, 340], [780, 190]], color: '#e8590c', count: 6, speed: 160, from: 2.0 },
           { kind: 'label', at: [780, 260], pos: [980, 260], text: '8.4千克变二氧化碳', from: 3.2 },
           { kind: 'text', at: [600, 740], text: '其余1.6千克变水排出体外', from: 4.8 },
         ],
@@ -92,7 +92,7 @@ export const fatBreathedOut: Story = {
         turn: 4, title: '碳原子重回绿叶', duration: 9,
         cues: [
           { kind: 'sprite', icon: '🧒', path: [[300, 450]], size: 140, from: 0.3 },
-          { kind: 'flow', path: [[390, 430], [780, 430]], color: '#2e7d32', count: 7, speed: 0.45, from: 1.2 },
+          { kind: 'flow', path: [[390, 430], [780, 430]], color: '#2e7d32', count: 7, speed: 180, from: 1.2 },
           { kind: 'sprite', icon: '🌳', path: [[880, 450]], size: 160, from: 0.8 },
           { kind: 'label', at: [600, 430], pos: [600, 270], text: '呼出的碳又被树叶吸收', from: 2.8 },
           { kind: 'text', at: [600, 740], text: '快乐运动，参与自然碳循环', from: 4.8 },

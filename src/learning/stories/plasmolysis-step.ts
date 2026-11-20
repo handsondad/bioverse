@@ -78,7 +78,8 @@ export const plasmolysisStep: Story = {
       {
         turn: 3, title: '空隙里是盐水', duration: 9,
         cues: [
-          { kind: 'shape', shape: 'rect', at: [600, 440], size: [460, 320], color: '#d0ebff', text: '细胞壁', outline: true, from: 0.2 },
+          { kind: 'shape', shape: 'rect', at: [600, 440], size: [460, 320], color: '#d0ebff', outline: true, from: 0.2 },
+          { kind: 'label', at: [790, 280], pos: [900, 210], text: '全透的细胞壁', from: 0.5 },
           { kind: 'shape', shape: 'circle', at: [600, 450], size: [220, 180], color: '#d8c5fa', text: '原生质层', from: 0.6 },
           { kind: 'arrow', path: [[160, 440], [370, 440]], color: '#3b6ea5', text: '盐水穿壁', from: 1.4 },
           { kind: 'arrow', path: [[1040, 440], [830, 440]], color: '#3b6ea5', text: '盐水穿壁', from: 1.6 },

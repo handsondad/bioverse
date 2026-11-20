@@ -71,7 +71,7 @@ export const vaccineMemory: Story = {
         cues: [
           { kind: 'shape', shape: 'circle', at: [260, 440], size: [140, 140], color: '#ff6b6b', text: '真病毒来袭', from: 0.3 },
           { kind: 'arrow', path: [[350, 440], [530, 440]], color: '#7c52b8', text: '记忆秒认出', from: 1.3 },
-          { kind: 'meter', at: [780, 400], label: '专门抗体数量', start: 8, end: 98, color: '#2e7d32', over: 2.2, from: 2.0 },
+          { kind: 'meter', at: [780, 400], label: '专门抗体数量', start: 0.08, end: 0.98, color: '#2e7d32', over: 2.2, from: 2.0 },
           { kind: 'label', at: [780, 510], pos: [780, 590], text: '赶在病毒繁殖前彻底清零', color: '#2e7d32', from: 3.6 },
           { kind: 'text', at: [600, 740], text: '比第一次摸索快得多、猛得多！', from: 4.8 },
         ],

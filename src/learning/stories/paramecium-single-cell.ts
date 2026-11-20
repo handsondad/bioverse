@@ -51,8 +51,8 @@ export const parameciumSingleCell: Story = {
         turn: 0, title: '万根纤毛划水', duration: 9,
         cues: [
           { kind: 'shape', shape: 'pill', at: [600, 450], size: [380, 170], color: '#b8e2fc', text: '草履虫', motion: 'wiggle', from: 0.2 },
-          { kind: 'flow', path: [[380, 330], [820, 330]], color: '#3b6ea5', count: 8, speed: 0.5, from: 1.0 },
-          { kind: 'flow', path: [[380, 570], [820, 570]], color: '#3b6ea5', count: 8, speed: 0.5, from: 1.0 },
+          { kind: 'flow', path: [[380, 330], [820, 330]], color: '#3b6ea5', count: 8, speed: 180, from: 1.0 },
+          { kind: 'flow', path: [[380, 570], [820, 570]], color: '#3b6ea5', count: 8, speed: 180, from: 1.0 },
           { kind: 'label', at: [600, 365], pos: [600, 220], text: '表膜纤毛像小船桨', from: 2.4 },
           { kind: 'text', at: [600, 740], text: '单个细胞也能飞快旋转游动', from: 4.5 },
         ],
@@ -91,8 +91,8 @@ export const parameciumSingleCell: Story = {
         turn: 4, title: '净水与横裂繁殖', duration: 9,
         cues: [
           { kind: 'count', at: [360, 340], label: '日吞细菌约', start: 0, end: 43000, unit: '个', over: 2.5, from: 0.4 },
-          { kind: 'shape', shape: 'pill', at: [680, 480], size: [180, 90], color: '#99e9f2', text: '子虫1', slide: { to: [560, 480], at: 2.2, over: 2.5 }, from: 1.6 },
-          { kind: 'shape', shape: 'pill', at: [720, 480], size: [180, 90], color: '#99e9f2', text: '子虫2', slide: { to: [860, 480], at: 2.2, over: 2.5 }, from: 1.6 },
+          { kind: 'shape', shape: 'pill', at: [660, 480], size: [160, 84], color: '#99e9f2', text: '子虫1', slide: { to: [580, 480], at: 2.0, over: 2.5 }, from: 1.6 },
+          { kind: 'shape', shape: 'pill', at: [800, 480], size: [160, 84], color: '#99e9f2', text: '子虫2', slide: { to: [880, 480], at: 2.0, over: 2.5 }, from: 1.6 },
           { kind: 'text', at: [600, 740], text: '吃饱横裂一分为二，净化池塘水', from: 4.6 },
         ],
       },

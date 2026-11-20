@@ -61,7 +61,8 @@ export const tuArtemisininMalaria: Story = {
         cues: [
           { kind: 'sprite', icon: '🦟', path: [[260, 430]], size: 140, from: 0.2 },
           { kind: 'arrow', path: [[370, 430], [550, 430]], color: '#e03131', text: '按蚊叮咬传入', from: 1.2 },
-          { kind: 'shape', shape: 'circle', at: [760, 430], size: [210, 210], color: '#ff8787', text: '红细胞', from: 2.0 },
+          { kind: 'shape', shape: 'circle', at: [760, 430], size: [210, 210], color: '#ff8787', from: 2.0 },
+          { kind: 'label', at: [840, 340], pos: [930, 230], text: '人体红细胞', from: 2.2 },
           { kind: 'shape', shape: 'circle', at: [760, 430], size: [76, 76], color: '#7c52b8', text: '疟原虫', motion: 'pulse', from: 2.6 },
           { kind: 'myth', wrong: '疟疾是病毒或细菌引起的普通发烧', right: '元凶是单细胞真核寄生虫——疟原虫', from: 4.2 },
         ],
@@ -89,7 +90,7 @@ export const tuArtemisininMalaria: Story = {
         cues: [
           { kind: 'vessel', vessel: 'flask', at: [340, 450], size: [210, 230], liquid: '#d8f3dc', level: 0.65, label: '35℃乙醚', from: 0.3 },
           { kind: 'arrow', path: [[470, 450], [640, 450]], color: '#2e7d32', text: '第191号样品', from: 1.5 },
-          { kind: 'meter', at: [840, 420], label: '疟原虫抑制率', start: 20, end: 100, color: '#2e7d32', over: 2.2, from: 2.2 },
+          { kind: 'meter', at: [840, 420], label: '疟原虫抑制率', start: 0.2, end: 1.0, color: '#2e7d32', over: 2.2, from: 2.2 },
           { kind: 'label', at: [840, 530], pos: [840, 610], text: '完好保住怕热的过氧桥结构', from: 3.6 },
           { kind: 'text', at: [600, 750], text: '低温提取一举攻克百次难关！', from: 4.8 },
         ],

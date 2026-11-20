@@ -91,8 +91,8 @@ export const fireflyColdLight: Story = {
       {
         turn: 3, title: '超高发光效率', duration: 9,
         cues: [
-          { kind: 'meter', at: [360, 380], label: '白炽灯发光比', start: 0, end: 10, color: '#e8590c', over: 2.0, from: 0.4 },
-          { kind: 'meter', at: [820, 380], label: '萤火虫量子效率', start: 0, end: 41, color: '#2e7d32', over: 2.5, from: 1.0 },
+          { kind: 'meter', at: [360, 380], label: '白炽灯发光比', start: 0, end: 0.1, color: '#e8590c', over: 2.0, from: 0.4 },
+          { kind: 'meter', at: [820, 380], label: '萤火虫量子效率', start: 0, end: 0.41, color: '#2e7d32', over: 2.5, from: 1.0 },
           { kind: 'text', at: [600, 660], text: '不烧灯丝，能量专心用来发光', from: 4.2 },
         ],
       },

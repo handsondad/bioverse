@@ -20,6 +20,26 @@ describe('小念 × 爸爸 biology stories', () => {
 
   it('follow the explainer film rules, with one to three scenes per turn', () => {
     expect(stories.flatMap(tagged(filmProblems))).toEqual([]);
+
+    const badFilm: Story = {
+      ...stories[0],
+      film: {
+        scenes: stories[0].film!.scenes.map((scene, i) => (i === 0
+          ? {
+            ...scene,
+            cues: [
+              { kind: 'meter', at: [300, 400], label: '活性', start: 0, end: 80, from: 0.4 },
+              { kind: 'flow', path: [[200, 400], [800, 400]], speed: 0.5, from: 0.6 },
+              { kind: 'label', at: [600, 540], pos: [600, 555], text: '重叠标签', from: 1.0 },
+            ],
+          }
+          : scene)),
+      },
+    };
+    const probs = filmProblems(badFilm);
+    expect(probs.some(p => p.includes('meter 的 start/end 是 0–1'))).toBe(true);
+    expect(probs.some(p => p.includes('flow 的 speed 单位是像素/秒'))).toBe(true);
+    expect(probs.some(p => p.includes('label 的指向点 at 和文字框 pos 重叠太近'))).toBe(true);
   });
 
   it('give every everyday question and 3D lab a written story with a film', () => {

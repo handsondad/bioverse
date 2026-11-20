@@ -73,7 +73,7 @@ export const yuanHybridRice: Story = {
         turn: 2, title: '天然免剪刀妈妈', duration: 9,
         cues: [
           { kind: 'shape', shape: 'pill', at: [340, 440], size: [240, 120], color: '#ffd8a8', text: '雄性不育母本', from: 0.3 },
-          { kind: 'flow', path: [[820, 380], [460, 420]], color: '#f59f00', count: 7, speed: 0.5, from: 1.4 },
+          { kind: 'flow', path: [[820, 380], [460, 420]], color: '#f59f00', count: 7, speed: 180, from: 1.4 },
           { kind: 'shape', shape: 'pill', at: [860, 440], size: [220, 120], color: '#8ce09b', text: '高产父本送粉', from: 0.8 },
           { kind: 'label', at: [640, 360], pos: [640, 240], text: '风吹授粉批量结出杂交种', color: '#2e7d32', from: 2.8 },
           { kind: 'text', at: [600, 740], text: '免去手剪雄蕊，大田制种成真', from: 4.8 },

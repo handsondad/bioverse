@@ -69,7 +69,7 @@ export const coralSymbiosisBleach: Story = {
         turn: 2, title: '海水过热赶房客', duration: 9,
         cues: [
           { kind: 'count', at: [320, 390], label: '海水持续偏高', start: 0, end: 2, unit: '℃', over: 2.0, from: 0.4 },
-          { kind: 'flow', path: [[680, 440], [960, 340]], color: '#82c91e', count: 7, speed: 0.5, from: 1.6 },
+          { kind: 'flow', path: [[680, 440], [960, 340]], color: '#82c91e', count: 7, speed: 180, from: 1.6 },
           { kind: 'shape', shape: 'rect', at: [640, 460], size: [220, 180], color: '#ff8787', tint: { color: '#f8f9fa', at: 2.0, over: 1.5 }, text: '露出白骨', outline: true, from: 0.8 },
           { kind: 'label', at: [800, 340], pos: [840, 220], text: '藻类受压产毒被排走', color: '#e8590c', from: 3.0 },
           { kind: 'text', at: [600, 740], text: '失去共生藻，整片珊瑚变惨白', from: 4.8 },

@@ -81,7 +81,7 @@ export const energyPyramidTiger: Story = {
       {
         turn: 3, title: '物质循环热单行', duration: 9,
         cues: [
-          { kind: 'flow', path: [[320, 380], [520, 520], [240, 520], [320, 380]], color: '#2e7d32', count: 6, speed: 0.4, loop: true, from: 0.4 },
+          { kind: 'flow', path: [[320, 380], [520, 520], [240, 520], [320, 380]], color: '#2e7d32', count: 6, speed: 190, loop: true, from: 0.4 },
           { kind: 'label', at: [360, 340], pos: [360, 230], text: '碳和水可反复循环', color: '#2e7d32', from: 1.6 },
           { kind: 'arrow', path: [[720, 460], [1020, 340]], color: '#e8590c', text: '热能散失不回头', from: 1.2 },
           { kind: 'myth', wrong: '呼吸散掉的热能还能被植物吸回去用', right: '热能一去不返，全靠太阳天天补新光', from: 4.0 },

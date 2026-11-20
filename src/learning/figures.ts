@@ -43,7 +43,11 @@ function barsSvg(figure: Extract<Figure, { kind: 'bars' }>): string {
   const width = 560;
   const rowH = 40;
   const labelW = 110;
-  const textW = 120;
+  const longestNote = Math.max(...figure.bars.map(bar => {
+    const note = bar.text ?? `${bar.value} ${figure.unit}`;
+    return [...note].reduce((sum, ch) => sum + (/[\u3000-\u9fff\uff00-\uffef]/.test(ch) ? 13.5 : 8), 0);
+  }), 0);
+  const textW = Math.min(180, Math.max(120, Math.ceil(longestNote) + 16));
   const top = 10;
   const max = Math.max(...figure.bars.map(bar => bar.value), 1e-9);
   const height = top * 2 + figure.bars.length * rowH;

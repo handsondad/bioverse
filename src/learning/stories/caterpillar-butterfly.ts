@@ -79,7 +79,7 @@ export const caterpillarButterfly: Story = {
         turn: 3, title: '泵入体液撑彩翅', duration: 9,
         cues: [
           { kind: 'shape', shape: 'pill', at: [340, 440], size: [150, 120], color: '#ffd8a8', text: '皱软新翅', from: 0.3 },
-          { kind: 'flow', path: [[430, 440], [670, 440]], color: '#e8590c', count: 6, speed: 0.5, from: 1.2 },
+          { kind: 'flow', path: [[430, 440], [670, 440]], color: '#e8590c', count: 6, speed: 170, from: 1.2 },
           { kind: 'sprite', icon: '🦋', path: [[820, 440]], size: 170, from: 2.4 },
           { kind: 'label', at: [820, 330], pos: [840, 220], text: '泵液撑平再晾干变硬', from: 3.4 },
           { kind: 'text', at: [600, 740], text: '刚羽化时千万不能用手碰软翅膀', from: 4.8 },

@@ -130,9 +130,11 @@ export const treePull: SimDef = {
         out.push(`<circle cx="${240 + i * 40}" cy="${n(vy)}" r="7" fill="#a5d8ff" opacity="${(1 - p).toFixed(2)}"/>`);
       }
       out.push(arrow(348, 224, 348, 122, BLUE, 4));
-      out.push(txt(424, 174, '水分子手拉手\n被一路拉上去', { size: 13, color: BLUE, bold: true }));
+      out.push(txt(424, 166, '水分子手拉手', { size: 13, color: BLUE, bold: true }));
+      out.push(txt(424, 186, '被一路拉上去', { size: 13, color: BLUE, bold: true }));
     } else {
-      out.push(txt(424, 174, '气孔紧闭\n水柱几乎不动', { size: 13, color: HOT, bold: true }));
+      out.push(txt(424, 166, '气孔紧闭', { size: 13, color: HOT, bold: true }));
+      out.push(txt(424, 186, '水柱几乎不动', { size: 13, color: HOT, bold: true }));
     }
     out.push(txt(120, 168, `向上拉力：${flow}%`, { size: 15, color: flow > 0 ? GREEN : INK, bold: true }));
     out.push(txt(280, 298, '植物吸进的水有九成多靠蒸腾散掉，换来了向上拉水的动力和降温', { size: 12, color: INK }));

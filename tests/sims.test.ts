@@ -31,6 +31,7 @@ describe('能拖滑块的生物互动图', () => {
       });
       const where = `${name} ${values.join(' / ')}`;
       expect(svg.innerHTML, where).not.toMatch(broken);
+      expect(svg.innerHTML, where).not.toContain('\n');
       expect(svg.querySelectorAll('*').length, where).toBeGreaterThan(3);
       expect(readout.textContent, where).not.toMatch(broken);
       expect(readout.textContent!.length, where).toBeGreaterThan(6);

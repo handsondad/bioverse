@@ -6,7 +6,7 @@ import type { Cue, FilmScene, Story } from './types';
  * 「小念 × 爸爸」文章的写作规矩，`tests/stories.test.ts` 和 `npm run story:check` 共用。
  */
 
-export type LabSize = { readonly steps: readonly unknown[] };
+export type LabSize = { readonly steps: readonly unknown[]; readonly question?: string };
 
 const filler = new Set('的了吗呢吧呀啊哦嘛是我你他她它们这那就也都还又在有和么什怎为个一不没会要说想看能可以得很太好真再');
 
@@ -26,6 +26,7 @@ export function topicWords(line: string): Set<string> {
 export function dialogueProblems(story: Story, lab?: LabSize): string[] {
   const problems: string[] = [];
   if (!lab) problems.push('curriculum.ts 里没有这个 slug');
+  if (lab?.question && story.title !== lab.question) problems.push(`标题「${story.title}」要与 curriculum.ts 的 question「${lab.question}」一字不差`);
   if (!story.title.includes('？')) problems.push('标题要是小念口吻的问题，带「？」');
   if (story.trigger.length < 8) problems.push('trigger 要用一句话写清小念刚遇到的事');
   const turns = story.dialogue;
@@ -121,6 +122,26 @@ function sceneProblems(scene: FilmScene, where: string): string[] {
     const limit = LIMITS[cue.kind];
     if (text && limit && [...text].length > limit) problems.push(`${where}：「${text}」超过 ${limit} 字`);
     if (cue.kind === 'myth' && ([...cue.wrong].length > 18 || [...cue.right].length > 18)) problems.push(`${where}：误会卡每句不超过 18 字`);
+    if (cue.kind === 'meter' && (cue.start < 0 || cue.start > 1 || cue.end < 0 || cue.end > 1)) {
+      problems.push(`${where}：meter 的 start/end 是 0–1 的比例，现在是 ${cue.start}→${cue.end}`);
+    }
+    if (cue.kind === 'flow') {
+      if (cue.path.length < 2) problems.push(`${where}：flow 至少 2 个点`);
+      if (cue.speed !== undefined && (cue.speed < 20 || cue.speed > 800)) {
+        problems.push(`${where}：flow 的 speed 单位是像素/秒（建议 80–400），现在是 ${cue.speed}`);
+      }
+    }
+    if (cue.kind === 'arrow' && cue.path.length < 2) problems.push(`${where}：箭头至少 2 个点`);
+    if (cue.kind === 'vessel') {
+      if (cue.level !== undefined && (cue.level < 0 || cue.level > 1)) problems.push(`${where}：vessel 的 level 是 0–1 的比例`);
+      if (cue.rise && (cue.rise.to < 0 || cue.rise.to > 1)) problems.push(`${where}：vessel 的 rise.to 是 0–1 的比例`);
+    }
+    if (cue.kind === 'particles' && cue.amount && (cue.amount.from < 0 || cue.amount.to < 0 || cue.amount.from > cue.count || cue.amount.to > cue.count)) {
+      problems.push(`${where}：particles 的 amount 不能超过 count（${cue.count}）`);
+    }
+    if (cue.kind === 'label' && Math.hypot(cue.at[0] - cue.pos[0], cue.at[1] - cue.pos[1]) < 36) {
+      problems.push(`${where}：label 的指向点 at 和文字框 pos 重叠太近`);
+    }
     if (cue.kind === 'ray' && cue.path.length < 2) problems.push(`${where}：光线至少 2 个点`);
     if (cue.kind === 'swing' && (cue.angle <= 0 || cue.angle > 80)) problems.push(`${where}：摆角 ${cue.angle}°（0–80）`);
     if (cue.kind === 'toss' && cue.ground <= cue.at[1]) problems.push(`${where}：toss 的地面要在出手点下方`);

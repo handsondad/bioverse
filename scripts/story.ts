@@ -82,8 +82,9 @@ ${turns.join('\n')}
 `);
 
   const indexFile = join(storyDir, 'index.ts');
-  const source = readFileSync(indexFile, 'utf8');
-  const lines = source.split('\n');
+  const raw = readFileSync(indexFile, 'utf8');
+  const eol = raw.includes('\r\n') ? '\r\n' : '\n';
+  const lines = raw.replace(/\r\n/g, '\n').split('\n');
   const imports = lines.filter(line => line.startsWith('import '));
   imports.push(`import { ${name} } from './${slug}';`);
   const modulePath = (line: string): string => /from '(.+)'/.exec(line)?.[1] ?? '';
@@ -92,7 +93,7 @@ ${turns.join('\n')}
   const listed = rest
     .replace('export const stories: readonly Story[] = [];', 'export const stories: readonly Story[] = [\n];')
     .replace(/(export const stories: readonly Story\[\] = \[[\s\S]*?)\n\];/, `$1\n  ${name},\n];`);
-  writeFileSync(indexFile, `${imports.join('\n')}\n${listed}`);
+  writeFileSync(indexFile, `${imports.join('\n')}\n${listed}`.replace(/\n/g, eol));
   console.log(`已生成 src/learning/stories/${slug}.ts 并登记到 stories/index.ts。`);
 }
 
