@@ -71,13 +71,24 @@ export const breadSweetChew: Story = {
         ],
       },
       {
-        turn: 3, title: '细嚼慢咽帮大忙', duration: 9,
+        turn: 3, title: '小肠补剪最后一刀', duration: 9,
         cues: [
           { kind: 'shape', shape: 'rect', at: [340, 430], size: [260, 140], color: '#fff4e0', text: '麦芽糖(2颗)', from: 0.3 },
           { kind: 'arrow', path: [[490, 430], [690, 430]], color: '#2e7d32', text: '小肠再剪', from: 1.6 },
           { kind: 'atom', path: [[780, 430]], symbol: '糖', color: '#ffd43b', r: 44, from: 2.8 },
           { kind: 'atom', path: [[910, 430]], symbol: '糖', color: '#ffd43b', r: 44, from: 3.2 },
           { kind: 'text', at: [600, 750], text: '变成单个葡萄糖就能进血液', from: 4.5 },
+        ],
+      },
+      {
+        turn: 4, title: '细嚼慢咽帮大忙', duration: 9,
+        cues: [
+          { kind: 'shape', shape: 'circle', at: [340, 430], size: [210, 210], color: '#fff4e0', text: '大饭团', from: 0.2 },
+          { kind: 'arrow', path: [[480, 430], [690, 430]], color: '#e8590c', text: '多嚼几下', from: 1.2 },
+          { kind: 'particles', box: [720, 340, 280, 180], count: 18, color: '#ffd8a8', motion: 'jitter', from: 2.0 },
+          { kind: 'label', at: [860, 430], pos: [860, 250], text: '磨碎再拌匀口水', from: 2.6 },
+          { kind: 'meter', at: [600, 640], label: '口腔消化', start: 0.1, end: 0.8, color: '#2e7d32', from: 3.2 },
+          { kind: 'text', at: [600, 780], text: '细嚼慢咽替肠胃分担粗活', from: 5.0 },
         ],
       },
     ],

@@ -77,6 +77,17 @@ export const bacteriaVsVirus: Story = {
           { kind: 'text', at: [600, 760], text: '按医嘱用药，保护救命药', from: 4.5 },
         ],
       },
+      {
+        turn: 4, title: '靠自己免疫好起来', duration: 9,
+        cues: [
+          { kind: 'sprite', icon: '🛌', path: [[340, 420]], size: 150, from: 0.2 },
+          { kind: 'label', at: [340, 370], pos: [340, 220], text: '喝水睡觉省力气', from: 0.8 },
+          { kind: 'shape', shape: 'circle', at: [840, 430], size: [200, 200], color: '#d3f9d8', text: '免疫细胞', motion: 'pulse', from: 1.8 },
+          { kind: 'sprite', icon: '🦠', path: [[1080, 430], [940, 430]], size: 60, travel: 2, from: 2.4, to: 5.2 },
+          { kind: 'count', at: [600, 640], label: '康复约', start: 0, end: 7, unit: '天', over: 3, from: 3.0 },
+          { kind: 'text', at: [600, 800], text: '合并细菌感染才用抗生素', from: 5.4 },
+        ],
+      },
     ],
   },
 };

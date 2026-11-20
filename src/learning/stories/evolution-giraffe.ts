@@ -76,6 +76,17 @@ export const evolutionGiraffe: Story = {
           { kind: 'text', at: [600, 760], text: '低头喝水也不发晕的精妙配合', from: 4.8 },
         ],
       },
+      {
+        turn: 4, title: '身边的自然选择', duration: 9,
+        cues: [
+          { kind: 'shape', shape: 'circle', at: [600, 430], size: [460, 300], color: '#fff4e6', from: 0.2 },
+          { kind: 'particles', box: [420, 330, 360, 200], count: 16, color: '#ff8787', motion: 'jitter', amount: { at: 2.4, over: 1.5, from: 16, to: 3 }, from: 0.6 },
+          { kind: 'sprite', icon: '💊', path: [[180, 280], [420, 340]], size: 80, travel: 1.5, from: 1.6 },
+          { kind: 'label', at: [700, 450], pos: [980, 240], text: '不怕药的活下来', from: 3.6 },
+          { kind: 'meter', at: [600, 670], label: '耐药菌占比', start: 0.05, end: 0.9, color: '#e8590c', from: 4.2 },
+          { kind: 'text', at: [600, 800], text: '自然选择每天都在发生', from: 5.6 },
+        ],
+      },
     ],
   },
 };

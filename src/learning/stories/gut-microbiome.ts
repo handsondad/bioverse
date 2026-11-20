@@ -70,6 +70,17 @@ export const gutMicrobiome: Story = {
         ],
       },
       {
+        turn: 3, title: '抗生素误伤好菌', duration: 9,
+        cues: [
+          { kind: 'shape', shape: 'rect', at: [600, 450], size: [760, 200], color: '#fff4e6', text: '肠道', from: 0.2 },
+          { kind: 'particles', box: [260, 380, 680, 140], count: 20, color: '#51cf66', motion: 'jitter', amount: { at: 2.2, over: 2, from: 20, to: 6 }, from: 0.6 },
+          { kind: 'sprite', icon: '💊', path: [[120, 280], [560, 280]], size: 90, travel: 2, from: 1.2 },
+          { kind: 'meter', at: [600, 660], label: '有益菌', start: 0.9, end: 0.3, color: '#2e7d32', over: 2, from: 2.2 },
+          { kind: 'label', at: [760, 400], pos: [980, 240], text: '好坏细菌一起遭殃', from: 2.8 },
+          { kind: 'text', at: [600, 800], text: '病好后吃蔬果慢慢长回', from: 5.0 },
+        ],
+      },
+      {
         turn: 4, title: '好好喂养肠道花园', duration: 9,
         cues: [
           { kind: 'sprite', icon: '🥬', path: [[340, 430]], size: 110, from: 0.3 },

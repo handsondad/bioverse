@@ -58,6 +58,18 @@ export const feverImmune: Story = {
         ],
       },
       {
+        turn: 2, title: '痰是战场垃圾', duration: 9,
+        cues: [
+          { kind: 'shape', shape: 'rect', at: [600, 440], size: [300, 520], color: '#ffe3e3', text: '气管', from: 0.2 },
+          { kind: 'particles', box: [470, 520, 260, 160], count: 12, color: '#868e96', motion: 'jitter', from: 0.8 },
+          { kind: 'label', at: [560, 600], pos: [240, 640], text: '黏液粘住灰尘病菌', from: 1.4 },
+          { kind: 'sprite', icon: '🦠', path: [[680, 560]], size: 70, from: 2.0 },
+          { kind: 'flow', path: [[600, 680], [600, 220]], color: '#e8590c', count: 6, speed: 120, loop: true, from: 3.0 },
+          { kind: 'label', at: [620, 300], pos: [940, 250], text: '纤毛往上扫', from: 3.6 },
+          { kind: 'text', at: [600, 800], text: '咳出的痰就是战场垃圾', from: 5.0 },
+        ],
+      },
+      {
         turn: 3, title: '高烧不能硬扛', duration: 9,
         cues: [
           { kind: 'count', at: [420, 440], label: '警惕高烧', start: 38.5, end: 40.0, unit: '℃', over: 2.5, from: 0.4 },

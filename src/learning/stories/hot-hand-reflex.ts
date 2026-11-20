@@ -70,6 +70,17 @@ export const hotHandReflex: Story = {
         ],
       },
       {
+        turn: 3, title: '大脑管住脊髓', duration: 9,
+        cues: [
+          { kind: 'shape', shape: 'pill', at: [600, 260], size: [300, 100], color: '#f3e8ff', text: '大脑', from: 0.2 },
+          { kind: 'shape', shape: 'pill', at: [600, 520], size: [300, 100], color: '#d0ebff', text: '脊髓', from: 0.6 },
+          { kind: 'sprite', icon: '💉', path: [[960, 520]], size: 90, from: 1.2 },
+          { kind: 'arrow', path: [[600, 320], [600, 460]], color: '#7048e8', text: '忍一下', from: 2.2 },
+          { kind: 'label', at: [760, 520], pos: [900, 680], text: '想缩手的命令被压住', from: 3.4 },
+          { kind: 'text', at: [600, 800], text: '高级中枢能管低级中枢', from: 5.0 },
+        ],
+      },
+      {
         turn: 4, title: '天生与后天反射', duration: 9,
         cues: [
           { kind: 'shape', shape: 'rect', at: [340, 440], size: [330, 220], color: '#d9f2dc', text: '非条件天生会', from: 0.3 },

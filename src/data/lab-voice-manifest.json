@@ -9,5 +9,450 @@
    "rate": "-5%"
   }
  },
- "clips": {}
+ "clips": {
+  "lab/enzyme-step/0-concl-66e05802": {
+   "hash": "de94db75d22b",
+   "seconds": 9.86
+  },
+  "lab/enzyme-step/0-q-83bbb828": {
+   "hash": "d07df08d6546",
+   "seconds": 5.47
+  },
+  "lab/enzyme-step/0-seen-66e9af7a": {
+   "hash": "77fa8a890f43",
+   "seconds": 11.4
+  },
+  "lab/enzyme-step/1-concl-a4f805ff": {
+   "hash": "4d888922162a",
+   "seconds": 10.85
+  },
+  "lab/enzyme-step/1-q-09bd1171": {
+   "hash": "484e39c3e357",
+   "seconds": 5.59
+  },
+  "lab/enzyme-step/1-seen-28b4010d": {
+   "hash": "a6c4d9f521eb",
+   "seconds": 12.74
+  },
+  "lab/enzyme-step/2-concl-2a5dee7a": {
+   "hash": "93c28b819613",
+   "seconds": 9.98
+  },
+  "lab/enzyme-step/2-q-3b02fe55": {
+   "hash": "088e9ad00d81",
+   "seconds": 5.21
+  },
+  "lab/enzyme-step/2-seen-8748b754": {
+   "hash": "d293e1803036",
+   "seconds": 10.39
+  },
+  "lab/enzyme-step/3-concl-0d23a589": {
+   "hash": "abaf918a5f62",
+   "seconds": 10.15
+  },
+  "lab/enzyme-step/3-q-8c4040e9": {
+   "hash": "48cec8513e00",
+   "seconds": 6.29
+  },
+  "lab/enzyme-step/3-seen-f34f3c0e": {
+   "hash": "f5f430ff7183",
+   "seconds": 12.17
+  },
+  "lab/enzyme-step/4-concl-13504321": {
+   "hash": "dd4ddafb5230",
+   "seconds": 10.92
+  },
+  "lab/enzyme-step/4-q-beea0fea": {
+   "hash": "a3f0b1c104a8",
+   "seconds": 6.38
+  },
+  "lab/enzyme-step/4-seen-dc5fbffd": {
+   "hash": "66daafd82fcf",
+   "seconds": 11.47
+  },
+  "lab/enzyme-step/5-concl-b1a847ef": {
+   "hash": "d2151c8231d4",
+   "seconds": 10.92
+  },
+  "lab/enzyme-step/5-q-bfaa98be": {
+   "hash": "81f73fa1a9d6",
+   "seconds": 4.75
+  },
+  "lab/enzyme-step/5-seen-14332652": {
+   "hash": "7636f33e9c4d",
+   "seconds": 11.16
+  },
+  "lab/enzyme-step/6-concl-e686ec3a": {
+   "hash": "3b0e0dfe84ca",
+   "seconds": 9.07
+  },
+  "lab/enzyme-step/6-q-7601502b": {
+   "hash": "95db9c9486d7",
+   "seconds": 5.62
+  },
+  "lab/enzyme-step/6-seen-dc009da7": {
+   "hash": "17c0f09935c7",
+   "seconds": 8.47
+  },
+  "lab/impulse-step/0-concl-b3f7ff94": {
+   "hash": "ea0589ede891",
+   "seconds": 10.63
+  },
+  "lab/impulse-step/0-q-2a3cb93b": {
+   "hash": "594428774026",
+   "seconds": 5.26
+  },
+  "lab/impulse-step/0-seen-b1a9fcc4": {
+   "hash": "1a60956b2ea0",
+   "seconds": 8.16
+  },
+  "lab/impulse-step/1-concl-de7b5498": {
+   "hash": "9d3e522d853d",
+   "seconds": 9.77
+  },
+  "lab/impulse-step/1-q-ddd17af6": {
+   "hash": "38d71e18eb7c",
+   "seconds": 5.3
+  },
+  "lab/impulse-step/1-seen-ca75af11": {
+   "hash": "4cec12401091",
+   "seconds": 11.02
+  },
+  "lab/impulse-step/2-concl-818b3985": {
+   "hash": "554d239a8c60",
+   "seconds": 10.27
+  },
+  "lab/impulse-step/2-q-9d614967": {
+   "hash": "8ba00c9aaa33",
+   "seconds": 4.06
+  },
+  "lab/impulse-step/2-seen-d5f9b016": {
+   "hash": "a2a708c31998",
+   "seconds": 11.47
+  },
+  "lab/impulse-step/3-concl-f5f87505": {
+   "hash": "51699394ef43",
+   "seconds": 11.11
+  },
+  "lab/impulse-step/3-q-673734e2": {
+   "hash": "3994802a14e7",
+   "seconds": 4.51
+  },
+  "lab/impulse-step/3-seen-099bdc4a": {
+   "hash": "a46e2fd5eae0",
+   "seconds": 10.68
+  },
+  "lab/impulse-step/4-concl-f5b46edc": {
+   "hash": "6e4f9cc46589",
+   "seconds": 10.44
+  },
+  "lab/impulse-step/4-q-10591499": {
+   "hash": "4db722957b26",
+   "seconds": 4.9
+  },
+  "lab/impulse-step/4-seen-949dba4b": {
+   "hash": "919546c6fd7c",
+   "seconds": 10.61
+  },
+  "lab/impulse-step/5-concl-a07fc633": {
+   "hash": "f0f58671ed02",
+   "seconds": 11.28
+  },
+  "lab/impulse-step/5-q-cfd0045c": {
+   "hash": "09ed71989b9a",
+   "seconds": 4.92
+  },
+  "lab/impulse-step/5-seen-ca6fe7fe": {
+   "hash": "bd6f0430fd4d",
+   "seconds": 11.78
+  },
+  "lab/impulse-step/6-concl-d704f39e": {
+   "hash": "6fd2acd2bd25",
+   "seconds": 10.9
+  },
+  "lab/impulse-step/6-q-f3a6a3d8": {
+   "hash": "bfdebca21cb1",
+   "seconds": 4.54
+  },
+  "lab/impulse-step/6-seen-0e50ef37": {
+   "hash": "34b66a0d7e30",
+   "seconds": 10.7
+  },
+  "lab/impulse-step/7-concl-5e27324e": {
+   "hash": "5cd3446b5f30",
+   "seconds": 11.38
+  },
+  "lab/impulse-step/7-q-ab710e97": {
+   "hash": "60b571b36bbb",
+   "seconds": 4.68
+  },
+  "lab/impulse-step/7-seen-13837ed5": {
+   "hash": "58298d28e26f",
+   "seconds": 11.54
+  },
+  "lab/mitosis-step/0-concl-1e2b0d90": {
+   "hash": "c303bd1bc085",
+   "seconds": 10.46
+  },
+  "lab/mitosis-step/0-q-3afc16ad": {
+   "hash": "3236c7085997",
+   "seconds": 5.54
+  },
+  "lab/mitosis-step/0-seen-d63d5275": {
+   "hash": "69e262a331c5",
+   "seconds": 11.21
+  },
+  "lab/mitosis-step/1-concl-12dc87c0": {
+   "hash": "4b98bdb6770b",
+   "seconds": 9.41
+  },
+  "lab/mitosis-step/1-q-28135d12": {
+   "hash": "3d1365818b81",
+   "seconds": 4.99
+  },
+  "lab/mitosis-step/1-seen-171799ef": {
+   "hash": "a45a7c4aefce",
+   "seconds": 11.52
+  },
+  "lab/mitosis-step/2-concl-b0506e0b": {
+   "hash": "fd887c0b6a77",
+   "seconds": 11.52
+  },
+  "lab/mitosis-step/2-q-ac3c0a30": {
+   "hash": "e54b2d360797",
+   "seconds": 4.39
+  },
+  "lab/mitosis-step/2-seen-764e9ac7": {
+   "hash": "98dd4ab9e18c",
+   "seconds": 10.42
+  },
+  "lab/mitosis-step/3-concl-056a0ed6": {
+   "hash": "2d8217e3888f",
+   "seconds": 10.99
+  },
+  "lab/mitosis-step/3-q-2e72a82b": {
+   "hash": "8eb62a974517",
+   "seconds": 5.14
+  },
+  "lab/mitosis-step/3-seen-937d7394": {
+   "hash": "732f107cdc3a",
+   "seconds": 10.63
+  },
+  "lab/mitosis-step/4-concl-71cf7075": {
+   "hash": "88e73562ce0b",
+   "seconds": 10.46
+  },
+  "lab/mitosis-step/4-q-29f3d870": {
+   "hash": "4b95cb352b39",
+   "seconds": 5.54
+  },
+  "lab/mitosis-step/4-seen-7b6595b5": {
+   "hash": "8cdc13d8f3fc",
+   "seconds": 12.22
+  },
+  "lab/mitosis-step/5-concl-008744d1": {
+   "hash": "bf9e50a14659",
+   "seconds": 8.88
+  },
+  "lab/mitosis-step/5-q-d4d79eec": {
+   "hash": "c03cfb9b8630",
+   "seconds": 5.02
+  },
+  "lab/mitosis-step/5-seen-5be1ada2": {
+   "hash": "127e85afccb5",
+   "seconds": 11.26
+  },
+  "lab/mitosis-step/6-concl-4eca7e50": {
+   "hash": "d24e7c33ed48",
+   "seconds": 10.27
+  },
+  "lab/mitosis-step/6-q-49798154": {
+   "hash": "02fd2f6f3f30",
+   "seconds": 4.66
+  },
+  "lab/mitosis-step/6-seen-39457227": {
+   "hash": "2646d6f2325d",
+   "seconds": 10.22
+  },
+  "lab/mitosis-step/7-concl-19242d53": {
+   "hash": "d7a01b7ae744",
+   "seconds": 10.75
+  },
+  "lab/mitosis-step/7-q-c023ce19": {
+   "hash": "5dd51f374d5e",
+   "seconds": 5.02
+  },
+  "lab/mitosis-step/7-seen-26208b58": {
+   "hash": "40b73da3c4a6",
+   "seconds": 12.74
+  },
+  "lab/plasmolysis-step/0-concl-e4365def": {
+   "hash": "4914059aed0f",
+   "seconds": 9.72
+  },
+  "lab/plasmolysis-step/0-q-c77f82af": {
+   "hash": "b3de7e31ba9c",
+   "seconds": 4.08
+  },
+  "lab/plasmolysis-step/0-seen-5027c994": {
+   "hash": "629e46b5896e",
+   "seconds": 9.84
+  },
+  "lab/plasmolysis-step/1-concl-0b46a6f3": {
+   "hash": "5bac4acfc22f",
+   "seconds": 11.21
+  },
+  "lab/plasmolysis-step/1-q-9b6a0e24": {
+   "hash": "98c68da5c6cc",
+   "seconds": 4.06
+  },
+  "lab/plasmolysis-step/1-seen-3876f8f7": {
+   "hash": "fb69c027196d",
+   "seconds": 9.24
+  },
+  "lab/plasmolysis-step/2-concl-0e40d92e": {
+   "hash": "fe0dbd2aaf31",
+   "seconds": 10.97
+  },
+  "lab/plasmolysis-step/2-q-c9d74772": {
+   "hash": "16f9e7f5fd9a",
+   "seconds": 4.32
+  },
+  "lab/plasmolysis-step/2-seen-5cd33bb9": {
+   "hash": "d4f035aec39b",
+   "seconds": 9.82
+  },
+  "lab/plasmolysis-step/3-concl-730852e2": {
+   "hash": "59c72002fa4c",
+   "seconds": 10.32
+  },
+  "lab/plasmolysis-step/3-q-ee40288f": {
+   "hash": "4569c0396a55",
+   "seconds": 5.18
+  },
+  "lab/plasmolysis-step/3-seen-bdfde47c": {
+   "hash": "fcf884cfc1fe",
+   "seconds": 9.96
+  },
+  "lab/plasmolysis-step/4-concl-f6635ae7": {
+   "hash": "5d96023666cb",
+   "seconds": 10.39
+  },
+  "lab/plasmolysis-step/4-q-918c630d": {
+   "hash": "bf71ac05ee80",
+   "seconds": 4.82
+  },
+  "lab/plasmolysis-step/4-seen-cd631536": {
+   "hash": "34b7a3e40c5b",
+   "seconds": 10.03
+  },
+  "lab/plasmolysis-step/5-concl-f50a01b7": {
+   "hash": "30f9aec3bfe0",
+   "seconds": 10.18
+  },
+  "lab/plasmolysis-step/5-q-1def79a4": {
+   "hash": "406358867008",
+   "seconds": 5.38
+  },
+  "lab/plasmolysis-step/5-seen-3bea3d9d": {
+   "hash": "f17c52564b85",
+   "seconds": 9.41
+  },
+  "lab/plasmolysis-step/6-concl-7539b905": {
+   "hash": "bf0d5f90254c",
+   "seconds": 9.14
+  },
+  "lab/plasmolysis-step/6-q-48668714": {
+   "hash": "47ef15efbe88",
+   "seconds": 4.78
+  },
+  "lab/plasmolysis-step/6-seen-80aba7ba": {
+   "hash": "f6b51dbe863d",
+   "seconds": 8.57
+  },
+  "lab/transport-step/0-concl-0d1124a1": {
+   "hash": "2a1579e8642f",
+   "seconds": 10.06
+  },
+  "lab/transport-step/0-q-ece55954": {
+   "hash": "636f12779deb",
+   "seconds": 4.51
+  },
+  "lab/transport-step/0-seen-1aee92ef": {
+   "hash": "b9a893ba59ec",
+   "seconds": 11.5
+  },
+  "lab/transport-step/1-concl-2f60574e": {
+   "hash": "2eed78ca5e7d",
+   "seconds": 10.8
+  },
+  "lab/transport-step/1-q-7ef07e56": {
+   "hash": "91ed9414b4bb",
+   "seconds": 5.54
+  },
+  "lab/transport-step/1-seen-de0a1b3f": {
+   "hash": "fdd430bab01d",
+   "seconds": 9.55
+  },
+  "lab/transport-step/2-concl-83e93d7d": {
+   "hash": "bfb01c7fd08e",
+   "seconds": 9.96
+  },
+  "lab/transport-step/2-q-b6630721": {
+   "hash": "96b58ef8be6b",
+   "seconds": 4.82
+  },
+  "lab/transport-step/2-seen-33df4f87": {
+   "hash": "e9ea439a4c3b",
+   "seconds": 8.95
+  },
+  "lab/transport-step/3-concl-4d4e4d92": {
+   "hash": "f38979a7b432",
+   "seconds": 10.94
+  },
+  "lab/transport-step/3-q-3270da1e": {
+   "hash": "72da85a68696",
+   "seconds": 3.94
+  },
+  "lab/transport-step/3-seen-6bbb3c35": {
+   "hash": "bad583013805",
+   "seconds": 10.9
+  },
+  "lab/transport-step/4-concl-b64fb594": {
+   "hash": "bbd4d85e6d45",
+   "seconds": 10.37
+  },
+  "lab/transport-step/4-q-7743b121": {
+   "hash": "2e13e397020f",
+   "seconds": 5.71
+  },
+  "lab/transport-step/4-seen-96352c1d": {
+   "hash": "9a0e71898ec2",
+   "seconds": 10.78
+  },
+  "lab/transport-step/5-concl-e3a7d1bb": {
+   "hash": "9f8e465e3e82",
+   "seconds": 9.19
+  },
+  "lab/transport-step/5-q-1ad7ac60": {
+   "hash": "0ce063685e6b",
+   "seconds": 5.09
+  },
+  "lab/transport-step/5-seen-afd230f6": {
+   "hash": "6206a07f1677",
+   "seconds": 9.96
+  },
+  "lab/transport-step/6-concl-186bb911": {
+   "hash": "fbefde68d9dd",
+   "seconds": 10.37
+  },
+  "lab/transport-step/6-q-6fc43c89": {
+   "hash": "b71b0f9a9cab",
+   "seconds": 4.56
+  },
+  "lab/transport-step/6-seen-748b6ef2": {
+   "hash": "9f31e648866f",
+   "seconds": 11.71
+  }
+ }
 }

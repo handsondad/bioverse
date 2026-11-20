@@ -71,6 +71,18 @@ export const photosynthesisFood: Story = {
         ],
       },
       {
+        turn: 3, title: '泥土只是调料', duration: 9,
+        cues: [
+          { kind: 'shape', shape: 'rect', at: [600, 600], size: [720, 170], color: '#e6c9a8', text: '泥土', from: 0.2 },
+          { kind: 'sprite', icon: '🌾', path: [[600, 380]], size: 150, from: 0.6 },
+          { kind: 'atom', path: [[400, 640], [560, 450]], symbol: 'N', color: '#4dabf7', r: 26, from: 1.4 },
+          { kind: 'atom', path: [[600, 660], [600, 460]], symbol: 'P', color: '#f59f00', r: 26, from: 1.8 },
+          { kind: 'atom', path: [[800, 640], [640, 450]], symbol: 'K', color: '#ae3ec9', r: 26, from: 2.2 },
+          { kind: 'label', at: [640, 330], pos: [900, 230], text: '氮磷钾造蛋白和叶绿素', from: 3.2 },
+          { kind: 'text', at: [600, 800], text: '量不多，缺了却长不好', from: 5.0 },
+        ],
+      },
+      {
         turn: 4, title: '白天晚上不一样', duration: 9,
         cues: [
           { kind: 'shape', shape: 'rect', at: [340, 430], size: [340, 220], color: '#fff4e0', text: '白天：光合放氧', from: 0.3 },

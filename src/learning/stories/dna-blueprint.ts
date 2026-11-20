@@ -82,6 +82,17 @@ export const dnaBlueprint: Story = {
           { kind: 'text', at: [600, 760], text: '每个细胞都存同一本完整书', from: 4.8 },
         ],
       },
+      {
+        turn: 4, title: '同一本书读不同章', duration: 9,
+        cues: [
+          { kind: 'shape', shape: 'rect', at: [600, 250], size: [380, 110], color: '#fff4e0', text: '同一本说明书', from: 0.2 },
+          { kind: 'shape', shape: 'circle', at: [270, 580], size: [210, 210], color: '#ffe3e3', text: '皮肤细胞', from: 1.2 },
+          { kind: 'shape', shape: 'circle', at: [930, 580], size: [210, 210], color: '#ffc9c9', text: '心肌细胞', from: 1.6 },
+          { kind: 'arrow', path: [[460, 320], [300, 460]], color: '#e8590c', text: '读造皮肤章', from: 2.4 },
+          { kind: 'arrow', path: [[740, 320], [900, 460]], color: '#c2255c', text: '读造心肌章', from: 3.0 },
+          { kind: 'text', at: [600, 800], text: '其余章节先合上不读', from: 4.6 },
+        ],
+      },
     ],
   },
 };

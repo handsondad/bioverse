@@ -69,6 +69,17 @@ export const decomposerCycle: Story = {
         ],
       },
       {
+        turn: 3, title: '温暖潮湿烂得快', duration: 9,
+        cues: [
+          { kind: 'text', at: [600, 240], text: '真菌细菌也怕冷', from: 0.2 },
+          { kind: 'shape', shape: 'pill', at: [330, 420], size: [340, 130], color: '#d3f9d8', text: '热带雨林', from: 0.8 },
+          { kind: 'meter', at: [330, 600], label: '分解速度', start: 0.1, end: 0.95, color: '#2e7d32', from: 1.4 },
+          { kind: 'shape', shape: 'pill', at: [870, 420], size: [340, 130], color: '#e7f5ff', text: '寒带针叶林', from: 2.4 },
+          { kind: 'meter', at: [870, 600], label: '分解速度', start: 0.1, end: 0.2, color: '#3b6ea5', from: 3.0 },
+          { kind: 'text', at: [600, 790], text: '雨林几天烂没，寒带铺多年', from: 4.6 },
+        ],
+      },
+      {
         turn: 4, title: '三类角色缺一不可', duration: 9,
         cues: [
           { kind: 'shape', shape: 'pill', at: [240, 440], size: [230, 120], color: '#d9f2dc', text: '生产者造粮', from: 0.3 },

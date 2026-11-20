@@ -143,15 +143,15 @@ export function filmProblems(story: Story): string[] {
   if (scenes[0]?.turn !== 0) problems.push('第一场戏要配第 1 轮对话');
   const total = totalDuration(story.film);
   if (total < 30 || total > 150) problems.push(`全片 ${total} 秒（30–150）`);
-  let skipped = 0;
   scenes.forEach((scene, i) => {
     const where = `第 ${i + 1} 场「${scene.title}」`;
     if (i > 0 && scene.turn < scenes[i - 1].turn) problems.push(`${where}：场次要按对话顺序排`);
-    if (i > 0) skipped += Math.max(scene.turn - scenes[i - 1].turn - 1, 0);
     if (scene.turn >= story.dialogue.length) problems.push(`${where}：对话没有第 ${scene.turn + 1} 轮`);
     problems.push(...sceneProblems(scene, where));
   });
-  if (skipped > 1) problems.push('最多只能跳过 1 轮对话不配戏');
+  const staged = new Set(scenes.map(scene => scene.turn));
+  const unstaged = story.dialogue.slice(0, -1).flatMap((_, i) => (staged.has(i) ? [] : [i + 1]));
+  if (unstaged.length) problems.push(`第 ${unstaged.join('、')} 轮还没配戏：配音时爸爸讲这一轮，画面却还停在上一场`);
   for (const turn of new Set(scenes.map(scene => scene.turn))) {
     if (scenes.filter(scene => scene.turn === turn).length > 3) problems.push(`第 ${turn + 1} 轮配了超过 3 场戏`);
   }

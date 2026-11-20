@@ -61,6 +61,19 @@ export const mitosisStep: Story = {
         ],
       },
       {
+        turn: 2, title: '前期打包染色体', duration: 9,
+        cues: [
+          { kind: 'shape', shape: 'circle', at: [600, 440], size: [380, 380], color: '#eef9ee', from: 0.2 },
+          { kind: 'shape', shape: 'circle', at: [600, 440], size: [220, 220], color: '#f3f0ff', text: '核膜', outline: true, from: 0.4, to: 3.0 },
+          { kind: 'shape', shape: 'pill', at: [550, 430], size: [44, 120], color: '#d9480f', motion: 'grow', from: 1.4 },
+          { kind: 'shape', shape: 'pill', at: [650, 450], size: [44, 120], color: '#3b6ea5', motion: 'grow', from: 1.6 },
+          { kind: 'label', at: [550, 380], pos: [250, 240], text: '细丝卷成染色体', from: 2.2 },
+          { kind: 'bond', a: [420, 440], b: [550, 430], color: '#868e96', from: 3.4 },
+          { kind: 'bond', a: [780, 440], b: [650, 450], color: '#868e96', from: 3.4 },
+          { kind: 'label', at: [780, 440], pos: [970, 650], text: '两极拉出纺锤丝', from: 4.2 },
+        ],
+      },
+      {
         turn: 3, title: '中期排队后期分', duration: 10,
         cues: [
           { kind: 'shape', shape: 'rect', at: [600, 450], size: [540, 310], color: '#eef9ee', from: 0.2 },

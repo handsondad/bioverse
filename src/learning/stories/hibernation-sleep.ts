@@ -66,6 +66,17 @@ export const hibernationSleep: Story = {
         ],
       },
       {
+        turn: 3, title: '黑熊只是浅冬眠', duration: 9,
+        cues: [
+          { kind: 'sprite', icon: '🐻', path: [[360, 430]], size: 190, from: 0.2 },
+          { kind: 'count', at: [360, 660], label: '黑熊体温', start: 37, end: 33, unit: '℃', over: 3, from: 1.0 },
+          { kind: 'sprite', icon: '🦔', path: [[840, 450]], size: 120, from: 2.2 },
+          { kind: 'count', at: [840, 660], label: '刺猬体温', start: 35, end: 5, unit: '℃', over: 3, from: 2.8 },
+          { kind: 'label', at: [360, 400], pos: [360, 230], text: '只降几度，一碰就醒', from: 4.0 },
+          { kind: 'text', at: [600, 800], text: '个头太大，叫浅冬眠或冬蛰', from: 5.4 },
+        ],
+      },
+      {
         turn: 4, title: '别吵醒冬眠动物', duration: 9,
         cues: [
           { kind: 'sprite', icon: '🦔', path: [[600, 420]], size: 150, from: 0.2 },

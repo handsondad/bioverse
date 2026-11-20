@@ -45,12 +45,24 @@ export const impulseStep: Story = {
   film: {
     scenes: [
       {
-        turn: 0, title: '静息与动作电位', duration: 10,
+        turn: 0, title: '静息电位外正内负', duration: 9,
         cues: [
-          { kind: 'shape', shape: 'rect', at: [600, 430], size: [760, 170], color: '#e7f5ff', tint: { color: '#ffd8a8', at: 3.5, over: 1.5 }, text: '神经纤维膜', from: 0.2 },
-          { kind: 'count', at: [600, 240], label: '膜电位', start: -70, end: 30, unit: 'mV', over: 2.5, from: 3.0 },
-          { kind: 'atom', path: [[600, 560], [600, 440]], symbol: 'Na⁺', color: '#e8590c', r: 36, travel: 2.2, from: 2.8 },
-          { kind: 'myth', wrong: '神经里像电线一样跑电子', right: '靠钠钾离子进出形成电信号', from: 5.5 },
+          { kind: 'shape', shape: 'rect', at: [600, 430], size: [760, 170], color: '#e7f5ff', text: '神经纤维膜', from: 0.2 },
+          { kind: 'atom', path: [[600, 440], [600, 600]], symbol: 'K⁺', color: '#4dabf7', r: 32, travel: 2.2, from: 1.0 },
+          { kind: 'count', at: [600, 240], label: '静息电位', start: -70, end: -70, unit: 'mV', from: 2.0 },
+          { kind: 'label', at: [880, 430], pos: [980, 640], text: '外正内负，稳稳待命', from: 3.0 },
+          { kind: 'myth', wrong: '神经里像电线一样跑电子', right: '靠钠钾离子进出形成电信号', from: 5.0 },
+        ],
+      },
+      {
+        turn: 1, title: '钠离子涌入翻转', duration: 9,
+        cues: [
+          { kind: 'shape', shape: 'rect', at: [600, 430], size: [760, 170], color: '#e7f5ff', tint: { color: '#ffd8a8', at: 2.4, over: 1.5 }, text: '神经纤维膜', from: 0.2 },
+          { kind: 'atom', path: [[480, 620], [480, 440]], symbol: 'Na⁺', color: '#e8590c', r: 32, travel: 2, from: 1.0 },
+          { kind: 'atom', path: [[720, 620], [720, 440]], symbol: 'Na⁺', color: '#e8590c', r: 32, travel: 2, from: 1.3 },
+          { kind: 'count', at: [600, 240], label: '膜电位', start: -70, end: 30, unit: 'mV', over: 2.5, from: 2.0 },
+          { kind: 'label', at: [880, 430], pos: [980, 640], text: '翻成内正外负', from: 4.0 },
+          { kind: 'text', at: [600, 780], text: '这就是动作电位', from: 5.2 },
         ],
       },
       {

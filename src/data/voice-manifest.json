@@ -9,5 +9,2406 @@
    "rate": "-5%"
   }
  },
- "clips": {}
+ "clips": {
+  "autumn-leaves/0-dad": {
+   "hash": "041a943096da",
+   "seconds": 17.95
+  },
+  "autumn-leaves/0-nian": {
+   "hash": "5e2571dd5da7",
+   "seconds": 7.8
+  },
+  "autumn-leaves/1-dad": {
+   "hash": "feec481cdf02",
+   "seconds": 19.3
+  },
+  "autumn-leaves/1-nian": {
+   "hash": "4a76b42b7426",
+   "seconds": 5.64
+  },
+  "autumn-leaves/2-dad": {
+   "hash": "59190a5f63bb",
+   "seconds": 18.7
+  },
+  "autumn-leaves/2-nian": {
+   "hash": "4b21033b99e5",
+   "seconds": 7.99
+  },
+  "autumn-leaves/3-dad": {
+   "hash": "4e0b43d8714b",
+   "seconds": 18.53
+  },
+  "autumn-leaves/3-nian": {
+   "hash": "b50dd65df7a6",
+   "seconds": 6.53
+  },
+  "autumn-leaves/4-dad": {
+   "hash": "eb41d86a9126",
+   "seconds": 16.46
+  },
+  "autumn-leaves/4-nian": {
+   "hash": "b1bd12827b99",
+   "seconds": 6.7
+  },
+  "autumn-leaves/5-dad": {
+   "hash": "416883f4da33",
+   "seconds": 10.2
+  },
+  "autumn-leaves/5-nian": {
+   "hash": "882a216e1c3e",
+   "seconds": 15.58
+  },
+  "bacteria-vs-virus/0-dad": {
+   "hash": "78314b9b9ef7",
+   "seconds": 18.77
+  },
+  "bacteria-vs-virus/0-nian": {
+   "hash": "d882513f4c2e",
+   "seconds": 7.61
+  },
+  "bacteria-vs-virus/1-dad": {
+   "hash": "9cd49828ade0",
+   "seconds": 17.78
+  },
+  "bacteria-vs-virus/1-nian": {
+   "hash": "0dfc63346a34",
+   "seconds": 8.21
+  },
+  "bacteria-vs-virus/2-dad": {
+   "hash": "1d3919786e99",
+   "seconds": 19.44
+  },
+  "bacteria-vs-virus/2-nian": {
+   "hash": "d43e37b66575",
+   "seconds": 9.41
+  },
+  "bacteria-vs-virus/3-dad": {
+   "hash": "ec285909b8cb",
+   "seconds": 18.46
+  },
+  "bacteria-vs-virus/3-nian": {
+   "hash": "ae751f18a146",
+   "seconds": 7.44
+  },
+  "bacteria-vs-virus/4-dad": {
+   "hash": "aea4891f3a00",
+   "seconds": 19.42
+  },
+  "bacteria-vs-virus/4-nian": {
+   "hash": "8addf55614a9",
+   "seconds": 6.02
+  },
+  "bacteria-vs-virus/5-dad": {
+   "hash": "1846696a77ec",
+   "seconds": 13.03
+  },
+  "bacteria-vs-virus/5-nian": {
+   "hash": "1f4115b76fdf",
+   "seconds": 17.81
+  },
+  "bee-pollination/0-dad": {
+   "hash": "fe4b01210122",
+   "seconds": 26.06
+  },
+  "bee-pollination/0-nian": {
+   "hash": "311cc6246942",
+   "seconds": 10.22
+  },
+  "bee-pollination/1-dad": {
+   "hash": "6d73e721e50a",
+   "seconds": 25.9
+  },
+  "bee-pollination/1-nian": {
+   "hash": "0e62cb230d56",
+   "seconds": 11.59
+  },
+  "bee-pollination/2-dad": {
+   "hash": "bf2bd2a6fb04",
+   "seconds": 23.83
+  },
+  "bee-pollination/2-nian": {
+   "hash": "a7ed8bb7981b",
+   "seconds": 9.22
+  },
+  "bee-pollination/3-dad": {
+   "hash": "2fd42dfc32e4",
+   "seconds": 24.26
+  },
+  "bee-pollination/3-nian": {
+   "hash": "45afe3a7f770",
+   "seconds": 11.14
+  },
+  "bee-pollination/4-dad": {
+   "hash": "1112a7d07678",
+   "seconds": 24.26
+  },
+  "bee-pollination/4-nian": {
+   "hash": "ccd3afd8d0a8",
+   "seconds": 9.77
+  },
+  "bee-pollination/5-dad": {
+   "hash": "efd40ea1173f",
+   "seconds": 8.9
+  },
+  "bee-pollination/5-nian": {
+   "hash": "03f5d59cf5bd",
+   "seconds": 17.42
+  },
+  "bird-migration/0-dad": {
+   "hash": "24f7d54ab1e9",
+   "seconds": 16.39
+  },
+  "bird-migration/0-nian": {
+   "hash": "d6d9e009bf39",
+   "seconds": 8.59
+  },
+  "bird-migration/1-dad": {
+   "hash": "eb04d5dec11e",
+   "seconds": 15.65
+  },
+  "bird-migration/1-nian": {
+   "hash": "01216483207a",
+   "seconds": 7.73
+  },
+  "bird-migration/2-dad": {
+   "hash": "4ba80669da03",
+   "seconds": 18.02
+  },
+  "bird-migration/2-nian": {
+   "hash": "0589f6849aa4",
+   "seconds": 8.3
+  },
+  "bird-migration/3-dad": {
+   "hash": "88302b869106",
+   "seconds": 18.62
+  },
+  "bird-migration/3-nian": {
+   "hash": "14ba5f2aa3d5",
+   "seconds": 7.22
+  },
+  "bird-migration/4-dad": {
+   "hash": "cd2d81bcb7b4",
+   "seconds": 19.01
+  },
+  "bird-migration/4-nian": {
+   "hash": "08b359caf63b",
+   "seconds": 8.42
+  },
+  "bird-migration/5-dad": {
+   "hash": "3a39eed6efb1",
+   "seconds": 11.52
+  },
+  "bird-migration/5-nian": {
+   "hash": "a269d2d2fd7d",
+   "seconds": 17.54
+  },
+  "blood-sugar-insulin/0-dad": {
+   "hash": "dcb24a562aab",
+   "seconds": 19.92
+  },
+  "blood-sugar-insulin/0-nian": {
+   "hash": "0c8fd2c2cf79",
+   "seconds": 10.85
+  },
+  "blood-sugar-insulin/1-dad": {
+   "hash": "26c5a34e1921",
+   "seconds": 22.08
+  },
+  "blood-sugar-insulin/1-nian": {
+   "hash": "f4aec7d447db",
+   "seconds": 4.99
+  },
+  "blood-sugar-insulin/2-dad": {
+   "hash": "be249fbbc3f1",
+   "seconds": 23.28
+  },
+  "blood-sugar-insulin/2-nian": {
+   "hash": "5663f6d1f822",
+   "seconds": 10.03
+  },
+  "blood-sugar-insulin/3-dad": {
+   "hash": "c3fdc98cf882",
+   "seconds": 17.86
+  },
+  "blood-sugar-insulin/3-nian": {
+   "hash": "375a9b3cf396",
+   "seconds": 6.74
+  },
+  "blood-sugar-insulin/4-dad": {
+   "hash": "ecedf801b737",
+   "seconds": 24.91
+  },
+  "blood-sugar-insulin/4-nian": {
+   "hash": "16eea4257399",
+   "seconds": 7.1
+  },
+  "blood-sugar-insulin/5-dad": {
+   "hash": "4b54cea5671f",
+   "seconds": 16.63
+  },
+  "blood-sugar-insulin/5-nian": {
+   "hash": "48a08afafaf6",
+   "seconds": 17.33
+  },
+  "bread-sweet-chew/0-dad": {
+   "hash": "c1b9f42006ff",
+   "seconds": 19.27
+  },
+  "bread-sweet-chew/0-nian": {
+   "hash": "1eb97d1c7e58",
+   "seconds": 5.83
+  },
+  "bread-sweet-chew/1-dad": {
+   "hash": "9b9788234764",
+   "seconds": 19.66
+  },
+  "bread-sweet-chew/1-nian": {
+   "hash": "64b6c05c6b5d",
+   "seconds": 4.34
+  },
+  "bread-sweet-chew/2-dad": {
+   "hash": "87eba838b922",
+   "seconds": 17.93
+  },
+  "bread-sweet-chew/2-nian": {
+   "hash": "6976f951985d",
+   "seconds": 5.33
+  },
+  "bread-sweet-chew/3-dad": {
+   "hash": "5002b96b46f5",
+   "seconds": 17.57
+  },
+  "bread-sweet-chew/3-nian": {
+   "hash": "5194fdd9d131",
+   "seconds": 5.78
+  },
+  "bread-sweet-chew/4-dad": {
+   "hash": "ac7a7a3266bc",
+   "seconds": 17.23
+  },
+  "bread-sweet-chew/4-nian": {
+   "hash": "314d28c5e93a",
+   "seconds": 8.74
+  },
+  "bread-sweet-chew/5-dad": {
+   "hash": "2670751dc9ce",
+   "seconds": 8.88
+  },
+  "bread-sweet-chew/5-nian": {
+   "hash": "66e43e2deaf2",
+   "seconds": 17.06
+  },
+  "cactus-spines-desert/0-dad": {
+   "hash": "0f77b61d6514",
+   "seconds": 21.91
+  },
+  "cactus-spines-desert/0-nian": {
+   "hash": "900b3b0058ab",
+   "seconds": 8.54
+  },
+  "cactus-spines-desert/1-dad": {
+   "hash": "6997b92fa0b4",
+   "seconds": 21.6
+  },
+  "cactus-spines-desert/1-nian": {
+   "hash": "84a4f0d9b285",
+   "seconds": 8.71
+  },
+  "cactus-spines-desert/2-dad": {
+   "hash": "9f42eee95fea",
+   "seconds": 21.48
+  },
+  "cactus-spines-desert/2-nian": {
+   "hash": "567d9ab8dfd8",
+   "seconds": 11.74
+  },
+  "cactus-spines-desert/3-dad": {
+   "hash": "c6d0fae3deca",
+   "seconds": 22.68
+  },
+  "cactus-spines-desert/3-nian": {
+   "hash": "583c1c49cd37",
+   "seconds": 7.39
+  },
+  "cactus-spines-desert/4-dad": {
+   "hash": "459c4f3126c2",
+   "seconds": 21.05
+  },
+  "cactus-spines-desert/4-nian": {
+   "hash": "540cca2479c6",
+   "seconds": 8.98
+  },
+  "cactus-spines-desert/5-dad": {
+   "hash": "64a3e4d92e57",
+   "seconds": 9.5
+  },
+  "cactus-spines-desert/5-nian": {
+   "hash": "3727fc0eb1ad",
+   "seconds": 17.59
+  },
+  "calico-sex-chromosome/0-dad": {
+   "hash": "5863f6a99768",
+   "seconds": 20.64
+  },
+  "calico-sex-chromosome/0-nian": {
+   "hash": "ada8a9e2d020",
+   "seconds": 9.96
+  },
+  "calico-sex-chromosome/1-dad": {
+   "hash": "cb388bca992d",
+   "seconds": 22.37
+  },
+  "calico-sex-chromosome/1-nian": {
+   "hash": "95519146fdfb",
+   "seconds": 7.58
+  },
+  "calico-sex-chromosome/2-dad": {
+   "hash": "c250d93f9564",
+   "seconds": 24.41
+  },
+  "calico-sex-chromosome/2-nian": {
+   "hash": "36fc39ebdc63",
+   "seconds": 9.41
+  },
+  "calico-sex-chromosome/3-dad": {
+   "hash": "c758d4e51504",
+   "seconds": 25.94
+  },
+  "calico-sex-chromosome/3-nian": {
+   "hash": "acdc2cc6639d",
+   "seconds": 11.45
+  },
+  "calico-sex-chromosome/4-dad": {
+   "hash": "3b02a773ef63",
+   "seconds": 22.06
+  },
+  "calico-sex-chromosome/4-nian": {
+   "hash": "2f16a69aea93",
+   "seconds": 9.86
+  },
+  "calico-sex-chromosome/5-dad": {
+   "hash": "6381e4447146",
+   "seconds": 15.36
+  },
+  "calico-sex-chromosome/5-nian": {
+   "hash": "c9e2c2ae3a31",
+   "seconds": 17.98
+  },
+  "camo-mimicry/0-dad": {
+   "hash": "e22f25d23075",
+   "seconds": 19.42
+  },
+  "camo-mimicry/0-nian": {
+   "hash": "a8c3ad1e9cc8",
+   "seconds": 8.95
+  },
+  "camo-mimicry/1-dad": {
+   "hash": "eb0fca0ecbd5",
+   "seconds": 15.79
+  },
+  "camo-mimicry/1-nian": {
+   "hash": "60d00c89c279",
+   "seconds": 7.97
+  },
+  "camo-mimicry/2-dad": {
+   "hash": "2e24cf2e4f11",
+   "seconds": 21.19
+  },
+  "camo-mimicry/2-nian": {
+   "hash": "5f4f62ce2b6e",
+   "seconds": 7.42
+  },
+  "camo-mimicry/3-dad": {
+   "hash": "748509b47243",
+   "seconds": 17.26
+  },
+  "camo-mimicry/3-nian": {
+   "hash": "43bff8b47a4f",
+   "seconds": 8.78
+  },
+  "camo-mimicry/4-dad": {
+   "hash": "c1a0e7dd4e65",
+   "seconds": 16.58
+  },
+  "camo-mimicry/4-nian": {
+   "hash": "845df3d10527",
+   "seconds": 6.14
+  },
+  "camo-mimicry/5-dad": {
+   "hash": "c6d7fd814cf9",
+   "seconds": 10.51
+  },
+  "camo-mimicry/5-nian": {
+   "hash": "3085dcdc7306",
+   "seconds": 17.3
+  },
+  "caterpillar-butterfly/0-dad": {
+   "hash": "f611e393ec7b",
+   "seconds": 20.5
+  },
+  "caterpillar-butterfly/0-nian": {
+   "hash": "11aab9873033",
+   "seconds": 8.62
+  },
+  "caterpillar-butterfly/1-dad": {
+   "hash": "0e5298e3bfd2",
+   "seconds": 27.34
+  },
+  "caterpillar-butterfly/1-nian": {
+   "hash": "3ab259612a09",
+   "seconds": 7.32
+  },
+  "caterpillar-butterfly/2-dad": {
+   "hash": "4025b8416dbf",
+   "seconds": 21.62
+  },
+  "caterpillar-butterfly/2-nian": {
+   "hash": "82a5de7152cd",
+   "seconds": 9.07
+  },
+  "caterpillar-butterfly/3-dad": {
+   "hash": "548a53955715",
+   "seconds": 19.9
+  },
+  "caterpillar-butterfly/3-nian": {
+   "hash": "c22898df295c",
+   "seconds": 8.98
+  },
+  "caterpillar-butterfly/4-dad": {
+   "hash": "730cfdfcf10a",
+   "seconds": 22.99
+  },
+  "caterpillar-butterfly/4-nian": {
+   "hash": "a3786bba5535",
+   "seconds": 9.67
+  },
+  "caterpillar-butterfly/5-dad": {
+   "hash": "4ed0a270b259",
+   "seconds": 15.24
+  },
+  "caterpillar-butterfly/5-nian": {
+   "hash": "16c728ae2176",
+   "seconds": 19.22
+  },
+  "cell-building-blocks/0-dad": {
+   "hash": "74210bedae5e",
+   "seconds": 15.5
+  },
+  "cell-building-blocks/0-nian": {
+   "hash": "cf2832a9464f",
+   "seconds": 8.3
+  },
+  "cell-building-blocks/1-dad": {
+   "hash": "b1596f4028f0",
+   "seconds": 16.58
+  },
+  "cell-building-blocks/1-nian": {
+   "hash": "90a1df65fbd5",
+   "seconds": 5.54
+  },
+  "cell-building-blocks/2-dad": {
+   "hash": "56876e9f562d",
+   "seconds": 15.53
+  },
+  "cell-building-blocks/2-nian": {
+   "hash": "dee81d18a7b3",
+   "seconds": 6.02
+  },
+  "cell-building-blocks/3-dad": {
+   "hash": "c96035014d20",
+   "seconds": 16.66
+  },
+  "cell-building-blocks/3-nian": {
+   "hash": "521bea67185d",
+   "seconds": 5.59
+  },
+  "cell-building-blocks/4-dad": {
+   "hash": "cc48eb08f53c",
+   "seconds": 17.76
+  },
+  "cell-building-blocks/4-nian": {
+   "hash": "7c3667244f1e",
+   "seconds": 6.91
+  },
+  "cell-building-blocks/5-dad": {
+   "hash": "17d470b3bfcd",
+   "seconds": 11.5
+  },
+  "cell-building-blocks/5-nian": {
+   "hash": "936381071c6d",
+   "seconds": 19.18
+  },
+  "cell-respiration/0-dad": {
+   "hash": "80bda3d09d6b",
+   "seconds": 16.08
+  },
+  "cell-respiration/0-nian": {
+   "hash": "9239128787b2",
+   "seconds": 8.06
+  },
+  "cell-respiration/1-dad": {
+   "hash": "5ac7cfa7f774",
+   "seconds": 17.71
+  },
+  "cell-respiration/1-nian": {
+   "hash": "845b6aaa82bc",
+   "seconds": 6.65
+  },
+  "cell-respiration/2-dad": {
+   "hash": "4a77e1f079c5",
+   "seconds": 17.88
+  },
+  "cell-respiration/2-nian": {
+   "hash": "e61d013ecb7d",
+   "seconds": 5.4
+  },
+  "cell-respiration/3-dad": {
+   "hash": "45a73ea59e73",
+   "seconds": 17.66
+  },
+  "cell-respiration/3-nian": {
+   "hash": "a94b97dae4e4",
+   "seconds": 6.94
+  },
+  "cell-respiration/4-dad": {
+   "hash": "16656588e579",
+   "seconds": 16.22
+  },
+  "cell-respiration/4-nian": {
+   "hash": "98b9d25fe0c4",
+   "seconds": 5.88
+  },
+  "cell-respiration/5-dad": {
+   "hash": "f84c446fb669",
+   "seconds": 11.11
+  },
+  "cell-respiration/5-nian": {
+   "hash": "dc04dc24086b",
+   "seconds": 18.65
+  },
+  "coral-symbiosis-bleach/0-dad": {
+   "hash": "f2eaba894f87",
+   "seconds": 25.7
+  },
+  "coral-symbiosis-bleach/0-nian": {
+   "hash": "faa94d0dbd4b",
+   "seconds": 9.31
+  },
+  "coral-symbiosis-bleach/1-dad": {
+   "hash": "652df766d658",
+   "seconds": 26.78
+  },
+  "coral-symbiosis-bleach/1-nian": {
+   "hash": "c8d318605917",
+   "seconds": 8.38
+  },
+  "coral-symbiosis-bleach/2-dad": {
+   "hash": "6f730bee14c5",
+   "seconds": 29.21
+  },
+  "coral-symbiosis-bleach/2-nian": {
+   "hash": "a855d20946c8",
+   "seconds": 10.99
+  },
+  "coral-symbiosis-bleach/3-dad": {
+   "hash": "16ed9b052fa2",
+   "seconds": 27.89
+  },
+  "coral-symbiosis-bleach/3-nian": {
+   "hash": "198c472daac6",
+   "seconds": 9.19
+  },
+  "coral-symbiosis-bleach/4-dad": {
+   "hash": "321b88dd11ff",
+   "seconds": 26.18
+  },
+  "coral-symbiosis-bleach/4-nian": {
+   "hash": "b8b6e47f29d6",
+   "seconds": 9.38
+  },
+  "coral-symbiosis-bleach/5-dad": {
+   "hash": "b74585c229ba",
+   "seconds": 10.8
+  },
+  "coral-symbiosis-bleach/5-nian": {
+   "hash": "3daf315518f3",
+   "seconds": 19.51
+  },
+  "decomposer-cycle/0-dad": {
+   "hash": "ba8ef3a59c5f",
+   "seconds": 18.96
+  },
+  "decomposer-cycle/0-nian": {
+   "hash": "7caf731c01ba",
+   "seconds": 8.26
+  },
+  "decomposer-cycle/1-dad": {
+   "hash": "39f532e2938f",
+   "seconds": 21.72
+  },
+  "decomposer-cycle/1-nian": {
+   "hash": "f0b0f130c234",
+   "seconds": 6.53
+  },
+  "decomposer-cycle/2-dad": {
+   "hash": "4397491ff3de",
+   "seconds": 20.33
+  },
+  "decomposer-cycle/2-nian": {
+   "hash": "26a3cac1c86b",
+   "seconds": 7.78
+  },
+  "decomposer-cycle/3-dad": {
+   "hash": "5112628b30ea",
+   "seconds": 20.38
+  },
+  "decomposer-cycle/3-nian": {
+   "hash": "4bc0d86ae6ae",
+   "seconds": 7.75
+  },
+  "decomposer-cycle/4-dad": {
+   "hash": "2ffc29049a72",
+   "seconds": 19.66
+  },
+  "decomposer-cycle/4-nian": {
+   "hash": "7d833406f1fe",
+   "seconds": 7.85
+  },
+  "decomposer-cycle/5-dad": {
+   "hash": "6d134a477a98",
+   "seconds": 11.4
+  },
+  "decomposer-cycle/5-nian": {
+   "hash": "3f03f09f2fa2",
+   "seconds": 17.33
+  },
+  "dizzy-ear-spin/0-dad": {
+   "hash": "6cc46de7f793",
+   "seconds": 19.73
+  },
+  "dizzy-ear-spin/0-nian": {
+   "hash": "8eb8a0caa23f",
+   "seconds": 8.45
+  },
+  "dizzy-ear-spin/1-dad": {
+   "hash": "55c8ac522d1e",
+   "seconds": 19.68
+  },
+  "dizzy-ear-spin/1-nian": {
+   "hash": "56b66974c277",
+   "seconds": 7.44
+  },
+  "dizzy-ear-spin/2-dad": {
+   "hash": "c897d6077300",
+   "seconds": 20.47
+  },
+  "dizzy-ear-spin/2-nian": {
+   "hash": "4939803975cb",
+   "seconds": 7.66
+  },
+  "dizzy-ear-spin/3-dad": {
+   "hash": "9f75044a93c3",
+   "seconds": 23.11
+  },
+  "dizzy-ear-spin/3-nian": {
+   "hash": "2050803f4286",
+   "seconds": 8.86
+  },
+  "dizzy-ear-spin/4-dad": {
+   "hash": "e4c4601a9155",
+   "seconds": 22.8
+  },
+  "dizzy-ear-spin/4-nian": {
+   "hash": "e7631d016fb0",
+   "seconds": 9.1
+  },
+  "dizzy-ear-spin/5-dad": {
+   "hash": "59167e6351a2",
+   "seconds": 12.72
+  },
+  "dizzy-ear-spin/5-nian": {
+   "hash": "d38fb655db00",
+   "seconds": 17.95
+  },
+  "dna-blueprint/0-dad": {
+   "hash": "54ad245c1ea0",
+   "seconds": 21.89
+  },
+  "dna-blueprint/0-nian": {
+   "hash": "0913c67bfe71",
+   "seconds": 9.26
+  },
+  "dna-blueprint/1-dad": {
+   "hash": "42d6a1d55199",
+   "seconds": 20.47
+  },
+  "dna-blueprint/1-nian": {
+   "hash": "a96dbd95cafc",
+   "seconds": 6
+  },
+  "dna-blueprint/2-dad": {
+   "hash": "24e61941dcc9",
+   "seconds": 22.22
+  },
+  "dna-blueprint/2-nian": {
+   "hash": "2c5d1471fc1b",
+   "seconds": 10.51
+  },
+  "dna-blueprint/3-dad": {
+   "hash": "8ea0c90046ed",
+   "seconds": 18.36
+  },
+  "dna-blueprint/3-nian": {
+   "hash": "336e494f7f1d",
+   "seconds": 8.3
+  },
+  "dna-blueprint/4-dad": {
+   "hash": "8a4301f42984",
+   "seconds": 16.54
+  },
+  "dna-blueprint/4-nian": {
+   "hash": "7ebd375ba9eb",
+   "seconds": 7.25
+  },
+  "dna-blueprint/5-dad": {
+   "hash": "689f4aaf8721",
+   "seconds": 11.66
+  },
+  "dna-blueprint/5-nian": {
+   "hash": "97a1f76bcc67",
+   "seconds": 19.46
+  },
+  "energy-pyramid-tiger/0-dad": {
+   "hash": "e544695f4a34",
+   "seconds": 19.01
+  },
+  "energy-pyramid-tiger/0-nian": {
+   "hash": "41063819206a",
+   "seconds": 10.15
+  },
+  "energy-pyramid-tiger/1-dad": {
+   "hash": "479fdab43f88",
+   "seconds": 23.95
+  },
+  "energy-pyramid-tiger/1-nian": {
+   "hash": "2e9750a483b9",
+   "seconds": 8.45
+  },
+  "energy-pyramid-tiger/2-dad": {
+   "hash": "1b3b1edd38e3",
+   "seconds": 23.04
+  },
+  "energy-pyramid-tiger/2-nian": {
+   "hash": "d2f251606930",
+   "seconds": 8.88
+  },
+  "energy-pyramid-tiger/3-dad": {
+   "hash": "136e70386862",
+   "seconds": 22.61
+  },
+  "energy-pyramid-tiger/3-nian": {
+   "hash": "2dc916db9542",
+   "seconds": 10.06
+  },
+  "energy-pyramid-tiger/4-dad": {
+   "hash": "a9d6dbfd11f2",
+   "seconds": 23.5
+  },
+  "energy-pyramid-tiger/4-nian": {
+   "hash": "f02470d7a194",
+   "seconds": 7.66
+  },
+  "energy-pyramid-tiger/5-dad": {
+   "hash": "1752f6b8ce78",
+   "seconds": 15.65
+  },
+  "energy-pyramid-tiger/5-nian": {
+   "hash": "1016f15a6544",
+   "seconds": 19.2
+  },
+  "enzyme-step/0-dad": {
+   "hash": "a4adb98dd8c0",
+   "seconds": 16.08
+  },
+  "enzyme-step/0-nian": {
+   "hash": "83de37fa9f16",
+   "seconds": 8.23
+  },
+  "enzyme-step/1-dad": {
+   "hash": "9c82dd55010f",
+   "seconds": 16.61
+  },
+  "enzyme-step/1-nian": {
+   "hash": "7f0587e8ee0e",
+   "seconds": 5.5
+  },
+  "enzyme-step/2-dad": {
+   "hash": "49395c111ecb",
+   "seconds": 16.78
+  },
+  "enzyme-step/2-nian": {
+   "hash": "33117bb9996a",
+   "seconds": 4.9
+  },
+  "enzyme-step/3-dad": {
+   "hash": "f8b8d95e1b58",
+   "seconds": 17.88
+  },
+  "enzyme-step/3-nian": {
+   "hash": "f3e62bbb7853",
+   "seconds": 5.18
+  },
+  "enzyme-step/4-dad": {
+   "hash": "45f2c7efec03",
+   "seconds": 19.46
+  },
+  "enzyme-step/4-nian": {
+   "hash": "3be1d48d71f3",
+   "seconds": 8.76
+  },
+  "enzyme-step/5-dad": {
+   "hash": "59ed1ecdc887",
+   "seconds": 13.63
+  },
+  "enzyme-step/5-nian": {
+   "hash": "d01ed84b72dd",
+   "seconds": 17.98
+  },
+  "evolution-giraffe/0-dad": {
+   "hash": "0f3ebd437113",
+   "seconds": 18.7
+  },
+  "evolution-giraffe/0-nian": {
+   "hash": "4bc1abbbbbe9",
+   "seconds": 10.22
+  },
+  "evolution-giraffe/1-dad": {
+   "hash": "1217f9c06ab3",
+   "seconds": 20.74
+  },
+  "evolution-giraffe/1-nian": {
+   "hash": "985eba5acb39",
+   "seconds": 7.87
+  },
+  "evolution-giraffe/2-dad": {
+   "hash": "84329d3886b9",
+   "seconds": 17.26
+  },
+  "evolution-giraffe/2-nian": {
+   "hash": "990276f62543",
+   "seconds": 8.28
+  },
+  "evolution-giraffe/3-dad": {
+   "hash": "641b115398b5",
+   "seconds": 19.32
+  },
+  "evolution-giraffe/3-nian": {
+   "hash": "b329bd582642",
+   "seconds": 7.75
+  },
+  "evolution-giraffe/4-dad": {
+   "hash": "bd9d154edc82",
+   "seconds": 17.62
+  },
+  "evolution-giraffe/4-nian": {
+   "hash": "217fc8d1e8bf",
+   "seconds": 5.69
+  },
+  "evolution-giraffe/5-dad": {
+   "hash": "22e32199d809",
+   "seconds": 10.08
+  },
+  "evolution-giraffe/5-nian": {
+   "hash": "ebec9108ec2c",
+   "seconds": 17.02
+  },
+  "fat-breathed-out/0-dad": {
+   "hash": "3fca2921f84d",
+   "seconds": 18.72
+  },
+  "fat-breathed-out/0-nian": {
+   "hash": "4679f7dc1216",
+   "seconds": 8.04
+  },
+  "fat-breathed-out/1-dad": {
+   "hash": "c8e6e5b413a7",
+   "seconds": 21.74
+  },
+  "fat-breathed-out/1-nian": {
+   "hash": "045a7fea0fef",
+   "seconds": 6.31
+  },
+  "fat-breathed-out/2-dad": {
+   "hash": "75eb7052ddc2",
+   "seconds": 22.2
+  },
+  "fat-breathed-out/2-nian": {
+   "hash": "353428d24500",
+   "seconds": 8.64
+  },
+  "fat-breathed-out/3-dad": {
+   "hash": "76278033136c",
+   "seconds": 21.74
+  },
+  "fat-breathed-out/3-nian": {
+   "hash": "539d8722c94e",
+   "seconds": 9.41
+  },
+  "fat-breathed-out/4-dad": {
+   "hash": "7469b3b7d180",
+   "seconds": 23.93
+  },
+  "fat-breathed-out/4-nian": {
+   "hash": "fe61ff3b2652",
+   "seconds": 9.29
+  },
+  "fat-breathed-out/5-dad": {
+   "hash": "cb23dcf15c94",
+   "seconds": 11.14
+  },
+  "fat-breathed-out/5-nian": {
+   "hash": "4b8277dd1ccd",
+   "seconds": 18.26
+  },
+  "fever-immune/0-dad": {
+   "hash": "f6f09f98c9ef",
+   "seconds": 19.18
+  },
+  "fever-immune/0-nian": {
+   "hash": "d792577bfb90",
+   "seconds": 6.41
+  },
+  "fever-immune/1-dad": {
+   "hash": "ce14fc34f19f",
+   "seconds": 20.62
+  },
+  "fever-immune/1-nian": {
+   "hash": "9f421045bdaa",
+   "seconds": 6.67
+  },
+  "fever-immune/2-dad": {
+   "hash": "3a4ed6509a95",
+   "seconds": 17.81
+  },
+  "fever-immune/2-nian": {
+   "hash": "ba8e4dd79318",
+   "seconds": 6.14
+  },
+  "fever-immune/3-dad": {
+   "hash": "360c260c3e49",
+   "seconds": 20.81
+  },
+  "fever-immune/3-nian": {
+   "hash": "604cd9315c66",
+   "seconds": 6.5
+  },
+  "fever-immune/4-dad": {
+   "hash": "cdfe96a9c952",
+   "seconds": 18.43
+  },
+  "fever-immune/4-nian": {
+   "hash": "07c7ac575879",
+   "seconds": 6.17
+  },
+  "fever-immune/5-dad": {
+   "hash": "fa95063f2e88",
+   "seconds": 8.81
+  },
+  "fever-immune/5-nian": {
+   "hash": "c6e81fff74d1",
+   "seconds": 16.75
+  },
+  "firefly-cold-light/0-dad": {
+   "hash": "f276890d23be",
+   "seconds": 19.3
+  },
+  "firefly-cold-light/0-nian": {
+   "hash": "6ef50db958f3",
+   "seconds": 8.23
+  },
+  "firefly-cold-light/1-dad": {
+   "hash": "990350667b4f",
+   "seconds": 18.31
+  },
+  "firefly-cold-light/1-nian": {
+   "hash": "f262d95ab2f2",
+   "seconds": 8.86
+  },
+  "firefly-cold-light/2-dad": {
+   "hash": "e50c28d8a037",
+   "seconds": 21.17
+  },
+  "firefly-cold-light/2-nian": {
+   "hash": "002f8a4823d6",
+   "seconds": 7.66
+  },
+  "firefly-cold-light/3-dad": {
+   "hash": "153b83adc4e3",
+   "seconds": 20.69
+  },
+  "firefly-cold-light/3-nian": {
+   "hash": "539a3ef06355",
+   "seconds": 9.86
+  },
+  "firefly-cold-light/4-dad": {
+   "hash": "85f1e3aec0be",
+   "seconds": 21.53
+  },
+  "firefly-cold-light/4-nian": {
+   "hash": "0bf0601052ab",
+   "seconds": 8.57
+  },
+  "firefly-cold-light/5-dad": {
+   "hash": "e8233bdad29d",
+   "seconds": 10.06
+  },
+  "firefly-cold-light/5-nian": {
+   "hash": "5cda0da85a91",
+   "seconds": 17.59
+  },
+  "fish-gills-water/0-dad": {
+   "hash": "222f17d7a6c2",
+   "seconds": 16.49
+  },
+  "fish-gills-water/0-nian": {
+   "hash": "f28541ab5057",
+   "seconds": 9.24
+  },
+  "fish-gills-water/1-dad": {
+   "hash": "b812d3a26ac2",
+   "seconds": 21.86
+  },
+  "fish-gills-water/1-nian": {
+   "hash": "019a17cf88a9",
+   "seconds": 7.68
+  },
+  "fish-gills-water/2-dad": {
+   "hash": "d38ac8f6bd37",
+   "seconds": 21.91
+  },
+  "fish-gills-water/2-nian": {
+   "hash": "3e117f3db0d0",
+   "seconds": 7.08
+  },
+  "fish-gills-water/3-dad": {
+   "hash": "1c266f3fd308",
+   "seconds": 21
+  },
+  "fish-gills-water/3-nian": {
+   "hash": "f8605dff7771",
+   "seconds": 8.78
+  },
+  "fish-gills-water/4-dad": {
+   "hash": "913ed46006a2",
+   "seconds": 20.38
+  },
+  "fish-gills-water/4-nian": {
+   "hash": "9e87fe22d503",
+   "seconds": 8.59
+  },
+  "fish-gills-water/5-dad": {
+   "hash": "5f3137e551e2",
+   "seconds": 13.75
+  },
+  "fish-gills-water/5-nian": {
+   "hash": "70db0cdf1abf",
+   "seconds": 15.48
+  },
+  "fleming-penicillin/0-dad": {
+   "hash": "1bbbb930719b",
+   "seconds": 23.3
+  },
+  "fleming-penicillin/0-nian": {
+   "hash": "600e814f6547",
+   "seconds": 12
+  },
+  "fleming-penicillin/1-dad": {
+   "hash": "0ee90786e904",
+   "seconds": 24.86
+  },
+  "fleming-penicillin/1-nian": {
+   "hash": "b4e87aff3654",
+   "seconds": 9.77
+  },
+  "fleming-penicillin/2-dad": {
+   "hash": "a5cba78cb44d",
+   "seconds": 24.79
+  },
+  "fleming-penicillin/2-nian": {
+   "hash": "254f83d2eb6f",
+   "seconds": 9.84
+  },
+  "fleming-penicillin/3-dad": {
+   "hash": "f19585a6de2b",
+   "seconds": 31.44
+  },
+  "fleming-penicillin/3-nian": {
+   "hash": "14a6a0e8accc",
+   "seconds": 8.45
+  },
+  "fleming-penicillin/4-dad": {
+   "hash": "003472b5b7da",
+   "seconds": 22.22
+  },
+  "fleming-penicillin/4-nian": {
+   "hash": "6ef65a9a676b",
+   "seconds": 12.26
+  },
+  "fleming-penicillin/5-dad": {
+   "hash": "055a4bb30d62",
+   "seconds": 10.85
+  },
+  "fleming-penicillin/5-nian": {
+   "hash": "30dd35611e38",
+   "seconds": 20.4
+  },
+  "food-web-balance/0-dad": {
+   "hash": "16ac7efb5b50",
+   "seconds": 20.86
+  },
+  "food-web-balance/0-nian": {
+   "hash": "09f49ef3e131",
+   "seconds": 10.51
+  },
+  "food-web-balance/1-dad": {
+   "hash": "1d7fdae4c191",
+   "seconds": 20.69
+  },
+  "food-web-balance/1-nian": {
+   "hash": "6f3bd2172da9",
+   "seconds": 8.14
+  },
+  "food-web-balance/2-dad": {
+   "hash": "fc45ea3e6ebf",
+   "seconds": 18.46
+  },
+  "food-web-balance/2-nian": {
+   "hash": "ccf1b21dc418",
+   "seconds": 5.81
+  },
+  "food-web-balance/3-dad": {
+   "hash": "760de4f57ea5",
+   "seconds": 19.2
+  },
+  "food-web-balance/3-nian": {
+   "hash": "6971f37fb083",
+   "seconds": 9.1
+  },
+  "food-web-balance/4-dad": {
+   "hash": "64428acc003b",
+   "seconds": 19.51
+  },
+  "food-web-balance/4-nian": {
+   "hash": "0fea8ca39865",
+   "seconds": 7.58
+  },
+  "food-web-balance/5-dad": {
+   "hash": "3e58ded44f31",
+   "seconds": 10.78
+  },
+  "food-web-balance/5-nian": {
+   "hash": "02d9fbcf96ed",
+   "seconds": 19.39
+  },
+  "gut-microbiome/0-dad": {
+   "hash": "101b47ef1b0e",
+   "seconds": 16.22
+  },
+  "gut-microbiome/0-nian": {
+   "hash": "cd4e56f90021",
+   "seconds": 8.69
+  },
+  "gut-microbiome/1-dad": {
+   "hash": "fa66efc36f27",
+   "seconds": 18.62
+  },
+  "gut-microbiome/1-nian": {
+   "hash": "8d2131363bdf",
+   "seconds": 7.34
+  },
+  "gut-microbiome/2-dad": {
+   "hash": "19032d028062",
+   "seconds": 16.78
+  },
+  "gut-microbiome/2-nian": {
+   "hash": "8724e9551eab",
+   "seconds": 9.02
+  },
+  "gut-microbiome/3-dad": {
+   "hash": "9d2e8fa60a9d",
+   "seconds": 18
+  },
+  "gut-microbiome/3-nian": {
+   "hash": "b82fbed968af",
+   "seconds": 6.77
+  },
+  "gut-microbiome/4-dad": {
+   "hash": "9c4916409678",
+   "seconds": 15.82
+  },
+  "gut-microbiome/4-nian": {
+   "hash": "c8c3ae63c933",
+   "seconds": 8.88
+  },
+  "gut-microbiome/5-dad": {
+   "hash": "e1bb90ee7c52",
+   "seconds": 12.14
+  },
+  "gut-microbiome/5-nian": {
+   "hash": "40e46fa731bd",
+   "seconds": 17.04
+  },
+  "hibernation-sleep/0-dad": {
+   "hash": "963a4fc9059f",
+   "seconds": 20.14
+  },
+  "hibernation-sleep/0-nian": {
+   "hash": "8dc9a5f11696",
+   "seconds": 9.26
+  },
+  "hibernation-sleep/1-dad": {
+   "hash": "8aa629627bb8",
+   "seconds": 18.5
+  },
+  "hibernation-sleep/1-nian": {
+   "hash": "518678470115",
+   "seconds": 7.01
+  },
+  "hibernation-sleep/2-dad": {
+   "hash": "39f6921e46f8",
+   "seconds": 20.64
+  },
+  "hibernation-sleep/2-nian": {
+   "hash": "f2ecbd98a8c1",
+   "seconds": 4.94
+  },
+  "hibernation-sleep/3-dad": {
+   "hash": "f4022e5526bd",
+   "seconds": 19.51
+  },
+  "hibernation-sleep/3-nian": {
+   "hash": "712237a93a11",
+   "seconds": 7.75
+  },
+  "hibernation-sleep/4-dad": {
+   "hash": "616eb6d71435",
+   "seconds": 16.44
+  },
+  "hibernation-sleep/4-nian": {
+   "hash": "1b0bde760351",
+   "seconds": 7.06
+  },
+  "hibernation-sleep/5-dad": {
+   "hash": "1e11f5f05b40",
+   "seconds": 12.89
+  },
+  "hibernation-sleep/5-nian": {
+   "hash": "8cbaa2448f84",
+   "seconds": 17.95
+  },
+  "hooke-cork-cell/0-dad": {
+   "hash": "d54fc49277da",
+   "seconds": 18.55
+  },
+  "hooke-cork-cell/0-nian": {
+   "hash": "4bb210c12779",
+   "seconds": 10.06
+  },
+  "hooke-cork-cell/1-dad": {
+   "hash": "2d654756fb03",
+   "seconds": 19.15
+  },
+  "hooke-cork-cell/1-nian": {
+   "hash": "7fb16bea9f2e",
+   "seconds": 6.58
+  },
+  "hooke-cork-cell/2-dad": {
+   "hash": "fee811a07b9c",
+   "seconds": 20.52
+  },
+  "hooke-cork-cell/2-nian": {
+   "hash": "26d18399a97e",
+   "seconds": 7.49
+  },
+  "hooke-cork-cell/3-dad": {
+   "hash": "66e4144239c4",
+   "seconds": 15.74
+  },
+  "hooke-cork-cell/3-nian": {
+   "hash": "6ad559154c7c",
+   "seconds": 7.49
+  },
+  "hooke-cork-cell/4-dad": {
+   "hash": "b85fb0b22de9",
+   "seconds": 18.43
+  },
+  "hooke-cork-cell/4-nian": {
+   "hash": "31cc4d8f4a9e",
+   "seconds": 7.82
+  },
+  "hooke-cork-cell/5-dad": {
+   "hash": "98c5908dec24",
+   "seconds": 11.16
+  },
+  "hooke-cork-cell/5-nian": {
+   "hash": "a92edfe09cbf",
+   "seconds": 18.43
+  },
+  "hot-hand-reflex/0-dad": {
+   "hash": "4b635bc13b13",
+   "seconds": 18.55
+  },
+  "hot-hand-reflex/0-nian": {
+   "hash": "d9597a560b6d",
+   "seconds": 8.35
+  },
+  "hot-hand-reflex/1-dad": {
+   "hash": "fef75bc3753a",
+   "seconds": 21.41
+  },
+  "hot-hand-reflex/1-nian": {
+   "hash": "56c045bb308b",
+   "seconds": 6.62
+  },
+  "hot-hand-reflex/2-dad": {
+   "hash": "ddb82f3072f4",
+   "seconds": 17.3
+  },
+  "hot-hand-reflex/2-nian": {
+   "hash": "b389c2ab6ce5",
+   "seconds": 6.26
+  },
+  "hot-hand-reflex/3-dad": {
+   "hash": "4722826243ce",
+   "seconds": 14.4
+  },
+  "hot-hand-reflex/3-nian": {
+   "hash": "b198a01c09be",
+   "seconds": 6.6
+  },
+  "hot-hand-reflex/4-dad": {
+   "hash": "7fc374d2a3e3",
+   "seconds": 19.18
+  },
+  "hot-hand-reflex/4-nian": {
+   "hash": "2c5a7eb0741d",
+   "seconds": 7.37
+  },
+  "hot-hand-reflex/5-dad": {
+   "hash": "29785aa2538d",
+   "seconds": 11.23
+  },
+  "hot-hand-reflex/5-nian": {
+   "hash": "8c6cb3b7f2b8",
+   "seconds": 17.9
+  },
+  "impulse-step/0-dad": {
+   "hash": "3554630eed26",
+   "seconds": 18.48
+  },
+  "impulse-step/0-nian": {
+   "hash": "a6a1c1e04121",
+   "seconds": 11.71
+  },
+  "impulse-step/1-dad": {
+   "hash": "235bf533b370",
+   "seconds": 15.65
+  },
+  "impulse-step/1-nian": {
+   "hash": "a53dbd0c7db2",
+   "seconds": 7.27
+  },
+  "impulse-step/2-dad": {
+   "hash": "d10e4b96ee16",
+   "seconds": 19.25
+  },
+  "impulse-step/2-nian": {
+   "hash": "f3ad843090af",
+   "seconds": 6.53
+  },
+  "impulse-step/3-dad": {
+   "hash": "70dea12d1922",
+   "seconds": 18.79
+  },
+  "impulse-step/3-nian": {
+   "hash": "c446081b4d73",
+   "seconds": 7.61
+  },
+  "impulse-step/4-dad": {
+   "hash": "0fa48aab5a19",
+   "seconds": 27.17
+  },
+  "impulse-step/4-nian": {
+   "hash": "99b1e5766507",
+   "seconds": 8.62
+  },
+  "impulse-step/5-dad": {
+   "hash": "73fa2091dc81",
+   "seconds": 12.7
+  },
+  "impulse-step/5-nian": {
+   "hash": "0c2a80c81807",
+   "seconds": 18.1
+  },
+  "look-like-parents/0-dad": {
+   "hash": "66350cc4c2d0",
+   "seconds": 18.77
+  },
+  "look-like-parents/0-nian": {
+   "hash": "eea9b01a1862",
+   "seconds": 8.3
+  },
+  "look-like-parents/1-dad": {
+   "hash": "9c9602ff0267",
+   "seconds": 20.62
+  },
+  "look-like-parents/1-nian": {
+   "hash": "957e5aa1479e",
+   "seconds": 7.66
+  },
+  "look-like-parents/2-dad": {
+   "hash": "08ba95ca7c6b",
+   "seconds": 20.42
+  },
+  "look-like-parents/2-nian": {
+   "hash": "c252486aa9d3",
+   "seconds": 7.66
+  },
+  "look-like-parents/3-dad": {
+   "hash": "33be0c9aab40",
+   "seconds": 17.83
+  },
+  "look-like-parents/3-nian": {
+   "hash": "c57706fc8fee",
+   "seconds": 7.44
+  },
+  "look-like-parents/4-dad": {
+   "hash": "269502dc3447",
+   "seconds": 18.46
+  },
+  "look-like-parents/4-nian": {
+   "hash": "9545a923a09b",
+   "seconds": 7.06
+  },
+  "look-like-parents/5-dad": {
+   "hash": "c209f8346c91",
+   "seconds": 9.84
+  },
+  "look-like-parents/5-nian": {
+   "hash": "b22e9a1f53f8",
+   "seconds": 17.45
+  },
+  "mendel-pea-ratio/0-dad": {
+   "hash": "85da2adfaddb",
+   "seconds": 25.63
+  },
+  "mendel-pea-ratio/0-nian": {
+   "hash": "9c1ad680a363",
+   "seconds": 10.66
+  },
+  "mendel-pea-ratio/1-dad": {
+   "hash": "4313634ef3b1",
+   "seconds": 23.09
+  },
+  "mendel-pea-ratio/1-nian": {
+   "hash": "196d5a0a9e1e",
+   "seconds": 6.82
+  },
+  "mendel-pea-ratio/2-dad": {
+   "hash": "25f17c88c669",
+   "seconds": 24.86
+  },
+  "mendel-pea-ratio/2-nian": {
+   "hash": "00442f03c261",
+   "seconds": 8.54
+  },
+  "mendel-pea-ratio/3-dad": {
+   "hash": "d79536c5c7b8",
+   "seconds": 27.46
+  },
+  "mendel-pea-ratio/3-nian": {
+   "hash": "0832e62d5e0d",
+   "seconds": 8.06
+  },
+  "mendel-pea-ratio/4-dad": {
+   "hash": "2674aedc0228",
+   "seconds": 22.51
+  },
+  "mendel-pea-ratio/4-nian": {
+   "hash": "430b361176fa",
+   "seconds": 8.14
+  },
+  "mendel-pea-ratio/5-dad": {
+   "hash": "863bf5aba876",
+   "seconds": 12.74
+  },
+  "mendel-pea-ratio/5-nian": {
+   "hash": "53d8cc90bb51",
+   "seconds": 18.14
+  },
+  "milk-pasteurization/0-dad": {
+   "hash": "d09e16882e44",
+   "seconds": 21.34
+  },
+  "milk-pasteurization/0-nian": {
+   "hash": "1105fbed9cc4",
+   "seconds": 10.97
+  },
+  "milk-pasteurization/1-dad": {
+   "hash": "665c5b89cce0",
+   "seconds": 26.5
+  },
+  "milk-pasteurization/1-nian": {
+   "hash": "25d1572d169d",
+   "seconds": 9.12
+  },
+  "milk-pasteurization/2-dad": {
+   "hash": "95147b249dfd",
+   "seconds": 29.81
+  },
+  "milk-pasteurization/2-nian": {
+   "hash": "a128fa7bffdf",
+   "seconds": 10.2
+  },
+  "milk-pasteurization/3-dad": {
+   "hash": "45e3df779c50",
+   "seconds": 24.86
+  },
+  "milk-pasteurization/3-nian": {
+   "hash": "c0f31260647f",
+   "seconds": 8.98
+  },
+  "milk-pasteurization/4-dad": {
+   "hash": "7a6744aed554",
+   "seconds": 23.4
+  },
+  "milk-pasteurization/4-nian": {
+   "hash": "ed029c73b157",
+   "seconds": 10.25
+  },
+  "milk-pasteurization/5-dad": {
+   "hash": "66b57f3047c2",
+   "seconds": 10.44
+  },
+  "milk-pasteurization/5-nian": {
+   "hash": "d810c954ff91",
+   "seconds": 18.86
+  },
+  "mimosa-fold-touch/0-dad": {
+   "hash": "73ddf01a1e9f",
+   "seconds": 17.3
+  },
+  "mimosa-fold-touch/0-nian": {
+   "hash": "e670f545a615",
+   "seconds": 9.62
+  },
+  "mimosa-fold-touch/1-dad": {
+   "hash": "7a08ce07053f",
+   "seconds": 21.86
+  },
+  "mimosa-fold-touch/1-nian": {
+   "hash": "b8c46eb3a09a",
+   "seconds": 8.62
+  },
+  "mimosa-fold-touch/2-dad": {
+   "hash": "fcb5c309fadd",
+   "seconds": 19.9
+  },
+  "mimosa-fold-touch/2-nian": {
+   "hash": "1137aaed1ac2",
+   "seconds": 9.17
+  },
+  "mimosa-fold-touch/3-dad": {
+   "hash": "773ed12be0a7",
+   "seconds": 21.86
+  },
+  "mimosa-fold-touch/3-nian": {
+   "hash": "343da243a3d1",
+   "seconds": 6.84
+  },
+  "mimosa-fold-touch/4-dad": {
+   "hash": "7f2d78ab0b1d",
+   "seconds": 20.74
+  },
+  "mimosa-fold-touch/4-nian": {
+   "hash": "4129abf7c4d7",
+   "seconds": 9.02
+  },
+  "mimosa-fold-touch/5-dad": {
+   "hash": "8a2b7b1dccbd",
+   "seconds": 10.73
+  },
+  "mimosa-fold-touch/5-nian": {
+   "hash": "82a2082a2dbc",
+   "seconds": 16.51
+  },
+  "mitosis-step/0-dad": {
+   "hash": "4dc24010b8b7",
+   "seconds": 15.26
+  },
+  "mitosis-step/0-nian": {
+   "hash": "492802ecf566",
+   "seconds": 8.62
+  },
+  "mitosis-step/1-dad": {
+   "hash": "87daa00a2311",
+   "seconds": 17.14
+  },
+  "mitosis-step/1-nian": {
+   "hash": "8036264ca28a",
+   "seconds": 5.86
+  },
+  "mitosis-step/2-dad": {
+   "hash": "3d431c10858f",
+   "seconds": 16.68
+  },
+  "mitosis-step/2-nian": {
+   "hash": "99364dfec2b9",
+   "seconds": 6.24
+  },
+  "mitosis-step/3-dad": {
+   "hash": "e501a9ce2fdf",
+   "seconds": 18.36
+  },
+  "mitosis-step/3-nian": {
+   "hash": "51d5d5f10862",
+   "seconds": 5.78
+  },
+  "mitosis-step/4-dad": {
+   "hash": "ae79ed0e36a7",
+   "seconds": 16.1
+  },
+  "mitosis-step/4-nian": {
+   "hash": "4ee1af55b672",
+   "seconds": 5.9
+  },
+  "mitosis-step/5-dad": {
+   "hash": "d4da3aa394b5",
+   "seconds": 11.26
+  },
+  "mitosis-step/5-nian": {
+   "hash": "0e855400759b",
+   "seconds": 18.58
+  },
+  "mutation-diversity/0-dad": {
+   "hash": "8d294eab0040",
+   "seconds": 18.29
+  },
+  "mutation-diversity/0-nian": {
+   "hash": "9f12287d558a",
+   "seconds": 7.37
+  },
+  "mutation-diversity/1-dad": {
+   "hash": "fec98877f726",
+   "seconds": 17.45
+  },
+  "mutation-diversity/1-nian": {
+   "hash": "91f53285d357",
+   "seconds": 7.3
+  },
+  "mutation-diversity/2-dad": {
+   "hash": "80715112fe8d",
+   "seconds": 17.3
+  },
+  "mutation-diversity/2-nian": {
+   "hash": "393ef409dc8b",
+   "seconds": 6.46
+  },
+  "mutation-diversity/3-dad": {
+   "hash": "60ecc6126870",
+   "seconds": 19.39
+  },
+  "mutation-diversity/3-nian": {
+   "hash": "3f6904fb2c93",
+   "seconds": 5.42
+  },
+  "mutation-diversity/4-dad": {
+   "hash": "3585cf292590",
+   "seconds": 18.43
+  },
+  "mutation-diversity/4-nian": {
+   "hash": "1f677dd93a91",
+   "seconds": 7.15
+  },
+  "mutation-diversity/5-dad": {
+   "hash": "11fe1750cd74",
+   "seconds": 11.9
+  },
+  "mutation-diversity/5-nian": {
+   "hash": "274c8c7ac5f0",
+   "seconds": 16.58
+  },
+  "paramecium-single-cell/0-dad": {
+   "hash": "e9f2f66f5ce7",
+   "seconds": 18.02
+  },
+  "paramecium-single-cell/0-nian": {
+   "hash": "80785ca7bc2f",
+   "seconds": 10.25
+  },
+  "paramecium-single-cell/1-dad": {
+   "hash": "076698892f30",
+   "seconds": 18.31
+  },
+  "paramecium-single-cell/1-nian": {
+   "hash": "894891b58d1b",
+   "seconds": 8.74
+  },
+  "paramecium-single-cell/2-dad": {
+   "hash": "a16823a34495",
+   "seconds": 19.01
+  },
+  "paramecium-single-cell/2-nian": {
+   "hash": "91668fd0890c",
+   "seconds": 7.9
+  },
+  "paramecium-single-cell/3-dad": {
+   "hash": "5333d38d9759",
+   "seconds": 19.18
+  },
+  "paramecium-single-cell/3-nian": {
+   "hash": "73013ccbe579",
+   "seconds": 9.24
+  },
+  "paramecium-single-cell/4-dad": {
+   "hash": "3645988daa01",
+   "seconds": 19.2
+  },
+  "paramecium-single-cell/4-nian": {
+   "hash": "671634d659c3",
+   "seconds": 8.66
+  },
+  "paramecium-single-cell/5-dad": {
+   "hash": "96e4e78d815c",
+   "seconds": 10.8
+  },
+  "paramecium-single-cell/5-nian": {
+   "hash": "3b23086f2b75",
+   "seconds": 15.82
+  },
+  "penguin-icy-feet/0-dad": {
+   "hash": "4e0a4dc406d0",
+   "seconds": 23.23
+  },
+  "penguin-icy-feet/0-nian": {
+   "hash": "fd54fe37eb04",
+   "seconds": 10.08
+  },
+  "penguin-icy-feet/1-dad": {
+   "hash": "f2640d34b68c",
+   "seconds": 20.14
+  },
+  "penguin-icy-feet/1-nian": {
+   "hash": "eb52c9b1abb4",
+   "seconds": 8.71
+  },
+  "penguin-icy-feet/2-dad": {
+   "hash": "59af3ff7d8c4",
+   "seconds": 22.58
+  },
+  "penguin-icy-feet/2-nian": {
+   "hash": "6e34327a3ef1",
+   "seconds": 9.05
+  },
+  "penguin-icy-feet/3-dad": {
+   "hash": "db66d6e193b6",
+   "seconds": 20.4
+  },
+  "penguin-icy-feet/3-nian": {
+   "hash": "fe6ee10321b8",
+   "seconds": 11.09
+  },
+  "penguin-icy-feet/4-dad": {
+   "hash": "16f62728fe82",
+   "seconds": 19.7
+  },
+  "penguin-icy-feet/4-nian": {
+   "hash": "e72d1ae714c1",
+   "seconds": 10.7
+  },
+  "penguin-icy-feet/5-dad": {
+   "hash": "34e2b81a14a6",
+   "seconds": 10.2
+  },
+  "penguin-icy-feet/5-nian": {
+   "hash": "ecf0c7a352eb",
+   "seconds": 17.14
+  },
+  "photosynthesis-food/0-dad": {
+   "hash": "9e086d05f5f5",
+   "seconds": 16.9
+  },
+  "photosynthesis-food/0-nian": {
+   "hash": "f0220ec8cba5",
+   "seconds": 8.04
+  },
+  "photosynthesis-food/1-dad": {
+   "hash": "7afc24872440",
+   "seconds": 18.36
+  },
+  "photosynthesis-food/1-nian": {
+   "hash": "b85b8b448022",
+   "seconds": 5.83
+  },
+  "photosynthesis-food/2-dad": {
+   "hash": "35509cd5857e",
+   "seconds": 13.25
+  },
+  "photosynthesis-food/2-nian": {
+   "hash": "fc5cc44a2f3a",
+   "seconds": 5.38
+  },
+  "photosynthesis-food/3-dad": {
+   "hash": "4e6b60d6cfae",
+   "seconds": 16.54
+  },
+  "photosynthesis-food/3-nian": {
+   "hash": "3f4d9c7aab7e",
+   "seconds": 7.44
+  },
+  "photosynthesis-food/4-dad": {
+   "hash": "ef0b33b0e001",
+   "seconds": 17.28
+  },
+  "photosynthesis-food/4-nian": {
+   "hash": "5ed8ff98c023",
+   "seconds": 7.92
+  },
+  "photosynthesis-food/5-dad": {
+   "hash": "92e315f72ef6",
+   "seconds": 11.16
+  },
+  "photosynthesis-food/5-nian": {
+   "hash": "861ca5794539",
+   "seconds": 16.49
+  },
+  "pineapple-tingle-enzyme/0-dad": {
+   "hash": "6c8ea4900486",
+   "seconds": 20.38
+  },
+  "pineapple-tingle-enzyme/0-nian": {
+   "hash": "d7396ee394d3",
+   "seconds": 7.97
+  },
+  "pineapple-tingle-enzyme/1-dad": {
+   "hash": "d12528572bb4",
+   "seconds": 23.21
+  },
+  "pineapple-tingle-enzyme/1-nian": {
+   "hash": "f1c0fc7042de",
+   "seconds": 7.1
+  },
+  "pineapple-tingle-enzyme/2-dad": {
+   "hash": "180f80eb5b19",
+   "seconds": 22.87
+  },
+  "pineapple-tingle-enzyme/2-nian": {
+   "hash": "dec50fbc3486",
+   "seconds": 8.4
+  },
+  "pineapple-tingle-enzyme/3-dad": {
+   "hash": "c1bbab169659",
+   "seconds": 20.45
+  },
+  "pineapple-tingle-enzyme/3-nian": {
+   "hash": "6ca8d94bb40a",
+   "seconds": 8.26
+  },
+  "pineapple-tingle-enzyme/4-dad": {
+   "hash": "dcc3efd6be54",
+   "seconds": 27.24
+  },
+  "pineapple-tingle-enzyme/4-nian": {
+   "hash": "e43009628b8b",
+   "seconds": 8.33
+  },
+  "pineapple-tingle-enzyme/5-dad": {
+   "hash": "23b13328dce7",
+   "seconds": 12.31
+  },
+  "pineapple-tingle-enzyme/5-nian": {
+   "hash": "4432bbbe1113",
+   "seconds": 18.1
+  },
+  "plant-water-up/0-dad": {
+   "hash": "9ce1cc6d8945",
+   "seconds": 17.06
+  },
+  "plant-water-up/0-nian": {
+   "hash": "e198cf4737b5",
+   "seconds": 8.64
+  },
+  "plant-water-up/1-dad": {
+   "hash": "536fc799232f",
+   "seconds": 17.52
+  },
+  "plant-water-up/1-nian": {
+   "hash": "c20a275d17ed",
+   "seconds": 6.55
+  },
+  "plant-water-up/2-dad": {
+   "hash": "e6ad41545b26",
+   "seconds": 17.9
+  },
+  "plant-water-up/2-nian": {
+   "hash": "9dc771a9a916",
+   "seconds": 8.35
+  },
+  "plant-water-up/3-dad": {
+   "hash": "0de3307b644e",
+   "seconds": 16.85
+  },
+  "plant-water-up/3-nian": {
+   "hash": "09be7780251b",
+   "seconds": 8.4
+  },
+  "plant-water-up/4-dad": {
+   "hash": "486cc2617fea",
+   "seconds": 16.2
+  },
+  "plant-water-up/4-nian": {
+   "hash": "e72d41af167e",
+   "seconds": 7.7
+  },
+  "plant-water-up/5-dad": {
+   "hash": "ed9f81f4f20b",
+   "seconds": 14.18
+  },
+  "plant-water-up/5-nian": {
+   "hash": "6f249d0206b1",
+   "seconds": 17.81
+  },
+  "plasmolysis-step/0-dad": {
+   "hash": "93ae0d5de53d",
+   "seconds": 19.85
+  },
+  "plasmolysis-step/0-nian": {
+   "hash": "cd799c23a6a8",
+   "seconds": 9
+  },
+  "plasmolysis-step/1-dad": {
+   "hash": "4ac1e1265546",
+   "seconds": 16.39
+  },
+  "plasmolysis-step/1-nian": {
+   "hash": "26dd711efe3e",
+   "seconds": 5.57
+  },
+  "plasmolysis-step/2-dad": {
+   "hash": "7cba7182897c",
+   "seconds": 15.7
+  },
+  "plasmolysis-step/2-nian": {
+   "hash": "c93293a8784b",
+   "seconds": 7.15
+  },
+  "plasmolysis-step/3-dad": {
+   "hash": "30e4e9da527f",
+   "seconds": 14.86
+  },
+  "plasmolysis-step/3-nian": {
+   "hash": "ce4633b3070f",
+   "seconds": 7.73
+  },
+  "plasmolysis-step/4-dad": {
+   "hash": "afcd8bb581a7",
+   "seconds": 18.86
+  },
+  "plasmolysis-step/4-nian": {
+   "hash": "577ce1ddc236",
+   "seconds": 6.24
+  },
+  "plasmolysis-step/5-dad": {
+   "hash": "c8a957484a05",
+   "seconds": 14.59
+  },
+  "plasmolysis-step/5-nian": {
+   "hash": "dd2c35d55744",
+   "seconds": 18.84
+  },
+  "seed-germination-dark/0-dad": {
+   "hash": "553f4898c4c7",
+   "seconds": 19.37
+  },
+  "seed-germination-dark/0-nian": {
+   "hash": "bc2d48da279e",
+   "seconds": 9.07
+  },
+  "seed-germination-dark/1-dad": {
+   "hash": "8758ec6a5715",
+   "seconds": 19.78
+  },
+  "seed-germination-dark/1-nian": {
+   "hash": "04adb08786cb",
+   "seconds": 9.38
+  },
+  "seed-germination-dark/2-dad": {
+   "hash": "c91874ecae44",
+   "seconds": 19.61
+  },
+  "seed-germination-dark/2-nian": {
+   "hash": "f870ae5feb8d",
+   "seconds": 9.19
+  },
+  "seed-germination-dark/3-dad": {
+   "hash": "73f2979d0458",
+   "seconds": 22.39
+  },
+  "seed-germination-dark/3-nian": {
+   "hash": "08de74883bd0",
+   "seconds": 10.66
+  },
+  "seed-germination-dark/4-dad": {
+   "hash": "39a457c3bbf1",
+   "seconds": 19.08
+  },
+  "seed-germination-dark/4-nian": {
+   "hash": "36fee17ceb0c",
+   "seconds": 8.74
+  },
+  "seed-germination-dark/5-dad": {
+   "hash": "0ebafcd7a367",
+   "seconds": 11.06
+  },
+  "seed-germination-dark/5-nian": {
+   "hash": "37fe49598db6",
+   "seconds": 17.14
+  },
+  "sunflower-follow-sun/0-dad": {
+   "hash": "669e9537cb9a",
+   "seconds": 19.44
+  },
+  "sunflower-follow-sun/0-nian": {
+   "hash": "df326ef6d72c",
+   "seconds": 11.66
+  },
+  "sunflower-follow-sun/1-dad": {
+   "hash": "abc1cf929e92",
+   "seconds": 17.26
+  },
+  "sunflower-follow-sun/1-nian": {
+   "hash": "5e6294c550c1",
+   "seconds": 8.04
+  },
+  "sunflower-follow-sun/2-dad": {
+   "hash": "051fd29742b5",
+   "seconds": 22.1
+  },
+  "sunflower-follow-sun/2-nian": {
+   "hash": "6f1cfc6f0f26",
+   "seconds": 9.5
+  },
+  "sunflower-follow-sun/3-dad": {
+   "hash": "d55043253e0a",
+   "seconds": 19.06
+  },
+  "sunflower-follow-sun/3-nian": {
+   "hash": "11e4efd8358c",
+   "seconds": 9.22
+  },
+  "sunflower-follow-sun/4-dad": {
+   "hash": "beb43042f1cd",
+   "seconds": 21.43
+  },
+  "sunflower-follow-sun/4-nian": {
+   "hash": "e097d3ad0548",
+   "seconds": 9.98
+  },
+  "sunflower-follow-sun/5-dad": {
+   "hash": "e7a0df2a4196",
+   "seconds": 8.28
+  },
+  "sunflower-follow-sun/5-nian": {
+   "hash": "4d87b2dcd05b",
+   "seconds": 16.7
+  },
+  "tadpole-tail-apoptosis/0-dad": {
+   "hash": "5794815428d3",
+   "seconds": 19.73
+  },
+  "tadpole-tail-apoptosis/0-nian": {
+   "hash": "0c7ca35322df",
+   "seconds": 9.02
+  },
+  "tadpole-tail-apoptosis/1-dad": {
+   "hash": "9a9c18902be1",
+   "seconds": 18.55
+  },
+  "tadpole-tail-apoptosis/1-nian": {
+   "hash": "3b8fc94588a4",
+   "seconds": 6.79
+  },
+  "tadpole-tail-apoptosis/2-dad": {
+   "hash": "92bba204c28b",
+   "seconds": 19.15
+  },
+  "tadpole-tail-apoptosis/2-nian": {
+   "hash": "2ffb84586b90",
+   "seconds": 6.31
+  },
+  "tadpole-tail-apoptosis/3-dad": {
+   "hash": "16ae0080b495",
+   "seconds": 20.93
+  },
+  "tadpole-tail-apoptosis/3-nian": {
+   "hash": "da607304f223",
+   "seconds": 8.11
+  },
+  "tadpole-tail-apoptosis/4-dad": {
+   "hash": "1759bc80000b",
+   "seconds": 17.57
+  },
+  "tadpole-tail-apoptosis/4-nian": {
+   "hash": "49395dc77a0d",
+   "seconds": 7.78
+  },
+  "tadpole-tail-apoptosis/5-dad": {
+   "hash": "6edbc84c88fb",
+   "seconds": 11.06
+  },
+  "tadpole-tail-apoptosis/5-nian": {
+   "hash": "b64ac021347c",
+   "seconds": 17.33
+  },
+  "transport-step/0-dad": {
+   "hash": "62cc4e9f4fbe",
+   "seconds": 17.42
+  },
+  "transport-step/0-nian": {
+   "hash": "985eb4cfa9d5",
+   "seconds": 8.02
+  },
+  "transport-step/1-dad": {
+   "hash": "51fa1344215a",
+   "seconds": 16.87
+  },
+  "transport-step/1-nian": {
+   "hash": "b4f6a6e1a42e",
+   "seconds": 6.05
+  },
+  "transport-step/2-dad": {
+   "hash": "f5477f5231f4",
+   "seconds": 17.47
+  },
+  "transport-step/2-nian": {
+   "hash": "a92d11e67636",
+   "seconds": 5.78
+  },
+  "transport-step/3-dad": {
+   "hash": "b2f2461bf4ee",
+   "seconds": 16.42
+  },
+  "transport-step/3-nian": {
+   "hash": "9ea51e850267",
+   "seconds": 9.77
+  },
+  "transport-step/4-dad": {
+   "hash": "b590489dcf55",
+   "seconds": 16.8
+  },
+  "transport-step/4-nian": {
+   "hash": "694e6a8fc444",
+   "seconds": 7.2
+  },
+  "transport-step/5-dad": {
+   "hash": "3c6a4d765f04",
+   "seconds": 11.52
+  },
+  "transport-step/5-nian": {
+   "hash": "7e76f01ae130",
+   "seconds": 17.09
+  },
+  "tu-artemisinin-malaria/0-dad": {
+   "hash": "caeee3992cd9",
+   "seconds": 27.7
+  },
+  "tu-artemisinin-malaria/0-nian": {
+   "hash": "1b5020329731",
+   "seconds": 8.38
+  },
+  "tu-artemisinin-malaria/1-dad": {
+   "hash": "7ef3160e5dbd",
+   "seconds": 26.16
+  },
+  "tu-artemisinin-malaria/1-nian": {
+   "hash": "5eb10a70e95a",
+   "seconds": 10.25
+  },
+  "tu-artemisinin-malaria/2-dad": {
+   "hash": "553ba0580154",
+   "seconds": 27.46
+  },
+  "tu-artemisinin-malaria/2-nian": {
+   "hash": "2d4c01299fb8",
+   "seconds": 7.49
+  },
+  "tu-artemisinin-malaria/3-dad": {
+   "hash": "f050c3059226",
+   "seconds": 28.94
+  },
+  "tu-artemisinin-malaria/3-nian": {
+   "hash": "2e776a42b6b8",
+   "seconds": 9.17
+  },
+  "tu-artemisinin-malaria/4-dad": {
+   "hash": "38f2a7ddd3f5",
+   "seconds": 25.56
+  },
+  "tu-artemisinin-malaria/4-nian": {
+   "hash": "04617f22e1b2",
+   "seconds": 9.58
+  },
+  "tu-artemisinin-malaria/5-dad": {
+   "hash": "7e027107d43b",
+   "seconds": 11.26
+  },
+  "tu-artemisinin-malaria/5-nian": {
+   "hash": "2f8847f8767b",
+   "seconds": 18.29
+  },
+  "vaccine-memory/0-dad": {
+   "hash": "db06cff4d6d4",
+   "seconds": 21.77
+  },
+  "vaccine-memory/0-nian": {
+   "hash": "9e16cecca745",
+   "seconds": 9.77
+  },
+  "vaccine-memory/1-dad": {
+   "hash": "ddbd8c9dcd8c",
+   "seconds": 21.62
+  },
+  "vaccine-memory/1-nian": {
+   "hash": "2119e6da928a",
+   "seconds": 7.34
+  },
+  "vaccine-memory/2-dad": {
+   "hash": "fc5b2c371b34",
+   "seconds": 23.47
+  },
+  "vaccine-memory/2-nian": {
+   "hash": "88d651778b2f",
+   "seconds": 7.25
+  },
+  "vaccine-memory/3-dad": {
+   "hash": "cc59b4228805",
+   "seconds": 25.58
+  },
+  "vaccine-memory/3-nian": {
+   "hash": "8ac03fdf7f61",
+   "seconds": 9.91
+  },
+  "vaccine-memory/4-dad": {
+   "hash": "c17c68369da3",
+   "seconds": 21.41
+  },
+  "vaccine-memory/4-nian": {
+   "hash": "4494866e2588",
+   "seconds": 8.38
+  },
+  "vaccine-memory/5-dad": {
+   "hash": "7f5789ce533c",
+   "seconds": 8.57
+  },
+  "vaccine-memory/5-nian": {
+   "hash": "f2ee23486c53",
+   "seconds": 18.02
+  },
+  "yeast-bread-yogurt/0-dad": {
+   "hash": "98140b5b2739",
+   "seconds": 18.79
+  },
+  "yeast-bread-yogurt/0-nian": {
+   "hash": "ea26cb2676cd",
+   "seconds": 7.2
+  },
+  "yeast-bread-yogurt/1-dad": {
+   "hash": "40db770a0c6a",
+   "seconds": 18.6
+  },
+  "yeast-bread-yogurt/1-nian": {
+   "hash": "7ec356446c28",
+   "seconds": 7.68
+  },
+  "yeast-bread-yogurt/2-dad": {
+   "hash": "30ed61694d6d",
+   "seconds": 22.01
+  },
+  "yeast-bread-yogurt/2-nian": {
+   "hash": "fca472ab6ecb",
+   "seconds": 8.83
+  },
+  "yeast-bread-yogurt/3-dad": {
+   "hash": "77bef343eaa7",
+   "seconds": 16.56
+  },
+  "yeast-bread-yogurt/3-nian": {
+   "hash": "22b6f616bde3",
+   "seconds": 8.38
+  },
+  "yeast-bread-yogurt/4-dad": {
+   "hash": "e2c13303901a",
+   "seconds": 20.71
+  },
+  "yeast-bread-yogurt/4-nian": {
+   "hash": "38bb8ccfe2f8",
+   "seconds": 8.26
+  },
+  "yeast-bread-yogurt/5-dad": {
+   "hash": "041bd0db33a8",
+   "seconds": 12.22
+  },
+  "yeast-bread-yogurt/5-nian": {
+   "hash": "510da944d7dd",
+   "seconds": 18.94
+  },
+  "yuan-hybrid-rice/0-dad": {
+   "hash": "e5d16c310796",
+   "seconds": 19.82
+  },
+  "yuan-hybrid-rice/0-nian": {
+   "hash": "da041fe29d0e",
+   "seconds": 9.31
+  },
+  "yuan-hybrid-rice/1-dad": {
+   "hash": "6c7fb394d25f",
+   "seconds": 24.36
+  },
+  "yuan-hybrid-rice/1-nian": {
+   "hash": "bf5293482884",
+   "seconds": 8.06
+  },
+  "yuan-hybrid-rice/2-dad": {
+   "hash": "72a922dd1b0e",
+   "seconds": 21.02
+  },
+  "yuan-hybrid-rice/2-nian": {
+   "hash": "5e1d54b7387f",
+   "seconds": 9.02
+  },
+  "yuan-hybrid-rice/3-dad": {
+   "hash": "f41fa29ab322",
+   "seconds": 24.67
+  },
+  "yuan-hybrid-rice/3-nian": {
+   "hash": "eeff2a2c1ba7",
+   "seconds": 8.21
+  },
+  "yuan-hybrid-rice/4-dad": {
+   "hash": "7da4bdc49910",
+   "seconds": 26.14
+  },
+  "yuan-hybrid-rice/4-nian": {
+   "hash": "0d325f2a68c6",
+   "seconds": 8.76
+  },
+  "yuan-hybrid-rice/5-dad": {
+   "hash": "7306db1781a5",
+   "seconds": 12.24
+  },
+  "yuan-hybrid-rice/5-nian": {
+   "hash": "e315a9c75b8d",
+   "seconds": 20.09
+  }
+ }
 }

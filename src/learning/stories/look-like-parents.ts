@@ -73,6 +73,18 @@ export const lookLikeParents: Story = {
         ],
       },
       {
+        turn: 3, title: '每个孩子重新洗牌', duration: 9,
+        cues: [
+          { kind: 'shape', shape: 'rect', at: [330, 380], size: [240, 140], color: '#d0ebff', text: '爸爸一半', from: 0.2 },
+          { kind: 'shape', shape: 'rect', at: [870, 380], size: [240, 140], color: '#ffe3e3', text: '妈妈一半', from: 0.4 },
+          { kind: 'text', at: [600, 240], text: '两万多个基因随机抽', from: 1.0 },
+          { kind: 'sprite', icon: '👦', path: [[600, 380], [460, 600]], size: 110, travel: 1.6, from: 1.8 },
+          { kind: 'sprite', icon: '👧', path: [[600, 380], [740, 600]], size: 110, travel: 1.6, from: 2.6 },
+          { kind: 'label', at: [740, 600], pos: [980, 640], text: '同卵双胞胎除外', from: 4.2 },
+          { kind: 'text', at: [600, 800], text: '亲兄妹也各有各的模样', from: 5.2 },
+        ],
+      },
+      {
         turn: 4, title: '基因与环境一起写', duration: 9,
         cues: [
           { kind: 'shape', shape: 'rect', at: [360, 440], size: [300, 180], color: '#efe5ff', text: '天生基因图纸', from: 0.3 },

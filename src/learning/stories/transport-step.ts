@@ -65,6 +65,19 @@ export const transportStep: Story = {
         ],
       },
       {
+        turn: 2, title: '通道和载体', duration: 9,
+        cues: [
+          { kind: 'shape', shape: 'rect', at: [600, 450], size: [940, 80], color: '#ffe8b3', from: 0.2 },
+          { kind: 'shape', shape: 'rect', at: [380, 450], size: [70, 140], color: '#74c0fc', text: '通道', from: 0.8 },
+          { kind: 'atom', path: [[380, 270], [380, 640]], symbol: 'K⁺', color: '#4dabf7', r: 24, travel: 2.5, from: 1.4 },
+          { kind: 'label', at: [380, 380], pos: [230, 250], text: '通道蛋白像小管道', from: 2.0 },
+          { kind: 'shape', shape: 'circle', at: [820, 450], size: [130, 130], color: '#ffa8a8', text: '载体', motion: 'wiggle', from: 3.0 },
+          { kind: 'atom', path: [[820, 270], [820, 450], [820, 640]], symbol: '糖', color: '#f59f00', r: 26, travel: 3, from: 3.6 },
+          { kind: 'label', at: [820, 390], pos: [970, 250], text: '载体蛋白变形转运', from: 4.4 },
+          { kind: 'text', at: [600, 780], text: '两种门都顺浓度、不耗能', from: 5.6 },
+        ],
+      },
+      {
         turn: 3, title: '主动运输', duration: 10,
         cues: [
           { kind: 'shape', shape: 'rect', at: [600, 450], size: [960, 72], color: '#f5b864', from: 0.2 },

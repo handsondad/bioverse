@@ -68,6 +68,17 @@ export const yeastBreadYogurt: Story = {
         ],
       },
       {
+        turn: 3, title: '蒸熟酵母已退休', duration: 9,
+        cues: [
+          { kind: 'sprite', icon: '🍞', path: [[340, 430]], size: 150, from: 0.2 },
+          { kind: 'count', at: [340, 640], label: '蒸锅温度', start: 30, end: 100, unit: '℃', over: 3, from: 0.8 },
+          { kind: 'label', at: [340, 380], pos: [340, 230], text: '酵母早被蒸熟', from: 3.0 },
+          { kind: 'sprite', icon: '🥛', path: [[860, 430]], size: 140, from: 3.6 },
+          { kind: 'label', at: [860, 380], pos: [860, 230], text: '冷藏酸奶有活菌', from: 4.2 },
+          { kind: 'text', at: [600, 800], text: '馒头只留下松软气孔', from: 5.4 },
+        ],
+      },
+      {
         turn: 4, title: '分清发酵与发霉', duration: 9,
         cues: [
           { kind: 'shape', shape: 'pill', at: [340, 420], size: [300, 130], color: '#d9f2dc', text: '好菌发酵：美味', from: 0.3 },

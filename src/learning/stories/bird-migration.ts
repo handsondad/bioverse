@@ -58,6 +58,17 @@ export const birdMigration: Story = {
         ],
       },
       {
+        turn: 2, title: '跟着老鸟学路线', duration: 9,
+        cues: [
+          { kind: 'sprite', icon: '🦢', path: [[240, 400], [900, 400]], size: 110, travel: 5, from: 0.2 },
+          { kind: 'sprite', icon: '🦢', path: [[120, 480], [780, 480]], size: 70, travel: 5, from: 0.5 },
+          { kind: 'label', at: [900, 400], pos: [960, 240], text: '老鸟领路', from: 1.4 },
+          { kind: 'label', at: [780, 480], pos: [640, 620], text: '小雁记住湿地和路线', from: 2.4 },
+          { kind: 'text', at: [600, 700], text: '独飞小鸣禽：方向写进基因', from: 4.0 },
+          { kind: 'text', at: [600, 810], text: '大鸟靠学，小鸟靠天生', from: 5.4 },
+        ],
+      },
+      {
         turn: 3, title: '排成人字省力气', duration: 10,
         cues: [
           { kind: 'sprite', icon: '🦢', path: [[360, 450], [740, 450]], size: 90, travel: 5, from: 0.4 },

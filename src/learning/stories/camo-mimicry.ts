@@ -74,6 +74,17 @@ export const camoMimicry: Story = {
           { kind: 'text', at: [600, 750], text: '显眼警戒色让天敌绕着走', from: 4.8 },
         ],
       },
+      {
+        turn: 4, title: '没毒也扮警戒色', duration: 9,
+        cues: [
+          { kind: 'sprite', icon: '🐝', path: [[360, 430]], size: 150, from: 0.2 },
+          { kind: 'label', at: [360, 400], pos: [360, 240], text: '黄蜂：真有毒刺', from: 0.8 },
+          { kind: 'sprite', icon: '🪰', path: [[840, 430]], size: 130, from: 1.8 },
+          { kind: 'label', at: [840, 400], pos: [840, 240], text: '食蚜蝇：没刺也穿黄黑', from: 2.4 },
+          { kind: 'text', at: [600, 620], text: '小鸟分不清，干脆都不吃', from: 3.6 },
+          { kind: 'myth', wrong: '鲜艳的虫子一定有毒', right: '有的只是模仿有毒的样子', from: 5.0 },
+        ],
+      },
     ],
   },
 };

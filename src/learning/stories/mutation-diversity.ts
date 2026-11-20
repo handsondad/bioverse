@@ -69,6 +69,17 @@ export const mutationDiversity: Story = {
         ],
       },
       {
+        turn: 3, title: '有利突变的例子', duration: 9,
+        cues: [
+          { kind: 'sprite', icon: '🥛', path: [[340, 430]], size: 150, from: 0.2 },
+          { kind: 'label', at: [340, 380], pos: [340, 230], text: '成年还能消化乳糖', from: 1.0 },
+          { kind: 'sprite', icon: '🌾', path: [[860, 430]], size: 150, from: 2.0 },
+          { kind: 'label', at: [860, 380], pos: [860, 230], text: '抗倒伏的水稻', from: 2.6 },
+          { kind: 'text', at: [600, 650], text: '有益变异帮生物更适应', from: 3.8 },
+          { kind: 'text', at: [600, 780], text: '人类育种也常用它', from: 5.2 },
+        ],
+      },
+      {
         turn: 4, title: '多样性护住物种', duration: 9,
         cues: [
           { kind: 'shape', shape: 'circle', at: [320, 440], size: [150, 150], color: '#ffd43b', text: '抗旱型', from: 0.3 },

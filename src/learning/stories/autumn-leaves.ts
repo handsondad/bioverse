@@ -75,6 +75,17 @@ export const autumnLeaves: Story = {
           { kind: 'text', at: [600, 770], text: '减少失水防雪压，安稳过冬', from: 4.5 },
         ],
       },
+      {
+        turn: 4, title: '松柏的防寒装备', duration: 9,
+        cues: [
+          { kind: 'sprite', icon: '🌲', path: [[600, 400]], size: 220, from: 0.2 },
+          { kind: 'label', at: [540, 360], pos: [260, 240], text: '细针叶面积小', from: 1.0 },
+          { kind: 'label', at: [660, 420], pos: [940, 260], text: '厚蜡质防漏水', from: 1.8 },
+          { kind: 'label', at: [620, 480], pos: [940, 560], text: '气孔藏在凹槽里', from: 2.6 },
+          { kind: 'text', at: [600, 690], text: '松针也换新，只是分批换', from: 4.0 },
+          { kind: 'text', at: [600, 790], text: '所以松柏四季常绿', from: 5.4 },
+        ],
+      },
     ],
   },
 };

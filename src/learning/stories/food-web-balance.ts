@@ -61,6 +61,18 @@ export const foodWebBalance: Story = {
         ],
       },
       {
+        turn: 2, title: '狼帮羊群清病弱', duration: 9,
+        cues: [
+          { kind: 'sprite', icon: '🐺', path: [[180, 460], [520, 460]], size: 130, travel: 3, from: 0.2 },
+          { kind: 'sprite', icon: '🐑', path: [[620, 470]], size: 80, from: 0.4, to: 3.6 },
+          { kind: 'label', at: [620, 430], pos: [560, 240], text: '老弱病羊跑得慢', from: 1.0 },
+          { kind: 'sprite', icon: '🐑', path: [[860, 400]], size: 110, from: 0.6 },
+          { kind: 'sprite', icon: '🐑', path: [[1000, 520]], size: 110, from: 0.6 },
+          { kind: 'label', at: [930, 460], pos: [960, 680], text: '健康强壮的活下来', from: 3.8 },
+          { kind: 'text', at: [600, 800], text: '传染病少了，羊群更健康', from: 5.2 },
+        ],
+      },
+      {
         turn: 3, title: '请回狼后森林复兴', duration: 9,
         cues: [
           { kind: 'sprite', icon: '🐺', path: [[260, 450]], size: 120, from: 0.3 },

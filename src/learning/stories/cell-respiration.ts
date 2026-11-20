@@ -80,6 +80,17 @@ export const cellRespiration: Story = {
           { kind: 'text', at: [600, 760], text: '乳酸攒多，腿就发酸发胀', from: 4.5 },
         ],
       },
+      {
+        turn: 4, title: '睡着也不停工', duration: 9,
+        cues: [
+          { kind: 'sprite', icon: '😴', path: [[600, 380]], size: 170, from: 0.2 },
+          { kind: 'pulse', at: [600, 380], color: '#e64980', radius: 150, rate: 0.8, from: 0.8 },
+          { kind: 'count', at: [340, 640], label: '心跳每分钟', start: 90, end: 65, unit: '次', over: 3, from: 1.6 },
+          { kind: 'meter', at: [860, 640], label: '呼吸作用', start: 0.9, end: 0.5, color: '#2e7d32', from: 2.2 },
+          { kind: 'label', at: [640, 300], pos: [940, 220], text: '细胞照样在发电', from: 3.4 },
+          { kind: 'text', at: [600, 800], text: '需要得少，只是慢下来', from: 5.0 },
+        ],
+      },
     ],
   },
 };

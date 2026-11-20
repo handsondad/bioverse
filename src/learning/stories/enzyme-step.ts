@@ -80,6 +80,16 @@ export const enzymeStep: Story = {
           { kind: 'text', at: [600, 770], text: '过酸过碱同样破坏空间结构', from: 4.0 },
         ],
       },
+      {
+        turn: 4, title: '发高烧酶也罢工', duration: 9,
+        cues: [
+          { kind: 'count', at: [360, 380], label: '体温', start: 37, end: 40, unit: '℃', over: 3, from: 0.4 },
+          { kind: 'meter', at: [360, 580], label: '酶活性', start: 1, end: 0.55, color: '#e8590c', from: 1.6 },
+          { kind: 'shape', shape: 'rect', at: [840, 440], size: [240, 260], color: '#d0ebff', text: '冰箱', from: 3.2 },
+          { kind: 'label', at: [840, 360], pos: [840, 230], text: '低温让酶打盹保鲜', from: 3.8 },
+          { kind: 'text', at: [600, 790], text: '几千种酶都怕体温乱跳', from: 5.4 },
+        ],
+      },
     ],
   },
 };

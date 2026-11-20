@@ -69,6 +69,18 @@ export const plantWaterUp: Story = {
         ],
       },
       {
+        turn: 3, title: '树荫比阳伞凉快', duration: 9,
+        cues: [
+          { kind: 'sprite', icon: '⛱️', path: [[330, 430]], size: 170, from: 0.2 },
+          { kind: 'label', at: [330, 380], pos: [330, 220], text: '只会挡太阳', from: 0.8 },
+          { kind: 'sprite', icon: '🌳', path: [[870, 420]], size: 220, from: 1.6 },
+          { kind: 'particles', box: [760, 260, 220, 140], count: 10, color: '#74c0fc', motion: 'rise', from: 2.2 },
+          { kind: 'label', at: [870, 330], pos: [960, 680], text: '叶子出汗蒸发吸热', from: 2.8 },
+          { kind: 'count', at: [600, 640], label: '一天蒸腾约', start: 0, end: 300, unit: '公斤', over: 3, from: 3.6 },
+          { kind: 'text', at: [600, 800], text: '树冠把树下的空气吹凉', from: 5.2 },
+        ],
+      },
+      {
         turn: 4, title: '气孔会自己关门', duration: 9,
         cues: [
           { kind: 'shape', shape: 'circle', at: [350, 440], size: [220, 160], color: '#8ce09b', text: '水足：张开', from: 0.4 },
